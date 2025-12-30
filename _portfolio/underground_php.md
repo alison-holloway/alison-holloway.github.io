@@ -6,7 +6,7 @@ doc_type: Published Book
 version: Release 2.0
 date: '2012-12-01'
 date_completed: '2012-12-01'
-featured: true
+featured: false
 tags:
 - Published Book
 - PHP

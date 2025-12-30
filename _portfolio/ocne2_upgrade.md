@@ -6,7 +6,7 @@ doc_type: Upgrade Guide
 version: Release 2
 date: '2024-08-01'
 date_completed: '2024-08-01'
-featured: true
+featured: false
 tags:
 - Upgrade
 - Migration

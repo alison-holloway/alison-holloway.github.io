@@ -6,7 +6,7 @@ doc_type: CLI Reference
 version: Release 2
 date: '2024-08-01'
 date_completed: '2024-08-01'
-featured: true
+featured: false
 tags:
 - CLI Reference
 - Command Line
