@@ -1,0 +1,53 @@
+---
+layout: default
+title: Portfolio
+---
+
+<h1 class="page-title">Documentation Portfolio</h1>
+
+<p style="margin-bottom: 2rem; color: var(--text-light); font-size: 1.1rem;">
+  A collection of technical documentation for cloud native and virtualization products, including installation guides, release notes, deployment guides, upgrade guides, and CLI reference materials.
+</p>
+
+<!-- Filter by Tag Section -->
+<div style="margin-bottom: 3rem;">
+  <h2 style="color: var(--secondary-color); margin-bottom: 1rem;">Filter by Category</h2>
+  <div class="tags">
+    <a href="{{ '/portfolio/' | relative_url }}" class="tag">All</a>
+    {% assign all_tags = site.portfolio | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+    {% for tag in all_tags %}
+      {% if tag != "" %}
+        <a href="#{{ tag | slugify }}" class="tag">{{ tag }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Portfolio Grid -->
+<div class="portfolio-grid">
+  {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
+  {% for item in sorted_portfolio %}
+    <div class="portfolio-card" data-tags="{% for tag in item.tags %}{{ tag | slugify }} {% endfor %}">
+      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+      <p class="portfolio-meta">
+        {{ item.product }} | {{ item.doc_type }}
+        {% if item.version %} | v{{ item.version }}{% endif %}
+      </p>
+      <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
+      
+      {% if item.tags %}
+        <div class="tags">
+          {% for tag in item.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+{% if site.portfolio.size == 0 %}
+  <div style="text-align: center; padding: 3rem; background: var(--bg-light); border-radius: 8px;">
+    <p style="color: var(--text-light); font-size: 1.1rem;">Portfolio items will be added soon.</p>
+  </div>
+{% endif %}

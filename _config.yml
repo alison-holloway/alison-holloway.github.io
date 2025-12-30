@@ -1,13 +1,58 @@
-title: Alison Holloway's Technical Writing Portfolio
-email: alison.holloway@pm.me
-description: >-
-  Alison Holloway's technical writing porfolio. Includes writing examples and
-  contact information.
-domain: alison-holloway.github.io
-baseurl: ''
-url: 'https://alison-holloway.github.io/'
-github_username: alison-holloway
-linkedin_username: alison-holloway-au
-theme: minima
+# Site settings
+title: Alison Holloway
+tagline: Senior Technical Writer
+description: Technical writing portfolio showcasing 30+ years of documentation experience in virtualization, cloud-native platforms, and container technologies
+baseurl: "" # Leave empty for GitHub Pages at username.github.io
+url: "https://alison-holloway.github.io"
+
+# Author information
+author:
+  name: Alison Holloway
+  email: alison.holloway@pm.me
+  phone: "+61 414 599 588"
+  linkedin: alison-holloway-au
+  github: alison-holloway
+  location: Melbourne, Victoria, Australia
+
+# Professional details
+professional:
+  years_experience: "30+"
+  specialization: "Virtualization, Cloud-Native Platforms, Container Technologies"
+  previous_roles:
+    - "Consulting User Assistance Developer, Oracle (2013-2025)"
+    - "Senior Technical Writer, Oracle (1993-2013)"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-admin
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      layout: "portfolio-item"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

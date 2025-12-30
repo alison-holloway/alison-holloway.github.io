@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<article class="portfolio-item">
+  <div class="portfolio-header">
+    <h1>{{ page.title }}</h1>
+    <p class="portfolio-meta">
+      {{ page.product }} | {{ page.doc_type }}
+    </p>
+  </div>
+
+  <div class="portfolio-details">
+    <dl>
+      <dt>Product:</dt>
+      <dd>{{ page.product }}</dd>
+      
+      <dt>Document Type:</dt>
+      <dd>{{ page.doc_type }}</dd>
+      
+      {% if page.version %}
+      <dt>Version:</dt>
+      <dd>{{ page.version }}</dd>
+      {% endif %}
+      
+      {% if page.date_completed %}
+      <dt>Completion Date:</dt>
+      <dd>{{ page.date_completed | date: "%B %Y" }}</dd>
+      {% endif %}
+      
+      {% if page.tools %}
+      <dt>Tools Used:</dt>
+      <dd>{{ page.tools | join: ", " }}</dd>
+      {% endif %}
+    </dl>
+  </div>
+
+  <div class="portfolio-content">
+    {{ content }}
+  </div>
+
+  {% if page.tags %}
+  <div class="tags">
+    {% for tag in page.tags %}
+      <a href="{{ '/portfolio/' | relative_url }}#{{ tag | slugify }}" class="tag">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.pdf_url or page.doc_url %}
+  <div class="portfolio-links">
+    <h2>View Documentation</h2>
+    {% if page.pdf_url %}
+      <a href="{{ page.pdf_url }}" class="btn" target="_blank">View PDF</a>
+    {% endif %}
+    {% if page.doc_url %}
+      <a href="{{ page.doc_url }}" class="btn btn-secondary" target="_blank">View Online</a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div style="margin-top: 3rem;">
+    <a href="{{ '/portfolio/' | relative_url }}">&larr; Back to Portfolio</a>
+  </div>
+</article>

@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+  <p style="margin-top: 1rem; font-size: 1rem; color: var(--text-light);">
+    Specializing in DITA XML, Kubernetes, Oracle Linux, and Cloud-Native Documentation
+  </p>
+</div>
+
+<section style="background: var(--bg-light); padding: 2rem; border-radius: 8px; margin-bottom: 3rem;">
+  <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Professional Highlights</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+    <div>
+      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">30+ Years Experience</h3>
+      <p style="color: var(--text-color);">Extensive background in software documentation across Oracle products</p>
+    </div>
+    <div>
+      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Cloud-Native Expertise</h3>
+      <p style="color: var(--text-color);">Kubernetes, containers, Oracle Cloud Native Environment, OpenStack</p>
+    </div>
+    <div>
+      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Published Author</h3>
+      <p style="color: var(--text-color);">Co-author of The Underground PHP and Oracle Manual</p>
+    </div>
+    <div>
+      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Technical Innovation</h3>
+      <p style="color: var(--text-color);">Created Terraform/Ansible deployment scripts adopted by Support teams</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Featured Documentation Projects</h2>
+  
+  <div class="portfolio-grid">
+    {% assign featured = site.portfolio | where: "featured", true | limit: 3 %}
+    {% if featured.size > 0 %}
+      {% for item in featured %}
+        <div class="portfolio-card">
+          <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+          <p class="portfolio-meta">{{ item.product }} | {{ item.doc_type }}</p>
+          <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% if item.tags %}
+            <div class="tags">
+              {% for tag in item.tags limit: 3 %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for item in site.portfolio limit: 3 %}
+        <div class="portfolio-card">
+          <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+          <p class="portfolio-meta">{{ item.product }} | {{ item.doc_type }}</p>
+          <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% if item.tags %}
+            <div class="tags">
+              {% for tag in item.tags limit: 3 %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="{{ '/portfolio/' | relative_url }}" class="btn">View Full Portfolio</a>
+  </div>
+</section>
+
+<section style="margin-top: 4rem;">
+  <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Recent Blog Posts</h2>
+  
+  {% if site.posts.size > 0 %}
+    <ul class="post-list">
+      {% for post in site.posts limit: 3 %}
+        <li class="post-item">
+          <h3 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+        </li>
+      {% endfor %}
+    </ul>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">View All Posts</a>
+    </div>
+  {% else %}
+    <p style="color: var(--text-light);">Blog posts coming soon. Check back for insights on technical writing, DITA XML, and documentation best practices.</p>
+  {% endif %}
+</section>
