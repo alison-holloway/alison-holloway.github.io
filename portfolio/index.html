@@ -31,7 +31,7 @@ title: Portfolio
       <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
       <p class="portfolio-meta">
         {{ item.product }} | {{ item.doc_type }}
-        {% if item.version %} | v{{ item.version }}{% endif %}
+        {% if item.version %} | Version {{ item.version }}{% endif %}
       </p>
       <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
       
