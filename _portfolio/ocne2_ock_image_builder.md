@@ -4,9 +4,9 @@ title: Oracle Cloud Native Environment Release 2 - Oracle Container Host for Kub
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: User Guide
-version: Release 2
+version: G17139-05
 date: '2024-08-01'
-date_completed: '2024-08-01'
+date_completed: 'August 2025'
 featured: false
 tags:
 - Image Building
@@ -25,17 +25,11 @@ excerpt: Guide for creating customized Oracle Container Host for Kubernetes (OCK
 
 ## Overview
 
-The Oracle Container Host for Kubernetes (OCK) Image Builder Guide documents procedures for creating custom node images for Oracle CNE clusters. OCK is the specialized Oracle Linux-based operating system image optimized for Kubernetes node deployment.
+The Oracle Container Host for Kubernetes (OCK) Image Builder Guide documents procedures for creating custom node images for Oracle CNE clusters. OCK is the specialized Oracle Linux-based operating system image optimized for Kubernetes node deployment. The guide covers OCK image architecture and components, image building prerequisites and environment setup, creating custom OCK images with additional software, image customization options (packages, configurations, scripts), testing and validating custom images, deploying clusters using custom OCK images, and troubleshooting image build issues.
 
-## Documentation Scope
+## Target Audience
 
-- OCK image architecture and components
-- Image building prerequisites and environment setup
-- Creating custom OCK images with additional software
-- Image customization options (packages, configurations, scripts)
-- Testing and validating custom images
-- Deploying clusters using custom OCK images
-- Troubleshooting image build issues
+Platform engineers, security teams, and system administrators who need to customize Kubernetes node images to meet organizational requirements. Assumes strong Linux system administration knowledge and familiarity with image building concepts.
 
 ## Key Documentation Features
 
@@ -49,14 +43,4 @@ The Oracle Container Host for Kubernetes (OCK) Image Builder Guide documents pro
 
 OCK image customization involves multiple technologies: Oracle Linux, image building tools, Kubernetes node requirements, and various provider-specific image formats. Documentation needed to guide users through this complexity while preventing image builds that would produce non-functional Kubernetes nodes.
 
-**Solution:** Developed validation checklists and testing procedures to ensure custom images meet all Kubernetes node requirements. Provided tested examples for common customization scenarios (adding monitoring agents, custom certificates, hardening configurations).
-
-## Target Audience
-
-Platform engineers, security teams, and system administrators who need to customize Kubernetes node images to meet organizational requirements. Assumes strong Linux system administration knowledge and familiarity with image building concepts.
-
-## Related Documentation
-
-- Concepts Guide (OCK architecture)
-- Kubernetes Clusters Guide (using custom images for deployment)
-- CLI Reference (image-related commands)
+**Solution:** Developed validation checklists and testing procedures to ensure custom images meet all Kubernetes node requirements. Provided tested examples for common customization scenarios (adding monitoring agents, custom certificates, hardening configurations)

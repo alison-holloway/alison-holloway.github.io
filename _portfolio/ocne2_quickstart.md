@@ -3,7 +3,7 @@ title: Oracle Cloud Native Environment Release 2 - Quick Start Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Quick Start Guide
-version: Release 2
+version: F96192-11
 date: '2024-08-01'
 date_completed: '2024-08-01'
 featured: true
@@ -28,15 +28,11 @@ excerpt: Fast-track guide for creating a KVM-based Kubernetes cluster using the 
 
 ## Overview
 
-The Oracle Cloud Native Environment Quick Start Guide provides streamlined procedures for deploying a development or test Kubernetes cluster using the libvirt provider on a single KVM host. This guide is designed to get users from zero to a running Kubernetes cluster in the shortest time possible.
+The Oracle Cloud Native Environment Quick Start Guide provides streamlined procedures for deploying a development or test Kubernetes cluster using the libvirt provider on a single KVM host. This guide is designed to get users from zero to a running Kubernetes cluster in the shortest time possible, covering CLI installation and initial configuration, single-node KVM host setup with libvirt, simple Kubernetes cluster creation, basic cluster verification, and next steps for expanding to production deployments.
 
-## Documentation Scope
+## Target Audience
 
-- CLI installation and initial configuration
-- Single-node KVM host setup with libvirt
-- Simple Kubernetes cluster creation
-- Basic cluster verification
-- Next steps for expanding to production deployments
+Developers, system administrators, and DevOps engineers who want to quickly evaluate Oracle CNE or set up development environments. Assumes Linux system administration skills and basic virtualization knowledge.
 
 ## Key Features
 
@@ -48,14 +44,6 @@ The Oracle Cloud Native Environment Quick Start Guide provides streamlined proce
 
 ## Documentation Challenge
 
-Quick Start guides must balance speed with completeness. Users want to get running quickly but also need enough information to troubleshoot if something goes wrong. The solution was to provide streamlined procedures with clear expected outputs at each step, plus links to detailed troubleshooting and conceptual information for users who need more depth.
+Quick Start guides must balance speed with completeness. Users want to get running quickly but also need enough information to troubleshoot if something goes wrong.
 
-## Target Audience
-
-Developers, system administrators, and DevOps engineers who want to quickly evaluate Oracle CNE or set up development environments. Assumes Linux system administration skills and basic virtualization knowledge.
-
-## Related Documentation
-
-- Concepts Guide (for architectural understanding)
-- CLI Reference (for complete command documentation)
-- Kubernetes Clusters Guide (for production deployments)
+**Solution:** Provided streamlined procedures with clear expected outputs at each step, plus links to detailed troubleshooting and conceptual information for users who need more depth.ß

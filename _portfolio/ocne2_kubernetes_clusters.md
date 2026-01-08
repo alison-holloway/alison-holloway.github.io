@@ -2,22 +2,23 @@
 title: Oracle Cloud Native Environment Release 2 - Kubernetes Clusters Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
-doc_type: Deployment Guide
-version: Release 2
+doc_type: Administration Guide
+version: F96197-22
 date: '2024-08-01'
-date_completed: '2024-08-01'
+date_completed: 'August 2025'
 featured: true
 tags:
 - Administration
 - Kubernetes
 - Cloud Native
 - Cluster Management
-- Deployment
 tools:
 - DITA XML
-- Oxygen XML Editor
+- Oxygen XML
 - Git
-pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/clusters/OCNE-2-CLUSTERS.pdf
+- Terraform
+- Ansible
+pdf_url: "https://docs.oracle.com/en/operating-systems/olcne/2/clusters/OCNE-2-CLUSTERS.pdf"
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/clusters/
 excerpt: Comprehensive guide covering Kubernetes cluster creation, configuration,
   and lifecycle management across all Oracle CNE provider types (libvirt, OCI, OLVM,
@@ -26,148 +27,63 @@ excerpt: Comprehensive guide covering Kubernetes cluster creation, configuration
 
 ## Overview
 
-The Oracle Cloud Native Environment Kubernetes Clusters Guide is the primary administration and deployment reference for Oracle CNE. It provides complete procedures for creating, configuring, updating, backing up, and managing Kubernetes clusters across all supported deployment models.
+The Oracle Cloud Native Environment Kubernetes Clusters Guide is the primary administration reference for Oracle CNE, covering complete procedures for creating, configuring, updating, backing up, and managing Kubernetes clusters across all supported deployment models: libvirt (KVM-based), Oracle Cloud Infrastructure, Oracle Linux Virtualization Manager, and Bring Your Own (bare metal or other platforms).
 
-## Documentation Scope
+## Target Audience
 
-This comprehensive guide covers:
-
-- **Cluster Providers:** Detailed procedures for all four provider types
-  - libvirt (KVM-based clusters)
-  - Oracle Cloud Infrastructure (OCI)
-  - Oracle Linux Virtualization Manager (OLVM)
-  - Bring Your Own (BYO) - bare metal or other platforms
-- **Node Images:** OCK (Oracle Container Host for Kubernetes) image creation and customization
-- **Cluster Configuration:** Network, storage, and security configuration
-- **Lifecycle Management:** Updates, backups, scaling, and maintenance
-- **Troubleshooting:** Cluster analysis and problem resolution
+System administrators deploying production Kubernetes clusters, platform engineers building cloud-native infrastructure, DevOps teams automating cluster deployment, and site reliability engineers maintaining cluster health. Assumes strong Linux administration skills, networking knowledge, and basic Kubernetes familiarity.
 
 ## Key Documentation Features
 
 ### Multi-Provider Architecture
 
-One of the most significant challenges was documenting four distinct deployment models while maintaining coherent documentation structure. Each provider has:
-- Different prerequisites
-- Provider-specific configuration options
-- Unique networking considerations
-- Distinct troubleshooting approaches
+One of the most significant challenges was documenting four distinct deployment models while maintaining coherent structure. Each provider has different prerequisites, configuration options, networking considerations, and troubleshooting approaches.
 
-**Solution:** Developed modular documentation architecture with:
-- Common foundational procedures
-- Provider-specific chapters with parallel structure
-- Cross-references showing equivalent operations across providers
-- Comparison matrices for feature availability by provider
+**Solution:** Developed modular documentation with common foundational procedures and provider-specific chapters using parallel structure. Created comparison matrices showing feature availability by provider and extensive cross-references for equivalent operations.
 
-### Production-Ready Configurations
+### Production-Ready Focus
 
-Unlike Quick Start documentation, this guide focuses on production deployments:
-- High-availability cluster configurations
-- Security hardening procedures
-- Performance tuning guidelines
-- Disaster recovery and backup strategies
-- Monitoring and observability integration
+Unlike Quick Start documentation, this guide focuses on production deployments including high-availability configurations, security hardening, performance tuning, disaster recovery strategies, and monitoring integration.
 
-### Lifecycle Management
+### Complete Lifecycle Coverage
 
-Complete cluster lifecycle documentation:
 - **Creation:** Detailed deployment procedures with all configuration options
 - **Configuration:** Post-deployment customization and tuning
 - **Updates:** Kubernetes version updates and component upgrades
-- **Scaling:** Adding/removing nodes, resizing clusters
+- **Scaling:** Adding/removing nodes, cluster resizing
 - **Backup/Restore:** Data protection and recovery procedures
 - **Decommissioning:** Proper cluster shutdown and cleanup
 
 ## Documentation Challenges
 
-### Challenge 1: Four Deployment Models
+### Challenge 1: Four Distinct Deployment Models
 
-Each provider (libvirt, OCI, OLVM, BYO) represents fundamentally different infrastructure:
-- libvirt: Local KVM virtualization
-- OCI: Oracle's cloud infrastructure
-- OLVM: Enterprise virtualization platform
-- BYO: Customer-provided infrastructure
+Each provider represents fundamentally different infrastructure with varying capabilities and limitations.
 
-**Solution:** Created provider-specific documentation sections with parallel structures, allowing users to focus on their deployment model while maintaining consistent documentation patterns. Developed comprehensive comparison tables showing feature availability and limitations per provider.
+**Solution:** Created provider-specific sections with parallel structures, allowing users to focus on their deployment model. Developed comprehensive comparison tables and clear feature availability documentation per provider.
 
 ### Challenge 2: Configuration Complexity
 
-Oracle CNE supports extensive configuration options through YAML configuration files. Documenting all options, their interactions, and use cases required careful organization.
+Oracle CNE supports extensive configuration options through YAML files. Documenting all options, interactions, and use cases required careful organization.
 
-**Solution:** Implemented layered documentation approach:
-- Quick configuration examples for common scenarios
-- Complete reference documentation for all options
-- Use-case-driven configuration patterns
-- Troubleshooting guide for common configuration errors
+**Solution:** Implemented layered approach—quick examples for common scenarios, complete reference for all options, use-case-driven patterns, and troubleshooting for common errors.
 
 ### Challenge 3: Update Procedures
 
-Kubernetes clusters require careful update procedures to maintain service availability and data integrity. Documentation needed to address multiple update scenarios with varying risk profiles.
+Kubernetes clusters require careful updates to maintain availability and data integrity across multiple scenarios with varying risk profiles.
 
-**Solution:** Developed comprehensive update procedures with:
-- Pre-update validation checklists
-- Step-by-step update procedures with verification points
-- Rollback procedures for each update stage
-- Provider-specific update considerations
+**Solution:** Developed comprehensive procedures with pre-update validation checklists, step-by-step updates with verification points, rollback procedures for each stage, and provider-specific considerations.
 
 ## Technical Approach
 
 ### Hands-On Validation
 
-Every procedure was tested across all provider types:
-- Built test clusters for each provider (libvirt, OCI, OLVM, BYO)
-- Validated all documented procedures in each environment
-- Captured real output and error messages
-- Documented provider-specific behaviors and limitations
+Every procedure was tested across all provider types. Built test clusters for libvirt, OCI, OLVM, and BYO environments. Validated all procedures, captured real output and error messages, and documented provider-specific behaviors.
 
 ### Automation Integration
 
-Created Terraform and Ansible automation scripts for:
-- Rapid test environment provisioning
-- Procedure validation automation
-- Consistent documentation testing
-- Support team training environments
-
-These automation scripts were later adopted by Oracle Support teams for their internal lab environments.
+Created Terraform and Ansible automation scripts for rapid test environment provisioning, procedure validation, consistent testing, and support team training. These scripts were later adopted by Oracle Support teams for internal lab environments.
 
 ### Engineering Collaboration
 
-- Participated in feature design reviews
-- Tested pre-release functionality
-- Provided feedback on usability and documentation needs
-- Validated technical accuracy with development teams
-
-## Target Audience
-
-- **System Administrators:** Deploying and managing production Kubernetes clusters
-- **Platform Engineers:** Building cloud-native infrastructure
-- **DevOps Teams:** Automating cluster deployment and management
-- **Site Reliability Engineers:** Maintaining cluster health and performance
-
-Assumes strong Linux administration skills, networking knowledge, and basic Kubernetes familiarity.
-
-## Documentation Deliverables
-
-- **Comprehensive HTML documentation** on docs.oracle.com
-- **PDF version** for offline reference
-- **Configuration file templates** and examples
-- **Troubleshooting decision trees** for common issues
-
-## Outcome and Impact
-
-The Kubernetes Clusters Guide has:
-- Enabled successful production deployments across all provider types
-- Reduced time-to-deployment for new Oracle CNE customers
-- Decreased support cases through comprehensive troubleshooting documentation
-- Provided foundation for Oracle field team training
-- Established patterns for multi-provider documentation
-
-The guide receives regular positive feedback from customers and field teams for its completeness and practical, production-focused approach.
-
-## Related Documentation
-
-- Release Notes (compatibility and known issues)
-- Concepts Guide (architectural foundation)
-- Quick Start Guide (simplified deployment)
-- CLI Reference (command details)
-- Applications Guide (application deployment)
-- Upgrade Guide (version migration)
+Participated in feature design reviews, tested pre-release functionality, provided feedback on usability and documentation needs, and validated technical accuracy with development teams.

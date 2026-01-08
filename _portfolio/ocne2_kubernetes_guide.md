@@ -3,9 +3,9 @@ title: Oracle Cloud Native Environment Release 2 - Kubernetes Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: User Guide
-version: Release 2
+version: F96196-06
 date: '2024-08-01'
-date_completed: '2024-08-01'
+date_completed: 'August 2025'
 featured: false
 tags:
 - Kubernetes
@@ -24,18 +24,11 @@ excerpt: Comprehensive introduction to using Kubernetes on Oracle CNE, covering 
 
 ## Overview
 
-The Oracle Cloud Native Environment Kubernetes Guide provides foundational Kubernetes knowledge specifically tailored for Oracle CNE users. While Oracle CNE simplifies many cluster management tasks through its CLI and catalogs, users still need to understand core Kubernetes concepts for application deployment and troubleshooting.
+The Oracle Cloud Native Environment Kubernetes Guide provides foundational Kubernetes knowledge specifically tailored for Oracle CNE users. While Oracle CNE simplifies many cluster management tasks through its CLI and catalogs, users still need to understand core Kubernetes concepts for application deployment and troubleshooting. The guide covers Kubernetes fundamentals and architecture, kubectl CLI usage and common commands, pod creation and management, deployments and ReplicaSets, services and networking, ConfigMaps and Secrets, persistent storage usage, and basic troubleshooting workflows.
 
-## Documentation Scope
+## Target Audience
 
-- Kubernetes fundamentals and architecture
-- kubectl CLI usage and common commands
-- Pod creation, management, and troubleshooting
-- Deployments and ReplicaSets
-- Services and networking
-- ConfigMaps and Secrets
-- Persistent storage usage
-- Basic troubleshooting workflows
+Application developers, DevOps engineers, and system administrators working with containerized applications on Oracle CNE. May be new to Kubernetes but familiar with containers and Linux.
 
 ## Key Documentation Features
 
@@ -50,13 +43,3 @@ The Oracle Cloud Native Environment Kubernetes Guide provides foundational Kuber
 This guide serves as a bridge between Kubernetes general documentation and Oracle CNE-specific features. It assumes readers are new to Kubernetes but have container technology familiarity. The goal is to provide enough Kubernetes knowledge to be productive without attempting to replace comprehensive Kubernetes documentation.
 
 **Solution:** Structured as a "Kubernetes for Oracle CNE Users" guide, focusing on most common tasks and concepts while providing extensive links to upstream Kubernetes documentation for deep dives.
-
-## Target Audience
-
-Application developers, DevOps engineers, and system administrators working with containerized applications on Oracle CNE. May be new to Kubernetes but familiar with containers and Linux.
-
-## Related Documentation
-
-- Concepts Guide (architecture overview)
-- Applications Guide (application deployment)
-- Kubernetes Clusters Guide (cluster management)

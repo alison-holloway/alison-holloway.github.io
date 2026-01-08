@@ -3,7 +3,7 @@ title: Oracle Cloud Native Environment Release 2 - Release Notes
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Release Notes
-version: Release 2
+version: F96191-10
 date: '2024-08-01'
 date_completed: '2024-08-01'
 featured: false
