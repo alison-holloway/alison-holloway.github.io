@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Oracle Cloud Native Environment Release 2 - Concepts Guide | Alison Holloway</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Oracle Cloud Native Environment Release 2 - Concepts Guide | Alison Holloway</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Oracle Cloud Native Environment Release 2 - Concepts Guide" />
+<meta name="author" content="Alison Holloway" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Foundational concepts and architecture documentation for Oracle Cloud Native Environment Release 2, covering cluster providers, node images, and platform components." />
+<meta property="og:description" content="Foundational concepts and architecture documentation for Oracle Cloud Native Environment Release 2, covering cluster providers, node images, and platform components." />
+<link rel="canonical" href="http://localhost:4000/portfolio/ocne2_concepts/" />
+<meta property="og:url" content="http://localhost:4000/portfolio/ocne2_concepts/" />
+<meta property="og:site_name" content="Alison Holloway" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-01T00:00:00+10:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Oracle Cloud Native Environment Release 2 - Concepts Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alison Holloway"},"dateModified":"2024-08-01T00:00:00+10:00","datePublished":"2024-08-01T00:00:00+10:00","description":"Foundational concepts and architecture documentation for Oracle Cloud Native Environment Release 2, covering cluster providers, node images, and platform components.","headline":"Oracle Cloud Native Environment Release 2 - Concepts Guide","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/portfolio/ocne2_concepts/"},"url":"http://localhost:4000/portfolio/ocne2_concepts/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-content">
+      <div>
+        <a href="/" class="site-title">Alison Holloway</a>
+        <span class="site-tagline">Senior Technical Writer</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li aria-current="page">Oracle Cloud Native Environment Release 2 - Concepts...</li>
+  </ol>
+</nav>
+
+<article class="portfolio-item">
+  <div class="portfolio-header">
+    <h1>Oracle Cloud Native Environment Release 2 - Concepts Guide</h1>
+    <p class="portfolio-meta">
+      Oracle Cloud Native Environment | Concepts Guide
+    </p>
+  </div>
+
+  <div class="portfolio-details">
+    <dl>
+      <dt>Product:</dt>
+      <dd>Oracle Cloud Native Environment</dd>
+
+      <dt>Document Type:</dt>
+      <dd>Concepts Guide</dd>
+
+      
+      <dt>Version:</dt>
+      <dd>F96190-08</dd>
+      
+
+      
+      <dt>Last Publish Date:</dt>
+      <dd>August 2025</dd>
+      
+
+      
+      <dt>Tools Used:</dt>
+      <dd>DITA XML, Oxygen XML, Git, Draw.io</dd>
+      
+    </dl>
+  </div>
+
+  <div class="portfolio-content">
+    <h2 id="overview">Overview</h2>
+
+<p>The Oracle Cloud Native Environment Release 2 Concepts Guide provides comprehensive conceptual and architectural information about Oracle CNE, Oracle’s Kubernetes-based platform for cloud-native application development and management. This guide serves as the foundational reference for understanding Oracle CNE’s architecture, components, deployment models, and design principles.</p>
+
+<h2 id="target-audience">Target Audience</h2>
+
+<p>Solution architects evaluating Oracle CNE for cloud-native projects, system administrators planning Oracle CNE deployments, platform engineers designing Kubernetes infrastructure, technical decision makers comparing platform options, and new users learning Oracle CNE fundamentals.</p>
+
+<h2 id="key-documentation-features">Key Documentation Features</h2>
+
+<h3 id="bridging-multiple-abstraction-levels">Bridging Multiple Abstraction Levels</h3>
+
+<p>Concepts documentation must work for readers at different technical depths: high-level overview for architects and decision-makers, architectural details for system designers, and implementation concepts for administrators who will deploy systems.</p>
+
+<p><strong>Solution:</strong> Structured the guide with progressive disclosure. High-level concepts first, followed by architectural details, with clear cross-references to procedural guides for implementation specifics. Used diagrams extensively to illustrate concepts visually before diving into detailed explanations.</p>
+
+<h3 id="multiple-deployment-models">Multiple Deployment Models</h3>
+
+<p>Release 2 introduced four distinct cluster providers (libvirt, OCI, OLVM, BYO), each with different architectural implications and use cases.</p>
+
+<p><strong>Solution:</strong> Created a provider-agnostic architectural foundation, then dedicated sections for provider-specific concepts. Included comparison matrices showing when to choose each provider and architectural diagrams for each deployment model.</p>
+
+<h3 id="kubernetes-abstraction">Kubernetes Abstraction</h3>
+
+<p>Oracle CNE builds on top of standard Kubernetes while adding Oracle-specific capabilities. Documentation needed to explain both standard Kubernetes concepts and Oracle CNE enhancements without overwhelming readers.</p>
+
+<p><strong>Solution:</strong> Assumed basic Kubernetes knowledge for most sections while providing “Kubernetes Fundamentals” appendix for readers new to the technology. Clearly distinguished Oracle CNE-specific features from standard Kubernetes throughout.</p>
+
+<h2 id="documentation-approach">Documentation Approach</h2>
+
+<h3 id="conceptual-before-procedural">Conceptual Before Procedural</h3>
+
+<p>The Concepts Guide deliberately avoids step-by-step procedures, instead focusing on what components exist and their purposes, why architectural decisions were made, when to use different features or configurations, and how components interact at an architectural level. Procedures are referenced but kept in task-based guides.</p>
+
+<h3 id="visual-communication">Visual Communication</h3>
+
+<p>Complex distributed systems like Oracle CNE require visual explanation. The guide includes architecture diagrams showing component relationships, network topology diagrams for different providers, data flow diagrams for key operations, and comparison tables for deployment options.</p>
+
+<h3 id="real-world-context">Real-World Context</h3>
+
+<p>Conceptual documentation becomes more valuable when tied to real-world use cases: development vs. production cluster considerations, small-scale vs. large-scale deployment architectures, high-availability design patterns, and disaster recovery concepts.</p>
+
+<h2 id="technical-contributions">Technical Contributions</h2>
+
+<p>Beyond documentation, this project involved participating in architecture review sessions with engineering to ensure documentation accurately reflected system design, working with field engineers to validate that documented concepts matched real-world deployment scenarios, creating comprehensive architecture diagrams using standard notation, and coordinating with product management, engineering, and field teams to ensure conceptual accuracy.</p>
+
+  </div>
+
+  
+  <div class="tags">
+    
+      <a href="/portfolio/#concepts" class="tag">Concepts</a>
+    
+      <a href="/portfolio/#architecture" class="tag">Architecture</a>
+    
+      <a href="/portfolio/#cloud-native" class="tag">Cloud Native</a>
+    
+      <a href="/portfolio/#kubernetes" class="tag">Kubernetes</a>
+    
+  </div>
+  
+
+  
+  <div class="portfolio-links">
+    <h2>View Documentation</h2>
+    
+      <a href="https://docs.oracle.com/en/operating-systems/olcne/2/concepts/OCNE-2-CONCEPTS.pdf" class="btn" target="_blank">View PDF</a>
+    
+    
+      <a href="https://docs.oracle.com/en/operating-systems/olcne/2/concepts/" class="btn btn-secondary" target="_blank">View Online</a>
+    
+  </div>
+  
+
+  <div class="portfolio-back">
+    <a href="/portfolio/">&larr; Back to Portfolio</a>
+  </div>
+</article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Alison Holloway. All rights reserved.</p>
+    <p>Senior Technical Writer | 30+ Years Experience | Virtualization, Cloud-Native, Container Technologies</p>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      mainNav.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

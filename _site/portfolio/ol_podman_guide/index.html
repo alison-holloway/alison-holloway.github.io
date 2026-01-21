@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Oracle Linux Podman User's Guide | Alison Holloway</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Oracle Linux Podman User’s Guide | Alison Holloway</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Oracle Linux Podman User’s Guide" />
+<meta name="author" content="Alison Holloway" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comprehensive user guide for Podman container management on Oracle Linux, restructured with DITA XML and updated with Oracle Linux 10 support, new Kubernetes integration chapter, and extensively revised content for modern container workflows." />
+<meta property="og:description" content="Comprehensive user guide for Podman container management on Oracle Linux, restructured with DITA XML and updated with Oracle Linux 10 support, new Kubernetes integration chapter, and extensively revised content for modern container workflows." />
+<link rel="canonical" href="http://localhost:4000/portfolio/ol_podman_guide/" />
+<meta property="og:url" content="http://localhost:4000/portfolio/ol_podman_guide/" />
+<meta property="og:site_name" content="Alison Holloway" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-01T00:00:00+11:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Oracle Linux Podman User’s Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alison Holloway"},"dateModified":"2025-12-01T00:00:00+11:00","datePublished":"2025-12-01T00:00:00+11:00","description":"Comprehensive user guide for Podman container management on Oracle Linux, restructured with DITA XML and updated with Oracle Linux 10 support, new Kubernetes integration chapter, and extensively revised content for modern container workflows.","headline":"Oracle Linux Podman User’s Guide","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/portfolio/ol_podman_guide/"},"url":"http://localhost:4000/portfolio/ol_podman_guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-content">
+      <div>
+        <a href="/" class="site-title">Alison Holloway</a>
+        <span class="site-tagline">Senior Technical Writer</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li aria-current="page">Oracle Linux Podman User's Guide</li>
+  </ol>
+</nav>
+
+<article class="portfolio-item">
+  <div class="portfolio-header">
+    <h1>Oracle Linux Podman User's Guide</h1>
+    <p class="portfolio-meta">
+      Oracle Linux Podman | User Guide
+    </p>
+  </div>
+
+  <div class="portfolio-details">
+    <dl>
+      <dt>Product:</dt>
+      <dd>Oracle Linux Podman</dd>
+
+      <dt>Document Type:</dt>
+      <dd>User Guide</dd>
+
+      
+      <dt>Version:</dt>
+      <dd>F30921-28 (December 2025)</dd>
+      
+
+      
+      <dt>Last Publish Date:</dt>
+      <dd>December 2025</dd>
+      
+
+      
+      <dt>Tools Used:</dt>
+      <dd>DITA XML, Oxygen XML, Git, Podman, Buildah, Skopeo</dd>
+      
+    </dl>
+  </div>
+
+  <div class="portfolio-content">
+    <h2 id="overview">Overview</h2>
+
+<p>Oracle Linux Podman User’s Guide is the definitive documentation for Podman, the daemonless container engine for managing OCI-compliant containers and images on Oracle Linux. This guide covers Podman’s complete feature set along with companion tools Buildah (for advanced image building) and Skopeo (for remote image management). As the primary technical writer for the December 2025 update (F30921-28), I led a major modernization effort that restructured the guide using DITA XML, added comprehensive Oracle Linux 10 coverage, wrote new content for Kubernetes integration, and significantly rewrote multiple chapters.</p>
+
+<h2 id="target-audience">Target Audience</h2>
+
+<p>Developers, system administrators, and DevOps engineers deploying containerized applications with Podman on Oracle Linux. Assumes familiarity with Linux system administration and container concepts.</p>
+
+<h2 id="my-recent-contributions-2025-update">My Recent Contributions (2025 Update)</h2>
+
+<h3 id="dita-xml-restructuring">DITA XML Restructuring</h3>
+
+<p>Transformed entire guide from legacy format to structured DITA architecture. Decomposed content into modular concept, task, and reference topics. Created logical DITA map structure optimizing content flow and navigation. Established conrefs and content references for multi-version documentation.</p>
+
+<h3 id="new-chapter-kubernetes-integration">New Chapter: Kubernetes Integration</h3>
+
+<p>Wrote comprehensive “podman kube” chapter covering Kubernetes YAML generation and deployment. Documented Kubernetes manifest creation with detailed procedures for generating Kubernetes-compatible YAML from Podman pods. Covered bidirectional workflows (exporting Podman pods to Kubernetes and running Kubernetes YAML with Podman). Explained PersistentVolumeClaim handling and volume management. Provided procedures for using Podman to test Kubernetes manifests before cluster deployment.</p>
+
+<h3 id="oracle-linux-10-integration">Oracle Linux 10 Integration</h3>
+
+<p>Added complete installation and usage procedures for Oracle Linux 10. Documented Podman support with Unbreakable Enterprise Kernel 8. Created conditional content for Oracle Linux 7, 8, 9, and 10 differences. Verified all procedures on Oracle Linux 10 release.</p>
+
+<h3 id="major-content-rewrites">Major Content Rewrites</h3>
+
+<p>Completely rewrote the Buildah chapter focusing on advanced image building scenarios, updated for current Buildah feature set and best practices, new examples demonstrating Buildah advantages over podman build, expanded coverage of Containerfile processing, and integration with CI/CD pipelines.</p>
+
+<p>Comprehensively revised the Skopeo chapter for remote registry management, updated commands and options for current Skopeo release, new use cases for bulk operations and registry migration, and registry authentication and security considerations.</p>
+
+<p>Extensively rewrote the Podman Quadlets section covering modern approach to running containers as systemd services, configuration examples for production deployments, startup dependencies and service ordering, and conversion from older podman generate systemd method.</p>
+
+<p>Significantly expanded the Private Container Registries section with step-by-step procedures for setting up private registries, authentication and access control configuration, TLS/SSL certificate management, and registry maintenance and troubleshooting.</p>
+
+<h3 id="comprehensive-testing-and-updates">Comprehensive Testing and Updates</h3>
+
+<p>Tested every command and procedure on Oracle Linux 8, 9, and 10. Revised all commands for current Podman, Buildah, and Skopeo releases. Updated command output examples to match current versions. Identified and corrected outdated external references. Captured new screenshots where UI or output changed. Fixed technical inaccuracies discovered during testing.</p>
+
+<h2 id="documentation-challenges">Documentation Challenges</h2>
+
+<h3 id="challenge-1-dita-migration-while-maintaining-currency">Challenge 1: DITA Migration While Maintaining Currency</h3>
+
+<p>Restructuring to DITA XML while simultaneously updating for Oracle Linux 10 and new features created complex coordination requirements.</p>
+
+<p><strong>Solution:</strong> Implemented phased approach. First migrated existing content to DITA establishing topic structure, then systematically updated topics with new content. Used DITA’s conditional processing to manage version-specific content from the start.</p>
+
+<h3 id="challenge-2-kubernetes-integration-documentation">Challenge 2: Kubernetes Integration Documentation</h3>
+
+<p>The new podman kube functionality bridges two ecosystems (Podman and Kubernetes) with different mental models and terminology. Documentation needed to serve users familiar with one but not the other.</p>
+
+<p><strong>Solution:</strong> Created chapter that introduces Kubernetes concepts as needed for Podman users, without assuming Kubernetes expertise. Provided parallel examples showing same operations in both Podman-native and Kubernetes manifest approaches. Included complete working examples that users can immediately test.</p>
+
+<h3 id="challenge-3-rapidly-evolving-container-technology">Challenge 3: Rapidly Evolving Container Technology</h3>
+
+<p>Podman, Buildah, and Skopeo undergo frequent updates with new features, changed defaults, and occasional breaking changes.</p>
+
+<p><strong>Solution:</strong> Established systematic testing framework covering all documented procedures across supported Oracle Linux versions. Maintained test environment matrices (OL 8/9/10 multiplied by UEK versions multiplied by Podman versions). Documented version-specific behaviors using DITA conditional processing where needed.</p>
+
+  </div>
+
+  
+  <div class="tags">
+    
+      <a href="/portfolio/#user-guide" class="tag">User Guide</a>
+    
+      <a href="/portfolio/#containers" class="tag">Containers</a>
+    
+      <a href="/portfolio/#podman" class="tag">Podman</a>
+    
+      <a href="/portfolio/#kubernetes" class="tag">Kubernetes</a>
+    
+      <a href="/portfolio/#oracle-linux" class="tag">Oracle Linux</a>
+    
+      <a href="/portfolio/#dita-xml" class="tag">DITA XML</a>
+    
+  </div>
+  
+
+  
+  <div class="portfolio-links">
+    <h2>View Documentation</h2>
+    
+      <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/podman/OL-PODMAN.pdf" class="btn" target="_blank">View PDF</a>
+    
+    
+      <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/podman/index.html" class="btn btn-secondary" target="_blank">View Online</a>
+    
+  </div>
+  
+
+  <div class="portfolio-back">
+    <a href="/portfolio/">&larr; Back to Portfolio</a>
+  </div>
+</article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Alison Holloway. All rights reserved.</p>
+    <p>Senior Technical Writer | 30+ Years Experience | Virtualization, Cloud-Native, Container Technologies</p>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      mainNav.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

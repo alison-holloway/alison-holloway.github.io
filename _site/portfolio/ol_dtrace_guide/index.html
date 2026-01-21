@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Oracle Linux: Using DTrace for System Tracing | Alison Holloway</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Oracle Linux: Using DTrace for System Tracing | Alison Holloway</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Oracle Linux: Using DTrace for System Tracing" />
+<meta name="author" content="Alison Holloway" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comprehensive reference guide for DTrace dynamic tracing tool on Oracle Linux, restructured using DITA XML and updated with latest features for modern eBPF-based implementation." />
+<meta property="og:description" content="Comprehensive reference guide for DTrace dynamic tracing tool on Oracle Linux, restructured using DITA XML and updated with latest features for modern eBPF-based implementation." />
+<link rel="canonical" href="http://localhost:4000/portfolio/ol_dtrace_guide/" />
+<meta property="og:url" content="http://localhost:4000/portfolio/ol_dtrace_guide/" />
+<meta property="og:site_name" content="Alison Holloway" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-01T00:00:00+10:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Oracle Linux: Using DTrace for System Tracing" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alison Holloway"},"dateModified":"2025-05-01T00:00:00+10:00","datePublished":"2025-05-01T00:00:00+10:00","description":"Comprehensive reference guide for DTrace dynamic tracing tool on Oracle Linux, restructured using DITA XML and updated with latest features for modern eBPF-based implementation.","headline":"Oracle Linux: Using DTrace for System Tracing","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/portfolio/ol_dtrace_guide/"},"url":"http://localhost:4000/portfolio/ol_dtrace_guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-content">
+      <div>
+        <a href="/" class="site-title">Alison Holloway</a>
+        <span class="site-tagline">Senior Technical Writer</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/portfolio/">Portfolio</a></li>
+    <li aria-current="page">Oracle Linux: Using DTrace for System Tracing</li>
+  </ol>
+</nav>
+
+<article class="portfolio-item">
+  <div class="portfolio-header">
+    <h1>Oracle Linux: Using DTrace for System Tracing</h1>
+    <p class="portfolio-meta">
+      Oracle Linux | Reference Guide
+    </p>
+  </div>
+
+  <div class="portfolio-details">
+    <dl>
+      <dt>Product:</dt>
+      <dd>Oracle Linux</dd>
+
+      <dt>Document Type:</dt>
+      <dd>Reference Guide</dd>
+
+      
+      <dt>Version:</dt>
+      <dd>F76721-03 (May 2025)</dd>
+      
+
+      
+      <dt>Last Publish Date:</dt>
+      <dd>May 2025</dd>
+      
+
+      
+      <dt>Tools Used:</dt>
+      <dd>DITA XML, Oxygen XML Editor, Git</dd>
+      
+    </dl>
+  </div>
+
+  <div class="portfolio-content">
+    <h2 id="overview">Overview</h2>
+
+<p>Oracle Linux: Using DTrace for System Tracing is the definitive reference guide for DTrace, a powerful dynamic tracing framework for Oracle Linux with the Unbreakable Enterprise Kernel (UEK). This guide documents DTrace’s complete feature set, including the D programming language, probe providers, aggregation functions, and advanced tracing capabilities for production system analysis. As the primary technical writer for the latest update (F76721-03, May 2025), I restructured the entire guide using DITA XML and incorporated documentation for the new eBPF-based DTrace implementation.</p>
+
+<h2 id="target-audience">Target Audience</h2>
+
+<p>Administrators, developers, and performance engineers using DTrace for system analysis and troubleshooting on Oracle Linux. Assumes familiarity with Linux system administration and performance analysis concepts.</p>
+
+<h2 id="my-contributions">My Contributions</h2>
+
+<h3 id="documentation-restructuring">Documentation Restructuring</h3>
+
+<p>Migrated legacy content to DITA XML, transforming existing documentation into structured DITA architecture. Implemented topic-based authoring by decomposing monolithic chapters into modular, reusable DITA topics. Designed information architecture creating DITA map structure optimizing content organization. Established content reuse strategy implementing conrefs and content references for multi-version documentation.</p>
+
+<h3 id="new-feature-documentation">New Feature Documentation</h3>
+
+<p>Documented the new eBPF-based DTrace implementation leveraging Linux kernel eBPF facilities. Updated probe providers for compatibility with modern Linux kernels. Added coverage for Oracle Linux 8, 9, and 10 with UEK 6, 7, and 8. Documented support for both x86_64 and aarch64 architectures.</p>
+
+<h3 id="technical-accuracy-and-testing">Technical Accuracy and Testing</h3>
+
+<p>Tested all DTrace examples on multiple Oracle Linux versions and kernel releases. Revised D programming examples for compatibility with new implementation. Validated all dtrace command options and output formats. Confirmed interaction with modern Linux tracing facilities.</p>
+
+<h2 id="documentation-challenges">Documentation Challenges</h2>
+
+<h3 id="challenge-1-documenting-major-implementation-change">Challenge 1: Documenting Major Implementation Change</h3>
+
+<p>The new DTrace implementation represents a fundamental architectural shift from kernel patches to eBPF-based tracing. Documentation needed to explain this transition while maintaining continuity for existing users.</p>
+
+<p><strong>Solution:</strong> Created clear sections distinguishing the new implementation from earlier versions. Documented functional compatibility ensuring existing DTrace scripts continue working. Explained eBPF integration benefits (no kernel patches required, modern Linux integration).</p>
+
+<h3 id="challenge-2-dita-xml-migration-from-legacy-format">Challenge 2: DITA XML Migration from Legacy Format</h3>
+
+<p>The previous guide used traditional documentation formats. Migrating to DITA required restructuring content while preserving technical accuracy and completeness.</p>
+
+<p><strong>Solution:</strong> Analyzed existing content structure to identify natural topic boundaries. Broke monolithic chapters into concept, task, and reference topics. Established topic relationships and cross-references in DITA maps. Compared output from DITA build against original documentation to ensure no content loss.</p>
+
+<h3 id="challenge-3-multi-platform-multi-kernel-documentation">Challenge 3: Multi-Platform, Multi-Kernel Documentation</h3>
+
+<p>DTrace supports multiple Oracle Linux releases (7, 8, 9, 10) and UEK versions (6, 7, 8), each with slightly different features and requirements.</p>
+
+<p><strong>Solution:</strong> Implemented DITA conditional processing using ditaval filters to generate version-specific documentation. Created platform compatibility matrices showing feature availability by Oracle Linux release and UEK version.</p>
+
+<h2 id="dita-xml-architecture">DITA XML Architecture</h2>
+
+<p>Designed DITA map structure with progressive disclosure: high-level concepts first, followed by architectural details, with clear cross-references. Used concept topics for technology explanations, task topics for step-by-step procedures, and reference topics for command syntax and parameters. Implemented conrefs for common terminology and keyrefs for platform names and version numbers.</p>
+
+<h2 id="technical-approach">Technical Approach</h2>
+
+<p>Reviewed existing documentation and compared with new implementation features. Identified new features requiring documentation and deprecated features to remove. Created DITA topic structure and map organization. Converted legacy content to DITA topics with appropriate topic types. Wrote documentation for new eBPF-based features. Tested all D program examples on target platforms. Coordinated reviews with DTrace development team.</p>
+
+  </div>
+
+  
+  <div class="tags">
+    
+      <a href="/portfolio/#reference-guide" class="tag">Reference Guide</a>
+    
+      <a href="/portfolio/#system-tracing" class="tag">System Tracing</a>
+    
+      <a href="/portfolio/#performance-analysis" class="tag">Performance Analysis</a>
+    
+      <a href="/portfolio/#oracle-linux" class="tag">Oracle Linux</a>
+    
+      <a href="/portfolio/#dita-xml" class="tag">DITA XML</a>
+    
+      <a href="/portfolio/#documentation-modernization" class="tag">Documentation Modernization</a>
+    
+  </div>
+  
+
+  
+  <div class="portfolio-links">
+    <h2>View Documentation</h2>
+    
+      <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/dtrace-v2-guide/OL-DTRACE2-GUIDE.pdf" class="btn" target="_blank">View PDF</a>
+    
+    
+      <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/dtrace-v2-guide/index.html" class="btn btn-secondary" target="_blank">View Online</a>
+    
+  </div>
+  
+
+  <div class="portfolio-back">
+    <a href="/portfolio/">&larr; Back to Portfolio</a>
+  </div>
+</article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Alison Holloway. All rights reserved.</p>
+    <p>Senior Technical Writer | 30+ Years Experience | Virtualization, Cloud-Native, Container Technologies</p>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      mainNav.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>
