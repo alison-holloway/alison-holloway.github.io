@@ -3,30 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% seo %}
-  {% feed_meta %}
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
     <div class="header-content">
       <div>
         <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
         <span class="site-tagline">{{ site.tagline }}</span>
       </div>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav">
         <ul>
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
           <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
-          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
           <li><a href="{{ '/about/' | relative_url }}">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     {{ content }}
   </main>
 
@@ -34,5 +38,17 @@
     <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
     <p>Senior Technical Writer | 30+ Years Experience | Virtualization, Cloud-Native, Container Technologies</p>
   </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      mainNav.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>

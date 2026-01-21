@@ -5,40 +5,50 @@ title: Portfolio
 
 <h1 class="page-title">Documentation Portfolio</h1>
 
-<p style="margin-bottom: 2rem; color: var(--text-light); font-size: 1.1rem;">
+<p class="portfolio-intro">
   A collection of technical documentation for cloud native and virtualization products, including installation guides, release notes, deployment guides, upgrade guides, and CLI reference materials.
 </p>
 
+<!-- Search Section -->
+<div class="search-section">
+  <label for="portfolio-search" class="visually-hidden">Search portfolio</label>
+  <input type="search" id="portfolio-search" class="search-input" placeholder="Search portfolio...">
+</div>
+
 <!-- Filter by Tag Section -->
-<div style="margin-bottom: 3rem;">
-  <h2 style="color: var(--secondary-color); margin-bottom: 1rem;">Filter by Category</h2>
-  <div class="tags">
-    <a href="{{ '/portfolio/' | relative_url }}" class="tag">All</a>
+<div class="filter-section">
+  <h2>Filter by Category</h2>
+  <div class="filter-tags">
+    <button class="filter-tag active" data-filter="all">All</button>
     {% assign all_tags = site.portfolio | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
     {% for tag in all_tags %}
       {% if tag != "" %}
-        <a href="#{{ tag | slugify }}" class="tag">{{ tag }}</a>
+        <button class="filter-tag" data-filter="{{ tag | slugify }}">{{ tag }}</button>
       {% endif %}
     {% endfor %}
   </div>
 </div>
 
 <!-- Portfolio Grid -->
-<div class="portfolio-grid">
+<div class="portfolio-grid" id="portfolio-grid">
   {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
   {% for item in sorted_portfolio %}
-    <div class="portfolio-card" data-tags="{% for tag in item.tags %}{{ tag | slugify }} {% endfor %}">
+    <div class="portfolio-card"
+         data-tags="{% for tag in item.tags %}{{ tag | slugify }} {% endfor %}"
+         data-title="{{ item.title | downcase }}"
+         data-product="{{ item.product | downcase }}"
+         data-description="{{ item.excerpt | strip_html | downcase | truncatewords: 50 }}">
       <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
       <p class="portfolio-meta">
         {{ item.product }} | {{ item.doc_type }}
         {% if item.version %} | Version {{ item.version }}{% endif %}
       </p>
       <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
-      
+
       {% if item.tags %}
         <div class="tags">
           {% for tag in item.tags %}
-            <span class="tag">{{ tag }}</span>
+            <button class="tag card-tag" data-filter="{{ tag | slugify }}">{{ tag }}</button>
           {% endfor %}
         </div>
       {% endif %}
@@ -46,8 +56,104 @@ title: Portfolio
   {% endfor %}
 </div>
 
+<div class="no-results" id="no-results" hidden>
+  <p>No portfolio items match your search.</p>
+  <button class="btn" id="clear-filter">Show All</button>
+</div>
+
 {% if site.portfolio.size == 0 %}
-  <div style="text-align: center; padding: 3rem; background: var(--bg-light); border-radius: 8px;">
-    <p style="color: var(--text-light); font-size: 1.1rem;">Portfolio items will be added soon.</p>
+  <div class="empty-state">
+    <p>Portfolio items will be added soon.</p>
   </div>
 {% endif %}
+
+<script>
+  const searchInput = document.getElementById('portfolio-search');
+  const filterTags = document.querySelectorAll('.filter-tag');
+  const cardTags = document.querySelectorAll('.card-tag');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+  const noResults = document.getElementById('no-results');
+  const clearFilterBtn = document.getElementById('clear-filter');
+
+  let currentFilter = 'all';
+  let currentSearch = '';
+
+  function updateDisplay() {
+    let visibleCount = 0;
+
+    portfolioCards.forEach(card => {
+      const tags = card.dataset.tags.trim().split(' ');
+      const title = card.dataset.title || '';
+      const product = card.dataset.product || '';
+      const description = card.dataset.description || '';
+
+      // Check filter match
+      const filterMatch = currentFilter === 'all' || tags.includes(currentFilter);
+
+      // Check search match
+      const searchTerm = currentSearch.toLowerCase();
+      const searchMatch = !searchTerm ||
+        title.includes(searchTerm) ||
+        product.includes(searchTerm) ||
+        description.includes(searchTerm) ||
+        tags.some(tag => tag.includes(searchTerm));
+
+      const shouldShow = filterMatch && searchMatch;
+      card.classList.toggle('hidden', !shouldShow);
+      if (shouldShow) visibleCount++;
+    });
+
+    noResults.hidden = visibleCount > 0;
+  }
+
+  function setFilter(filter) {
+    currentFilter = filter;
+    filterTags.forEach(tag => {
+      tag.classList.toggle('active', tag.dataset.filter === filter);
+    });
+    updateDisplay();
+  }
+
+  // Search input handler
+  searchInput.addEventListener('input', (e) => {
+    currentSearch = e.target.value;
+    updateDisplay();
+  });
+
+  // Filter tag click handlers
+  filterTags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      setFilter(tag.dataset.filter);
+    });
+  });
+
+  // Card tag click handlers
+  cardTags.forEach(tag => {
+    tag.addEventListener('click', (e) => {
+      e.preventDefault();
+      setFilter(tag.dataset.filter);
+      document.querySelector('.filter-section').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Clear filter button
+  clearFilterBtn.addEventListener('click', () => {
+    currentSearch = '';
+    searchInput.value = '';
+    setFilter('all');
+  });
+
+  // Handle URL hash for direct linking
+  function handleHashFilter() {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const matchingTag = Array.from(filterTags).find(tag => tag.dataset.filter === hash);
+      if (matchingTag) {
+        setFilter(hash);
+      }
+    }
+  }
+
+  handleHashFilter();
+  window.addEventListener('hashchange', handleHashFilter);
+</script>

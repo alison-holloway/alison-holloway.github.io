@@ -9,7 +9,6 @@ url: "https://alison-holloway.github.io"
 author:
   name: Alison Holloway
   email: alison.holloway@pm.me
-  phone: "+61 414 599 588"
   linkedin: alison-holloway-au
   github: alison-holloway
   location: Melbourne, Victoria, Australia
@@ -24,9 +23,7 @@ professional:
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-admin
 
@@ -43,11 +40,6 @@ defaults:
       type: "portfolio"
     values:
       layout: "portfolio-item"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
 
 # Exclude from processing
 exclude:

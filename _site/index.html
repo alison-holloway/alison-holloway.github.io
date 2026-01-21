@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <title>Alison Holloway</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -23,59 +24,62 @@
 {"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Alison Holloway"},"description":"Technical writing portfolio showcasing 30+ years of documentation experience in virtualization, cloud-native platforms, and container technologies","headline":"Alison Holloway","name":"Alison Holloway","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Alison Holloway" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
     <div class="header-content">
       <div>
         <a href="/" class="site-title">Alison Holloway</a>
         <span class="site-tagline">Senior Technical Writer</span>
       </div>
-      <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav">
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/blog/">Blog</a></li>
           <li><a href="/about/">About</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="hero">
   <h1>Alison Holloway</h1>
   <p>Technical writing portfolio showcasing 30+ years of documentation experience in virtualization, cloud-native platforms, and container technologies</p>
-  <p style="margin-top: 1rem; font-size: 1rem; color: var(--text-light);">
+  <p class="hero-subtitle">
     Specializing in DITA XML, Kubernetes, Oracle Linux, and Cloud-Native Documentation
   </p>
 </div>
 
-<section style="background: var(--bg-light); padding: 2rem; border-radius: 8px; margin-bottom: 3rem;">
-  <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Professional Highlights</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-    <div>
-      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">30+ Years Experience</h3>
-      <p style="color: var(--text-color);">Extensive background in software documentation across Oracle products</p>
+<section class="highlights-section">
+  <h2>Professional Highlights</h2>
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <h3>30+ Years Experience</h3>
+      <p>Extensive background in software documentation across Oracle products</p>
     </div>
-    <div>
-      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Cloud-Native Expertise</h3>
-      <p style="color: var(--text-color);">Kubernetes, containers, Oracle Cloud Native Environment, OpenStack</p>
+    <div class="highlight-card">
+      <h3>Cloud-Native Expertise</h3>
+      <p>Kubernetes, containers, Oracle Cloud Native Environment, OpenStack</p>
     </div>
-    <div>
-      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Published Author</h3>
-      <p style="color: var(--text-color);">Co-author of The Underground PHP and Oracle Manual</p>
+    <div class="highlight-card">
+      <h3>Published Author</h3>
+      <p>Co-author of The Underground PHP and Oracle Manual</p>
     </div>
-    <div>
-      <h3 style="color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">Technical Innovation</h3>
-      <p style="color: var(--text-color);">Created Terraform/Ansible deployment scripts adopted by Support teams</p>
+    <div class="highlight-card">
+      <h3>Technical Innovation</h3>
+      <p>Created Terraform/Ansible deployment scripts adopted by Support teams</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Featured Documentation Projects</h2>
+<section class="featured-section">
+  <h2>Featured Documentation Projects</h2>
   
   <div class="portfolio-grid">
     
@@ -135,36 +139,29 @@
     
   </div>
 
-  <div style="text-align: center; margin-top: 2rem;">
+  <div class="section-cta">
     <a href="/portfolio/" class="btn">View Full Portfolio</a>
   </div>
 </section>
 
-<section style="margin-top: 4rem;">
-  <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Recent Blog Posts</h2>
-  
-  
-    <ul class="post-list">
-      
-        <li class="post-item">
-          <h3 class="post-title"><a href="/blog/2024/01/15/welcome/">Thirty Years in Technical Writing: Lessons from the Documentation Trenches</a></h3>
-          <p class="post-meta">January 15, 2024</p>
-          <p class="post-excerpt">After more than 30 years documenting software products—from Oracle Database in the early 1990s to Kubernetes and cloud-native platforms today—I’ve learned that great technical writing isn’t just about clear prose. It’s about deeply understanding the technology, anticipating user needs, and...</p>
-          <a href="/blog/2024/01/15/welcome/" class="read-more">Read more &rarr;</a>
-        </li>
-      
-    </ul>
-    
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="/blog/" class="btn btn-secondary">View All Posts</a>
-    </div>
-  
-</section>
+
   </main>
 
   <footer>
     <p>&copy; 2026 Alison Holloway. All rights reserved.</p>
     <p>Senior Technical Writer | 30+ Years Experience | Virtualization, Cloud-Native, Container Technologies</p>
   </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      mainNav.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
