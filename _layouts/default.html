@@ -10,6 +10,14 @@
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Convert ```mermaid code blocks to mermaid divs
+      document.querySelectorAll('pre code.language-mermaid').forEach(function(codeBlock) {
+        var pre = codeBlock.parentNode;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = codeBlock.textContent;
+        pre.parentNode.replaceChild(div, pre);
+      });
       mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
     });
   </script>
