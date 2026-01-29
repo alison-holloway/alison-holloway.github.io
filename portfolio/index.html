@@ -9,12 +9,6 @@ title: Portfolio
   A collection of technical documentation for cloud native and virtualization products, including installation guides, release notes, deployment guides, upgrade guides, and CLI reference materials.
 </p>
 
-<!-- Search Section -->
-<div class="search-section">
-  <label for="portfolio-search" class="visually-hidden">Search portfolio</label>
-  <input type="search" id="portfolio-search" class="search-input" placeholder="Search portfolio...">
-</div>
-
 <!-- Filter by Tag Section -->
 <div class="filter-section">
   <h2>Filter by Category</h2>
@@ -68,7 +62,6 @@ title: Portfolio
 {% endif %}
 
 <script>
-  const searchInput = document.getElementById('portfolio-search');
   const filterTags = document.querySelectorAll('.filter-tag');
   const cardTags = document.querySelectorAll('.card-tag');
   const portfolioCards = document.querySelectorAll('.portfolio-card');
@@ -76,31 +69,18 @@ title: Portfolio
   const clearFilterBtn = document.getElementById('clear-filter');
 
   let currentFilter = 'all';
-  let currentSearch = '';
 
   function updateDisplay() {
     let visibleCount = 0;
 
     portfolioCards.forEach(card => {
       const tags = card.dataset.tags.trim().split(' ');
-      const title = card.dataset.title || '';
-      const product = card.dataset.product || '';
-      const description = card.dataset.description || '';
 
       // Check filter match
       const filterMatch = currentFilter === 'all' || tags.includes(currentFilter);
 
-      // Check search match
-      const searchTerm = currentSearch.toLowerCase();
-      const searchMatch = !searchTerm ||
-        title.includes(searchTerm) ||
-        product.includes(searchTerm) ||
-        description.includes(searchTerm) ||
-        tags.some(tag => tag.includes(searchTerm));
-
-      const shouldShow = filterMatch && searchMatch;
-      card.classList.toggle('hidden', !shouldShow);
-      if (shouldShow) visibleCount++;
+      card.classList.toggle('hidden', !filterMatch);
+      if (filterMatch) visibleCount++;
     });
 
     noResults.hidden = visibleCount > 0;
@@ -113,12 +93,6 @@ title: Portfolio
     });
     updateDisplay();
   }
-
-  // Search input handler
-  searchInput.addEventListener('input', (e) => {
-    currentSearch = e.target.value;
-    updateDisplay();
-  });
 
   // Filter tag click handlers
   filterTags.forEach(tag => {
@@ -138,8 +112,6 @@ title: Portfolio
 
   // Clear filter button
   clearFilterBtn.addEventListener('click', () => {
-    currentSearch = '';
-    searchInput.value = '';
     setFilter('all');
   });
 

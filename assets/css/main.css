@@ -807,34 +807,6 @@ main ol li {
   color: var(--text-light);
 }
 
-/* Search Section */
-.search-section {
-  margin-bottom: 1.5rem;
-}
-
-.search-input {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-  background: var(--bg-color);
-  color: var(--text-color);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
-
-.search-input::placeholder {
-  color: var(--text-light);
-}
-
 /* Visually Hidden (for accessibility) */
 .visually-hidden {
   position: absolute;
@@ -1054,10 +1026,6 @@ footer a:hover {
     padding: 2rem;
   }
 
-  /* Search tablet */
-  .search-input {
-    max-width: 100%;
-  }
 }
 
 /* Small phones */
