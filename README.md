@@ -26,14 +26,18 @@ alison-holloway.github.io/
 ├── 404.html                 # Error page
 ├── README.md                # This file
 ├── _layouts/
-│   ├── default.html         # Main layout with navigation
+│   ├── default.html         # Main layout with navigation (includes Mermaid.js)
 │   └── portfolio_item.html  # Portfolio project layout
-├── _portfolio/              # Portfolio items (12 items)
+├── _portfolio/              # Portfolio items (13 items)
 │   ├── ocne2_*.md           # Oracle Cloud Native Environment 2 docs
 │   ├── ol_*.md              # Oracle Linux guides
 │   └── underground_php.md   # Co-authored book
 ├── portfolio/
 │   └── index.html           # Portfolio listing with category filter
+├── docs/
+│   └── mermaid-style-guide.md  # Mermaid diagram formatting standards
+├── scripts/
+│   └── format-mermaid.py    # Mermaid diagram formatter
 └── assets/
     └── css/
         └── main.css         # Site styling
@@ -51,6 +55,7 @@ alison-holloway.github.io/
 - OCK Image Builder Guide
 - Upgrade Guide
 - CLI Reference
+- **Information Architecture** - Documentation set design with Mermaid diagrams
 
 ### Oracle Linux
 - Podman Guide
@@ -189,11 +194,44 @@ bundle exec jekyll serve --port 4001
 
 Check the Actions tab in GitHub for build errors.
 
+## Mermaid Diagrams
+
+Portfolio items can include Mermaid diagrams for visualizing information architecture, user flows, and documentation structure. The site uses Mermaid.js for rendering.
+
+### Formatting Diagrams
+
+A Python formatter ensures consistent styling across all diagrams:
+
+```bash
+# Preview changes without modifying files
+python3 scripts/format-mermaid.py --dry-run
+
+# Check conformance (returns exit code 1 if issues found)
+python3 scripts/format-mermaid.py --validate
+
+# Apply formatting to all diagrams
+python3 scripts/format-mermaid.py
+
+# Show diff of changes
+python3 scripts/format-mermaid.py --diff
+```
+
+See `docs/mermaid-style-guide.md` for the complete style guide.
+
+### Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Blue | `#235789` | Main arrows, node text |
+| Yellow | `#F1D302` | Content node borders |
+| Red | `#C1292E` | Workflow node borders, cross-references |
+
 ## Resources
 
 - [Jekyll Documentation](https://jekyllrb.com/docs/)
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
 - [Markdown Guide](https://www.markdownguide.org/)
+- [Mermaid Documentation](https://mermaid.js.org/)
 
 ---
 
