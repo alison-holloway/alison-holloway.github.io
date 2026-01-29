@@ -48,49 +48,29 @@ The 9 books serve distinct purposes while forming an integrated whole:
 The books are organized into five functional categories that reflect how users approach the documentation:
 
 ```mermaid
-%%{init: {
-  "theme": "default",
-  "themeVariables": {
-    "fontFamily": "sans-serif",
-    "fontSize": "14px"
-  }
-}}%%
 flowchart TB
-    subgraph Reference["Reference & Updates"]
-        RN["Release Notes"]
-        CLI["CLI Reference"]
-    end
-
-    subgraph Foundation["Foundation & Concepts"]
-        CON["Concepts"]
-        K8S["Kubernetes"]
-    end
-
-    subgraph Start["Getting Started"]
-        QS["Quick Start"]
-    end
-
-    subgraph Core["Core Operations"]
-        KC["Kubernetes Clusters"]
-        APP["Applications"]
-    end
-
-    subgraph Advanced["Advanced & Specialized"]
-        OCK["OCK Image Builder"]
-        UPG["Upgrade Guide"]
-    end
-
-    classDef refStyle fill:#E8F4FD,stroke:#1976D2,stroke-width:2px,color:#0D47A1
-    classDef foundStyle fill:#E8F5E9,stroke:#388E3C,stroke-width:2px,color:#1B5E20
-    classDef startStyle fill:#FFF3E0,stroke:#F57C00,stroke-width:2px,color:#E65100
-    classDef coreStyle fill:#FCE4EC,stroke:#C2185B,stroke-width:2px,color:#880E4F
-    classDef advStyle fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C
-
-    class RN,CLI refStyle
-    class CON,K8S foundStyle
-    class QS startStyle
-    class KC,APP coreStyle
-    class OCK,UPG advStyle
+  subgraph Reference["Reference & Updates"]
+    RN["Release Notes"]
+    CLI["CLI Reference"]
+  end
+  subgraph Foundation["Foundation & Concepts"]
+    CON["Concepts"]
+    K8S["Kubernetes"]
+  end
+  subgraph Start["Getting Started"]
+    QS["Quick Start"]
+  end
+  subgraph Core["Core Operations"]
+    KC["Kubernetes Clusters"]
+    APP["Applications"]
+  end
+  subgraph Advanced["Advanced & Specialized"]
+    OCK["OCK Image Builder"]
+    UPG["Upgrade Guide"]
+  end
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  class APP,CLI,CON,K8S,KC,OCK,QS,RN,UPG chapter;
 ```
 
 ## Information Flow
@@ -98,55 +78,38 @@ flowchart TB
 This diagram shows how users navigate between books based on their needs:
 
 ```mermaid
-%%{init: {
-  "theme": "default",
-  "themeVariables": {
-    "fontFamily": "sans-serif",
-    "fontSize": "14px"
-  }
-}}%%
 flowchart LR
-    subgraph Entry["Entry Points"]
-        RN["Release Notes"]
-        QS["Quick Start"]
-        CON["Concepts"]
-    end
-
-    subgraph Core["Core Documentation"]
-        KC["Kubernetes<br/>Clusters"]
-        CLI["CLI Reference"]
-        APP["Applications"]
-    end
-
-    subgraph Support["Supporting Guides"]
-        K8S["Kubernetes"]
-        OCK["OCK Image<br/>Builder"]
-        UPG["Upgrade"]
-    end
-
-    RN -->|"what's new"| KC
-    RN -->|"known issues"| CLI
-    QS -->|"production deployment"| KC
-    CON -->|"understand architecture"| KC
-    CON -->|"provider selection"| KC
-
-    KC <-->|"command syntax"| CLI
-    KC -->|"deploy apps"| APP
-    APP <-->|"catalog commands"| CLI
-
-    KC -->|"k8s basics"| K8S
-    KC -->|"custom images"| OCK
-    KC <-->|"R1 migration"| UPG
-
-    APP -->|"k8s concepts"| K8S
-
-    classDef entry fill:#FFF3E0,stroke:#F57C00,stroke-width:2px
-    classDef core fill:#E3F2FD,stroke:#1976D2,stroke-width:2px
-    classDef support fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px
-
-    class RN,QS,CON entry
-    class KC,CLI,APP core
-    class K8S,OCK,UPG support
+  subgraph Entry["Entry Points"]
+    RN["Release Notes"]
+    QS["Quick Start"]
+    CON["Concepts"]
+  end
+  subgraph Core["Core Documentation"]
+    KC["Kubernetes<br/>Clusters"]
+    CLI["CLI Reference"]
+    APP["Applications"]
+  end
+  subgraph Support["Supporting Guides"]
+    K8S["Kubernetes"]
+    OCK["OCK Image<br/>Builder"]
+    UPG["Upgrade"]
+  end
+  RN -->|"what's new"| KC
+  RN -->|"known issues"| CLI
+  QS -->|"production deployment"| KC
+  CON -->|"understand architecture"| KC
+  CON -->|"provider selection"| KC
+  KC <-->|"command syntax"| CLI
+  KC -->|"deploy apps"| APP
+  APP <-->|"catalog commands"| CLI
+  KC -->|"k8s basics"| K8S
+  KC -->|"custom images"| OCK
+  KC <-->|"R1 migration"| UPG
+  APP -->|"k8s concepts"| K8S
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  class APP,CLI,CON,K8S,KC,OCK,QS,RN,UPG chapter;
+  linkStyle 0,1,2,3,4,5,6,7,8,9,10,11 stroke:#235789,stroke-width:3px;
 ```
 
 ## User Journeys
@@ -160,17 +123,13 @@ The information architecture supports several common reader journeys through the
 **Goal:** Get a working Kubernetes cluster as fast as possible.
 
 ```mermaid
-%%{init: {"theme": "default"}}%%
 flowchart LR
-    Start([Start]) --> QS["Quick Start<br/>Ch 1-9"]
-    QS --> APP["Applications<br/>Install App"]
-    APP --> Done([Running Cluster<br/>+ Application])
-    APP -.->|"explore"| CON["Concepts"]
-
-    classDef active fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px
-    classDef optional fill:#FFF9C4,stroke:#F9A825,stroke-width:1px,stroke-dasharray:5 5
-    class QS,APP active
-    class CON optional
+  Start([Start]) --> QS["Quick Start<br/>Ch 1-9"]
+  QS --> APP["Applications<br/>Install App"]
+  APP --> Done([Running Cluster<br/>+ Application])
+  APP -.->|"explore"| CON["Concepts"]
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
 ```
 
 **Path:** Quick Start (complete) → Applications (deploy sample app) → Concepts (optional exploration)
@@ -182,21 +141,16 @@ flowchart LR
 **Goal:** Deploy a production-ready, highly-available cluster on OCI.
 
 ```mermaid
-%%{init: {"theme": "default"}}%%
 flowchart TB
-    Start([Start]) --> RN["Release Notes<br/>Check compatibility"]
-    RN --> CON["Concepts<br/>Ch 3: OCI Provider"]
-    CON --> CLI["CLI Reference<br/>Ch 1, 3: Install & Config"]
-    CLI --> KC["Kubernetes Clusters<br/>Ch 2, 3, 7: OCI Deployment"]
-    KC --> APP["Applications<br/>Production setup"]
-    APP --> Done([Production<br/>OCI Cluster])
-
-    KC -.->|"ongoing"| KC10["Kubernetes Clusters<br/>Ch 10: Admin"]
-
-    classDef path fill:#BBDEFB,stroke:#1976D2,stroke-width:2px
-    classDef ongoing fill:#E1F5FE,stroke:#0288D1,stroke-width:1px,stroke-dasharray:5 5
-    class RN,CON,CLI,KC,APP path
-    class KC10 ongoing
+  Start([Start]) --> RN["Release Notes<br/>Check compatibility"]
+  RN --> CON["Concepts<br/>Ch 3: OCI Provider"]
+  CON --> CLI["CLI Reference<br/>Ch 1, 3: Install & Config"]
+  CLI --> KC["Kubernetes Clusters<br/>Ch 2, 3, 7: OCI Deployment"]
+  KC --> APP["Applications<br/>Production setup"]
+  APP --> Done([Production<br/>OCI Cluster])
+  KC -.->|"ongoing"| KC10["Kubernetes Clusters<br/>Ch 10: Admin"]
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
 ```
 
 **Path:** Release Notes → Concepts (OCI architecture) → CLI (installation, OCI config) → Kubernetes Clusters (OCI deployment) → Applications
@@ -208,18 +162,16 @@ flowchart TB
 **Goal:** Successfully migrate production clusters with minimal downtime.
 
 ```mermaid
-%%{init: {"theme": "default"}}%%
 flowchart TB
-    Start([R1 Cluster]) --> RN["Release Notes<br/>Breaking changes"]
-    RN --> UPG1["Upgrade Guide<br/>Ch 1-2: Prerequisites"]
-    UPG1 --> KC["Kubernetes Clusters<br/>Ch 10: Backup"]
-    KC --> UPG2["Upgrade Guide<br/>Ch 3-6: Execute"]
-    UPG2 --> UPG3["Upgrade Guide<br/>Ch 7-9: Validate"]
-    UPG3 --> CLI["CLI Reference<br/>Learn new CLI"]
-    CLI --> Done([R2 Cluster])
-
-    classDef path fill:#FFCCBC,stroke:#E64A19,stroke-width:2px
-    class RN,UPG1,KC,UPG2,UPG3,CLI path
+  Start([R1 Cluster]) --> RN["Release Notes<br/>Breaking changes"]
+  RN --> UPG1["Upgrade Guide<br/>Ch 1-2: Prerequisites"]
+  UPG1 --> KC["Kubernetes Clusters<br/>Ch 10: Backup"]
+  KC --> UPG2["Upgrade Guide<br/>Ch 3-6: Execute"]
+  UPG2 --> UPG3["Upgrade Guide<br/>Ch 7-9: Validate"]
+  UPG3 --> CLI["CLI Reference<br/>Learn new CLI"]
+  CLI --> Done([R2 Cluster])
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
 ```
 
 **Path:** Release Notes (breaking changes) → Upgrade Guide (prerequisites) → Kubernetes Clusters (backup) → Upgrade Guide (execute, validate) → CLI Reference (new commands)
@@ -231,16 +183,14 @@ flowchart TB
 **Goal:** Build custom OCK images meeting corporate security standards.
 
 ```mermaid
-%%{init: {"theme": "default"}}%%
 flowchart LR
-    Start([Requirements]) --> CON["Concepts<br/>Ch 2: OCK Architecture"]
-    CON --> KC1["Kubernetes Clusters<br/>Ch 3: Image Options"]
-    KC1 --> OCK["OCK Image Builder<br/>Ch 1-4: Build Custom"]
-    OCK --> KC2["Kubernetes Clusters<br/>Deploy with Custom Image"]
-    KC2 --> Done([Hardened Cluster])
-
-    classDef path fill:#D1C4E9,stroke:#512DA8,stroke-width:2px
-    class CON,KC1,OCK,KC2 path
+  Start([Requirements]) --> CON["Concepts<br/>Ch 2: OCK Architecture"]
+  CON --> KC1["Kubernetes Clusters<br/>Ch 3: Image Options"]
+  KC1 --> OCK["OCK Image Builder<br/>Ch 1-4: Build Custom"]
+  OCK --> KC2["Kubernetes Clusters<br/>Deploy with Custom Image"]
+  KC2 --> Done([Hardened Cluster])
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
 ```
 
 **Path:** Concepts (OCK architecture) → Kubernetes Clusters (image options) → OCK Image Builder (build custom) → Kubernetes Clusters (deploy)
@@ -252,21 +202,17 @@ flowchart LR
 **Goal:** Ongoing cluster maintenance including updates, scaling, backups, and troubleshooting.
 
 ```mermaid
-%%{init: {"theme": "default"}}%%
 flowchart TB
-    subgraph DayTwo["Day-2 Operations Hub"]
-        KC10["Kubernetes Clusters<br/>Ch 10: Administration"]
-    end
-
-    CLI["CLI Reference<br/>Command syntax"] <--> KC10
-    RN["Release Notes<br/>Patches & issues"] <--> KC10
-    K8S["Kubernetes<br/>App troubleshooting"] <--> KC10
-    APP["Applications<br/>App updates"] <--> KC10
-
-    classDef hub fill:#C8E6C9,stroke:#2E7D32,stroke-width:3px
-    classDef support fill:#E8F5E9,stroke:#43A047,stroke-width:1px
-    class KC10 hub
-    class CLI,RN,K8S,APP support
+  subgraph DayTwo["Day-2 Operations Hub"]
+    KC10["Kubernetes Clusters<br/>Ch 10: Administration"]
+  end
+  CLI["CLI Reference<br/>Command syntax"] <--> KC10
+  RN["Release Notes<br/>Patches & issues"] <--> KC10
+  K8S["Kubernetes<br/>App troubleshooting"] <--> KC10
+  APP["Applications<br/>App updates"] <--> KC10
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  class KC10 chapter;
 ```
 
 **Pattern:** Kubernetes Clusters Chapter 10 serves as the operations hub, with frequent cross-references to CLI Reference, Release Notes, Kubernetes guide, and Applications.
@@ -332,43 +278,34 @@ Effective cross-referencing ensures users can navigate the complete set without 
 ### Cross-Reference Visualization
 
 ```mermaid
-%%{init: {"theme": "default"}}%%
 flowchart TB
-    RN["Release Notes"]
-    CON["Concepts"]
-    QS["Quick Start"]
-    CLI["CLI Reference"]
-    KC["Kubernetes Clusters"]
-    APP["Applications"]
-    K8S["Kubernetes"]
-    OCK["OCK Image Builder"]
-    UPG["Upgrade Guide"]
-
-    RN -.-> CON
-    RN -.-> KC
-    RN -.-> UPG
-
-    QS --> KC
-    CON --> KC
-
-    KC <--> CLI
-    KC --> APP
-    APP <--> CLI
-
-    KC --> OCK
-    KC --> K8S
-    APP --> K8S
-
-    UPG --> KC
-    UPG --> CLI
-
-    classDef central fill:#FFCDD2,stroke:#C62828,stroke-width:3px
-    classDef primary fill:#E3F2FD,stroke:#1565C0,stroke-width:2px
-    classDef support fill:#F5F5F5,stroke:#616161,stroke-width:1px
-
-    class KC central
-    class CLI,APP,CON primary
-    class RN,QS,K8S,OCK,UPG support
+  RN["Release Notes"]
+  CON["Concepts"]
+  QS["Quick Start"]
+  CLI["CLI Reference"]
+  KC["Kubernetes Clusters"]
+  APP["Applications"]
+  K8S["Kubernetes"]
+  OCK["OCK Image Builder"]
+  UPG["Upgrade Guide"]
+  RN -.-> CON
+  RN -.-> KC
+  RN -.-> UPG
+  QS --> KC
+  CON --> KC
+  KC <--> CLI
+  KC --> APP
+  APP <--> CLI
+  KC --> OCK
+  KC --> K8S
+  APP --> K8S
+  UPG --> KC
+  UPG --> CLI
+  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
+  class APP,CLI,CON,K8S,KC,OCK,QS,RN,UPG chapter;
+  linkStyle 3,4,5,6,7,8,9,10,11,12 stroke:#235789,stroke-width:3px;
+  linkStyle 0,1,2 stroke:#F1D302,stroke-width:2.5px,stroke-dasharray:6,5;
 ```
 
 The **Kubernetes Clusters** guide serves as the central hub of the documentation set, with the most incoming and outgoing cross-references.
