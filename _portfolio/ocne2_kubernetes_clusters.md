@@ -87,3 +87,55 @@ Created Terraform and Ansible automation scripts for rapid test environment prov
 ### Engineering Collaboration
 
 Participated in feature design reviews, tested pre-release functionality, provided feedback on usability and documentation needs, and validated technical accuracy with development teams.
+
+## DITA Book Structure
+
+This guide is authored in DITA XML using a bookmap structure, demonstrating modular topic-based authoring principles. The architecture showcases content reuse, conditional processing, and consistent information typing.
+
+### Book Organization
+
+The bookmap contains front matter (preface, legal notices) and 10 chapters organized into logical groupings:
+
+**Foundational Chapters (1-4)**
+- Chapter 1: Introduction — Concept topics covering Oracle CNE overview, provider types, configuration hierarchy
+- Chapter 2: Cluster Configuration Files — Concept overview plus reference topics for each provider's configuration options (BYO, libvirt, OCI, OLVM) and configuration examples
+- Chapter 3: Oracle Container Host for Kubernetes Image — Concept and task topics covering OCK image user, custom images, OSTree archive images
+- Chapter 4: Proxy Servers — Task topics for CLI, cluster, and UI proxy configuration
+
+**Provider Chapters (5-8)** — Parallel structure across all four providers
+- Chapter 5: libvirt Provider — Setup, cluster creation, connection, deletion
+- Chapter 6: Oracle Linux Virtualization Manager Provider — Setup, configuration, image creation, VM templates, cluster operations, scaling, upgrades, deletion (includes oVirt CSI driver reference)
+- Chapter 7: OCI Provider — Setup, Cluster API templates, compute images, cluster creation, OCI components reference, scaling, upgrades, deletion
+- Chapter 8: Bring Your Own Provider — OS image options (ISO, OSTree), cluster creation, node migration, deletion
+
+**Management Chapters (9-10)**
+- Chapter 9: UI — Access tokens, port forwarding, catalog integration
+- Chapter 10: Cluster Administration — Updates (patch and minor releases), backups, cluster analysis, OS console access
+
+### Topic Types
+
+The guide uses all three core DITA topic types strategically:
+
+| Topic Type | Usage | Examples |
+|------------|-------|----------|
+| **Concept** | Architectural overview, design rationale, when to use features | Provider introductions, configuration file concepts, update best practices |
+| **Task** | Step-by-step procedures with prerequisites and results | Creating clusters, scaling nodes, backing up clusters |
+| **Reference** | Structured data, configuration options, specifications | Configuration file options, Cluster API template parameters, CLI command reference |
+
+### Content Reuse Architecture
+
+**Keydefs:** Product names, version numbers, and URLs managed through key definitions for consistent terminology and easy updates across releases.
+
+**Conditional Processing:** Provider-specific content filtered using DITAVAL processing. Common procedures (connecting to clusters, monitoring installations) written once and conditionalized for provider context.
+
+**Conrefs:** Shared content fragments for repeated warnings, prerequisites, and standardized notes reused across chapters.
+
+**Parallel Structure:** Provider chapters (5-8) follow identical organizational patterns, enabling users to transfer knowledge between providers and simplifying maintenance when procedures change.
+
+### Information Architecture Decisions
+
+**Separation of Concerns:** Configuration reference content (Chapter 2) separated from procedural content (Chapters 5-8), allowing users to reference options without navigating through procedures.
+
+**Progressive Disclosure:** Each provider chapter follows setup → creation → operation → maintenance → deletion flow, matching the user's journey through the cluster lifecycle.
+
+**Nested Topics:** Complex operations use nested topic structures. For example, the OCI Provider chapter contains sub-topics for Cluster API templates, compute images, and scaling operations, each with their own concept/task/reference breakdown.
