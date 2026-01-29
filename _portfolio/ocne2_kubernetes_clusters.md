@@ -112,6 +112,52 @@ The bookmap contains front matter (preface, legal notices) and 10 chapters organ
 - Chapter 9: UI — Access tokens, port forwarding, catalog integration
 - Chapter 10: Cluster Administration — Updates (patch and minor releases), backups, cluster analysis, OS console access
 
+### Visual Structure
+
+```mermaid
+graph TD
+    subgraph Front["Front Matter"]
+        P[Preface]
+        L[Legal Notices]
+    end
+
+    subgraph Found["Foundational Chapters"]
+        C1[1. Introduction]
+        C2[2. Cluster Configuration Files]
+        C3[3. OCK Image]
+        C4[4. Proxy Servers]
+    end
+
+    subgraph Prov["Provider Chapters - Parallel Structure"]
+        C5[5. libvirt]
+        C6[6. OLVM]
+        C7[7. OCI]
+        C8[8. BYO]
+    end
+
+    subgraph Mgmt["Management Chapters"]
+        C9[9. UI]
+        C10[10. Cluster Administration]
+    end
+
+    subgraph ProvFlow["Each Provider Chapter"]
+        Setup[Setup] --> Create[Create Cluster]
+        Create --> Connect[Connect]
+        Connect --> Scale[Scale]
+        Scale --> Upgrade[Upgrade]
+        Upgrade --> Delete[Delete]
+    end
+
+    Front --> Found
+    Found --> Prov
+    Prov --> Mgmt
+
+    C2 -.->|config reference| C5
+    C2 -.->|config reference| C6
+    C2 -.->|config reference| C7
+    C2 -.->|config reference| C8
+```
+
 ### Topic Types
 
 The guide uses all three core DITA topic types strategically:
@@ -139,3 +185,31 @@ The guide uses all three core DITA topic types strategically:
 **Progressive Disclosure:** Each provider chapter follows setup → creation → operation → maintenance → deletion flow, matching the user's journey through the cluster lifecycle.
 
 **Nested Topics:** Complex operations use nested topic structures. For example, the OCI Provider chapter contains sub-topics for Cluster API templates, compute images, and scaling operations, each with their own concept/task/reference breakdown.
+
+### User Flows
+
+The documentation architecture supports several common reader journeys:
+
+**Flow 1: First-Time OCI Deployment**
+1. Chapter 1 (Introduction) — Understand provider options, choose OCI
+2. Chapter 2 (Configuration Files) — Review OCI-specific configuration options
+3. Chapter 3 (OCK Image) — Learn about node images
+4. Chapter 7 (OCI Provider) — Follow setup, create cluster, connect
+
+**Flow 2: Scaling an Existing OLVM Cluster**
+1. Chapter 6 (OLVM Provider) — Navigate directly to "Scale a Cluster" section
+2. Chapter 2 (Configuration Files) — Reference OLVM options if needed
+3. Chapter 10 (Cluster Administration) — Review best practices
+
+**Flow 3: Production Hardening**
+1. Chapter 1 (Introduction) — Review high-availability concepts
+2. Chapter 2 (Configuration Files) — Find security-related options
+3. Provider chapter (5-8) — Apply provider-specific configurations
+4. Chapter 10 (Cluster Administration) — Set up backups, monitoring
+
+**Flow 4: Upgrading Kubernetes Version**
+1. Chapter 10 (Cluster Administration) — Read update best practices
+2. Provider chapter (5-8) — Follow provider-specific upgrade procedure
+3. Chapter 2 (Configuration Files) — Verify configuration compatibility
+
+These flows demonstrate how the parallel provider structure and separated reference content allow users to efficiently navigate based on their specific task and deployment model.
