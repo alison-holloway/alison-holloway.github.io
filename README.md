@@ -2,6 +2,19 @@
 
 A professional portfolio site showcasing 30+ years of technical writing experience in virtualization, cloud-native platforms, and container technologies. Built with Jekyll and hosted on GitHub Pages.
 
+## Table of Contents
+
+- [About This Portfolio](#about-this-portfolio)
+- [Directory Structure](#directory-structure)
+- [Current Portfolio Items](#current-portfolio-items)
+- [Local Development](#local-development)
+- [Adding Portfolio Items](#adding-portfolio-items)
+- [Deploying Changes](#deploying-changes)
+- [Customization](#customization)
+- [Troubleshooting](#troubleshooting)
+- [Mermaid Diagrams](#mermaid-diagrams)
+- [Resources](#resources)
+
 ## About This Portfolio
 
 This site showcases documentation work across:
