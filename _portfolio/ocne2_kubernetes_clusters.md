@@ -115,47 +115,78 @@ The bookmap contains front matter (preface, legal notices) and 10 chapters organ
 ### Visual Structure
 
 ```mermaid
-graph TD
-    subgraph Front["Front Matter"]
-        P[Preface]
-        L[Legal Notices]
-    end
+%%{init: {
+  "theme": "default",
+  "themeVariables": {
+    "fontFamily": "sans-serif",
+    "fontSize": "16px",
+    "darkMode": true
+  }
+}}%%
+flowchart TB
+  %% Section headers as boxes
+  FrontSection["Front Matter"]
+  FoundSection["Foundational Chapters"]
+  ProvSection["Provider Chapters"]
+  ProvFlowSection["Provider Workflow"]
+  MgmtSection["Management Chapters"]
 
-    subgraph Found["Foundational Chapters"]
-        C1[1. Introduction]
-        C2[2. Cluster Configuration Files]
-        C3[3. OCK Image]
-        C4[4. Proxy Servers]
-    end
+  %% Front Matter
+  P["Preface"]
+  L["Legal Notices"]
+  FrontSection --> P
+  FrontSection --> L
+  FrontSection --> FoundSection
 
-    subgraph Prov["Provider Chapters - Parallel Structure"]
-        C5[5. libvirt]
-        C6[6. OLVM]
-        C7[7. OCI]
-        C8[8. BYO]
-    end
+  %% Foundational Chapters
+  C1["1. Introduction"]
+  C2["2. Cluster Config Files"]
+  C3["3. OCK Image"]
+  C4["4. Proxy Servers"]
+  FoundSection --> C1
+  FoundSection --> C2
+  FoundSection --> C3
+  FoundSection --> C4
+  FoundSection --> ProvSection
 
-    subgraph Mgmt["Management Chapters"]
-        C9[9. UI]
-        C10[10. Cluster Administration]
-    end
+  %% Provider Chapters (side by side)
+  C5["5. libvirt"]
+  C6["6. OLVM"]
+  C7["7. OCI"]
+  C8["8. BYO"]
+  ProvSection --> C5
+  ProvSection --> C6
+  ProvSection --> C7
+  ProvSection --> C8
 
-    subgraph ProvFlow["Each Provider Chapter"]
-        Setup[Setup] --> Create[Create Cluster]
-        Create --> Connect[Connect]
-        Connect --> Scale[Scale]
-        Scale --> Upgrade[Upgrade]
-        Upgrade --> Delete[Delete]
-    end
+  %% Config cross-references (dotted)
+  C2 -. "config ref" .- C5
+  C2 -. "config ref" .- C6
+  C2 -. "config ref" .- C7
+  C2 -. "config ref" .- C8
 
-    Front --> Found
-    Found --> Prov
-    Prov --> Mgmt
+  %% Provider Workflow (right of Provider Chapters)
+  ProvSection -.-> ProvFlowSection
+  ProvFlowSection[/"Setup → Create → Connect → Scale → Upgrade → Delete"/]
 
-    C2 -.->|config reference| C5
-    C2 -.->|config reference| C6
-    C2 -.->|config reference| C7
-    C2 -.->|config reference| C8
+  %% Now to place Management right of Provider Workflow ---
+  ProvFlowSection -.-> MgmtSection
+  C9["9. UI"]
+  C10["10. Cluster Admin"]
+  MgmtSection --> C9
+  MgmtSection --> C10
+
+  %% STYLE section headers and content nodes
+  classDef sectionHdr fill:#235789,stroke:#163050,stroke-width:2.5px,color:#fff,font-size:18px,font-weight:bold
+  classDef chapter fill:#F9F8F8,stroke:#888,stroke-width:1.5px,color:#222,font-size:16px,font-weight:bold
+  class FrontSection,FoundSection,ProvSection,ProvFlowSection,MgmtSection sectionHdr
+  class P,L,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 chapter
+  class ProvFlowSection chapter
+
+  %% link styles for dotted and spacing
+  linkStyle 13,14,15,16 stroke-width:2px,stroke-dasharray:5 5,stroke:#1C7C8D
+  linkStyle 17 stroke-width:0.5px,stroke-dasharray:3 7,stroke:#8F9AA6
+  linkStyle 18 stroke-width:0.5px,stroke-dasharray:3 7,stroke:#8F9AA6
 ```
 
 ### Topic Types
