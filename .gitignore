@@ -5,4 +5,5 @@ vendor
 Gemfile.lock
 _site/
 node_modules/
+scripts/_browser-export-bundle.mjs
 
