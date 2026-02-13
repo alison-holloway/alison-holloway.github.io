@@ -7,20 +7,6 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% seo %}
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Convert ```mermaid code blocks to mermaid divs
-      document.querySelectorAll('pre code.language-mermaid').forEach(function(codeBlock) {
-        var pre = codeBlock.parentNode;
-        var div = document.createElement('div');
-        div.className = 'mermaid';
-        div.textContent = codeBlock.textContent;
-        pre.parentNode.replaceChild(div, pre);
-      });
-      mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-    });
-  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>

@@ -16,7 +16,7 @@ tools:
 - DITA XML
 - Oxygen XML
 - Git
-- Mermaid
+- Excalidraw
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/
 excerpt: Complete information architecture for Oracle Cloud Native Environment Release 2, encompassing 9 integrated documentation deliverables designed to support diverse user journeys across evaluation, deployment, operation, and advanced customization scenarios.
 ---
@@ -47,70 +47,13 @@ The 9 books serve distinct purposes while forming an integrated whole:
 
 The books are organized into five functional categories that reflect how users approach the documentation:
 
-```mermaid
-flowchart TB
-  subgraph Reference["Reference & Updates"]
-    RN["Release Notes"]
-    CLI["CLI Reference"]
-  end
-  subgraph Foundation["Foundation & Concepts"]
-    CON["Concepts"]
-    K8S["Kubernetes"]
-  end
-  subgraph Start["Getting Started"]
-    QS["Quick Start"]
-  end
-  subgraph Core["Core Operations"]
-    KC["Kubernetes Clusters"]
-    APP["Applications"]
-  end
-  subgraph Advanced["Advanced & Specialized"]
-    OCK["OCK Image Builder"]
-    UPG["Upgrade Guide"]
-  end
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  class APP,CLI,CON,K8S,KC,OCK,QS,RN,UPG chapter;
-```
+<img src="/assets/excalidraw/ia-documentation-set-architecture.svg" alt="Documentation set architecture showing five functional categories: Reference and Updates, Foundation and Concepts, Getting Started, Core Operations, and Advanced and Specialized" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 ## Information Flow
 
 This diagram shows how users navigate between books based on their needs:
 
-```mermaid
-flowchart LR
-  subgraph Entry["Entry Points"]
-    RN["Release Notes"]
-    QS["Quick Start"]
-    CON["Concepts"]
-  end
-  subgraph Core["Core Documentation"]
-    KC["Kubernetes<br/>Clusters"]
-    CLI["CLI Reference"]
-    APP["Applications"]
-  end
-  subgraph Support["Supporting Guides"]
-    K8S["Kubernetes"]
-    OCK["OCK Image<br/>Builder"]
-    UPG["Upgrade"]
-  end
-  RN -->|"what's new"| KC
-  RN -->|"known issues"| CLI
-  QS -->|"production deployment"| KC
-  CON -->|"understand architecture"| KC
-  CON -->|"provider selection"| KC
-  KC <-->|"command syntax"| CLI
-  KC -->|"deploy apps"| APP
-  APP <-->|"catalog commands"| CLI
-  KC -->|"k8s basics"| K8S
-  KC -->|"custom images"| OCK
-  KC <-->|"R1 migration"| UPG
-  APP -->|"k8s concepts"| K8S
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  class APP,CLI,CON,K8S,KC,OCK,QS,RN,UPG chapter;
-  linkStyle 0,1,2,3,4,5,6,7,8,9,10,11 stroke:#235789,stroke-width:3px;
-```
+<img src="/assets/excalidraw/ia-information-flow.svg" alt="Information flow diagram showing how users navigate between books: Entry Points to Core Documentation to Supporting Guides" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 ## User Journeys
 
@@ -122,15 +65,7 @@ The information architecture supports several common reader journeys through the
 
 **Goal:** Get a working Kubernetes cluster as fast as possible.
 
-```mermaid
-flowchart LR
-  Start([Start]) --> QS["Quick Start<br/>Ch 1-9"]
-  QS --> APP["Applications<br/>Install App"]
-  APP --> Done([Running Cluster<br/>+ Application])
-  APP -.->|"explore"| CON["Concepts"]
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-```
+<img src="/assets/excalidraw/ia-journey-1-quick-evaluation.svg" alt="Quick evaluation journey: Start to Quick Start to Applications to Running Cluster" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 **Path:** Quick Start (complete) → Applications (deploy sample app) → Concepts (optional exploration)
 
@@ -140,18 +75,7 @@ flowchart LR
 
 **Goal:** Deploy a production-ready, highly-available cluster on OCI.
 
-```mermaid
-flowchart TB
-  Start([Start]) --> RN["Release Notes<br/>Check compatibility"]
-  RN --> CON["Concepts<br/>Ch 3: OCI Provider"]
-  CON --> CLI["CLI Reference<br/>Ch 1, 3: Install & Config"]
-  CLI --> KC["Kubernetes Clusters<br/>Ch 2, 3, 7: OCI Deployment"]
-  KC --> APP["Applications<br/>Production setup"]
-  APP --> Done([Production<br/>OCI Cluster])
-  KC -.->|"ongoing"| KC10["Kubernetes Clusters<br/>Ch 10: Admin"]
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-```
+<img src="/assets/excalidraw/ia-journey-2-production-oci-deployment.svg" alt="Production OCI deployment journey: Start to Release Notes to Concepts to CLI to Kubernetes Clusters to Applications to Production OCI Cluster" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 **Path:** Release Notes → Concepts (OCI architecture) → CLI (installation, OCI config) → Kubernetes Clusters (OCI deployment) → Applications
 
@@ -161,18 +85,7 @@ flowchart TB
 
 **Goal:** Successfully migrate production clusters with minimal downtime.
 
-```mermaid
-flowchart TB
-  Start([R1 Cluster]) --> RN["Release Notes<br/>Breaking changes"]
-  RN --> UPG1["Upgrade Guide<br/>Ch 1-2: Prerequisites"]
-  UPG1 --> KC["Kubernetes Clusters<br/>Ch 10: Backup"]
-  KC --> UPG2["Upgrade Guide<br/>Ch 3-6: Execute"]
-  UPG2 --> UPG3["Upgrade Guide<br/>Ch 7-9: Validate"]
-  UPG3 --> CLI["CLI Reference<br/>Learn new CLI"]
-  CLI --> Done([R2 Cluster])
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-```
+<img src="/assets/excalidraw/ia-journey-3-upgrade-from-release-1-x.svg" alt="Upgrade journey: R1 Cluster to Release Notes to Upgrade Guide prerequisites to Kubernetes Clusters backup to Upgrade Guide execute and validate to CLI to R2 Cluster" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 **Path:** Release Notes (breaking changes) → Upgrade Guide (prerequisites) → Kubernetes Clusters (backup) → Upgrade Guide (execute, validate) → CLI Reference (new commands)
 
@@ -182,16 +95,7 @@ flowchart TB
 
 **Goal:** Build custom OCK images meeting corporate security standards.
 
-```mermaid
-flowchart LR
-  Start([Requirements]) --> CON["Concepts<br/>Ch 2: OCK Architecture"]
-  CON --> KC1["Kubernetes Clusters<br/>Ch 3: Image Options"]
-  KC1 --> OCK["OCK Image Builder<br/>Ch 1-4: Build Custom"]
-  OCK --> KC2["Kubernetes Clusters<br/>Deploy with Custom Image"]
-  KC2 --> Done([Hardened Cluster])
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-```
+<img src="/assets/excalidraw/ia-journey-4-custom-node-images.svg" alt="Custom node images journey: Requirements to Concepts to Kubernetes Clusters image options to OCK Image Builder to Kubernetes Clusters deploy to Hardened Cluster" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 **Path:** Concepts (OCK architecture) → Kubernetes Clusters (image options) → OCK Image Builder (build custom) → Kubernetes Clusters (deploy)
 
@@ -201,19 +105,7 @@ flowchart LR
 
 **Goal:** Ongoing cluster maintenance including updates, scaling, backups, and troubleshooting.
 
-```mermaid
-flowchart TB
-  subgraph DayTwo["Day-2 Operations Hub"]
-    KC10["Kubernetes Clusters<br/>Ch 10: Administration"]
-  end
-  CLI["CLI Reference<br/>Command syntax"] <--> KC10
-  RN["Release Notes<br/>Patches & issues"] <--> KC10
-  K8S["Kubernetes<br/>App troubleshooting"] <--> KC10
-  APP["Applications<br/>App updates"] <--> KC10
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  class KC10 chapter;
-```
+<img src="/assets/excalidraw/ia-journey-5-day-2-operations.svg" alt="Day-2 operations hub diagram showing Kubernetes Clusters Chapter 10 Administration as the central hub with bidirectional connections to CLI Reference, Release Notes, Kubernetes guide, and Applications" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 **Pattern:** Kubernetes Clusters Chapter 10 serves as the operations hub, with frequent cross-references to CLI Reference, Release Notes, Kubernetes guide, and Applications.
 
@@ -277,36 +169,7 @@ Effective cross-referencing ensures users can navigate the complete set without 
 
 ### Cross-Reference Visualization
 
-```mermaid
-flowchart TB
-  RN["Release Notes"]
-  CON["Concepts"]
-  QS["Quick Start"]
-  CLI["CLI Reference"]
-  KC["Kubernetes Clusters"]
-  APP["Applications"]
-  K8S["Kubernetes"]
-  OCK["OCK Image Builder"]
-  UPG["Upgrade Guide"]
-  RN -.-> CON
-  RN -.-> KC
-  RN -.-> UPG
-  QS --> KC
-  CON --> KC
-  KC <--> CLI
-  KC --> APP
-  APP <--> CLI
-  KC --> OCK
-  KC --> K8S
-  APP --> K8S
-  UPG --> KC
-  UPG --> CLI
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  class APP,CLI,CON,K8S,KC,OCK,QS,RN,UPG chapter;
-  linkStyle 3,4,5,6,7,8,9,10,11,12 stroke:#235789,stroke-width:3px;
-  linkStyle 0,1,2 stroke:#F1D302,stroke-width:2.5px,stroke-dasharray:6,5;
-```
+<img src="/assets/excalidraw/ia-cross-reference-visualization.svg" alt="Cross-reference visualization showing connections between all 9 books with Kubernetes Clusters as the central hub, solid arrows for direct references and dashed arrows for contextual references from Release Notes" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 The **Kubernetes Clusters** guide serves as the central hub of the documentation set, with the most incoming and outgoing cross-references.
 

@@ -1,0 +1,32 @@
+{
+  "name": "alison-holloway.github.io",
+  "version": "1.0.0",
+  "description": "A professional portfolio site showcasing 30+ years of technical writing experience in virtualization, cloud-native platforms, and container technologies. Built with Jekyll and hosted on GitHub Pages.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "export-svg": "npx esbuild scripts/_browser-export.mjs --bundle --format=esm --outfile=scripts/_browser-export-bundle.mjs --platform=browser && node scripts/export-excalidraw-svg.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alison-holloway/alison-holloway.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alison-holloway/alison-holloway.github.io/issues"
+  },
+  "homepage": "https://github.com/alison-holloway/alison-holloway.github.io#readme",
+  "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "playwright": "^1.58.2"
+  }
+}

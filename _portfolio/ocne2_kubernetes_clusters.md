@@ -114,62 +114,7 @@ The bookmap contains front matter (preface, legal notices) and 10 chapters organ
 
 ### Visual Structure
 
-```mermaid
-flowchart TB
-  %% Section headers as boxes
-  FrontSection["Front Matter"]
-  FoundSection["Foundational Chapters"]
-  ProvSection["Provider Chapters"]
-  ProvFlowSection["Provider Workflow"]
-  MgmtSection["Management Chapters"]
-  %% Front Matter
-  P["Preface"]
-  L["Legal Notices"]
-  FrontSection --> P
-  FrontSection --> L
-  FrontSection --> FoundSection
-  %% Foundational Chapters
-  C1["1. Introduction"]
-  C2["2. Cluster Config Files"]
-  C3["3. OCK Image"]
-  C4["4. Proxy Servers"]
-  FoundSection --> C1
-  FoundSection --> C2
-  FoundSection --> C3
-  FoundSection --> C4
-  FoundSection --> ProvSection
-  %% Provider Chapters (side by side)
-  C5["5. libvirt"]
-  C6["6. OLVM"]
-  C7["7. OCI"]
-  C8["8. BYO"]
-  ProvSection --> C5
-  ProvSection --> C6
-  ProvSection --> C7
-  ProvSection --> C8
-  %% Config cross-references (dotted)
-  C2 -. "config ref" .- C5
-  C2 -. "config ref" .- C6
-  C2 -. "config ref" .- C7
-  C2 -. "config ref" .- C8
-  %% Provider Workflow (right of Provider Chapters)
-  ProvSection -.-> ProvFlowSection
-  ProvFlowSection[/"Setup → Create → Connect → Scale → Upgrade → Delete"/]
-  %% Now to place Management right of Provider Workflow ---
-  ProvFlowSection -.-> MgmtSection
-  C9["9. UI"]
-  C10["10. Cluster Admin"]
-  MgmtSection --> C9
-  MgmtSection --> C10
-  %% STYLE section headers and content nodes
-  classDef chapter fill:#fff,stroke:#F1D302,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  classDef workflowNode fill:#fff,stroke:#C1292E,stroke-width:2px,color:#235789,font-size:16px,font-weight:bold;
-  class C1,C10,C2,C3,C4,C5,C6,C7,C8,C9,FoundSection,FrontSection,L,MgmtSection,P,ProvFlowSection,ProvSection chapter;
-  %% link styles for dotted and spacing
-  linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,18,19 stroke:#235789,stroke-width:3px;
-  linkStyle 16,17 stroke:#F1D302,stroke-width:2.5px,stroke-dasharray:6,5;
-  linkStyle 12,13,14,15 stroke:#C1292E,stroke-width:2.5px,stroke-dasharray:2,5;
-```
+<img src="/assets/excalidraw/kc-visual-structure.svg" alt="Visual structure of the Kubernetes Clusters guide showing Front Matter, Foundational Chapters 1-4, Provider Chapters 5-8 with parallel workflow structure, config cross-references from Chapter 2, and Management Chapters 9-10" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
 ### Topic Types
 
