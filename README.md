@@ -231,9 +231,13 @@ This bundles `@excalidraw/excalidraw` with esbuild and uses Playwright to render
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Blue | `#235789` | Main arrows, node text |
-| Yellow | `#F1D302` | Content node borders |
-| Red | `#C1292E` | Workflow node borders, cross-references |
+| Navy | `#1B3A5C` | Category headings, card labels |
+| Medium blue | `#4A6FA5` | Container borders, card borders, arrow strokes |
+| Blue-grey tint | `#EEF2F7` | Category container fills |
+| White | `#FFFFFF` | Card fills |
+| Off-white | `#F8FAFC` | Canvas background |
+
+Diagrams use Helvetica font (fontFamily: 2) and no roughness (roughness: 0).
 
 ## Resources
 

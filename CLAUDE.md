@@ -73,10 +73,12 @@ Portfolio diagrams are authored as `.excalidraw` files in `assets/excalidraw/` a
 2. Run `npm run export-svg` to re-export all SVGs
 3. SVGs are referenced in portfolio markdown as `<img>` tags
 
-Diagrams use Helvetica font (fontFamily: 2) and a consistent color palette:
-- Blue (`#235789`) — node text, arrow strokes
-- Yellow (`#F1D302`) — content node borders
-- Red (`#C1292E`) — workflow node borders
+Diagrams use Helvetica font (fontFamily: 2), no roughness, and a consistent color palette:
+- Navy (`#1B3A5C`) — category headings, card labels
+- Medium blue (`#4A6FA5`) — container borders, card borders, arrow strokes
+- Blue-grey tint (`#EEF2F7`) — category container fills
+- White (`#FFFFFF`) — card fills
+- Off-white (`#F8FAFC`) — canvas background
 
 ## Deployment
 
