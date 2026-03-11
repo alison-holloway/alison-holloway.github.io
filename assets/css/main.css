@@ -303,6 +303,53 @@ main ol li {
   color: var(--text-color);
 }
 
+/* Two-track cards (Home Page) */
+.track-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.track-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.track-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.track-card h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.track-card .track-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.track-card .track-link:hover {
+  text-decoration: underline;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
 /* Featured Section (Home Page) */
 .featured-section h2 {
   color: var(--primary-color);

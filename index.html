@@ -1,77 +1,38 @@
 ---
 layout: default
+title: "AI Consultant & Technical Writer"
 ---
 
 <div class="hero">
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
-  <p class="hero-subtitle">
-    Specializing in DITA XML, Kubernetes, Oracle Linux, and Cloud-Native Documentation
-  </p>
+  <h1>Helping small businesses work smarter with AI.<br>Helping tech companies document software products.</h1>
+  <p>I'm Alison Holloway, an AI consultant and senior technical writer based in Melbourne.
+  I work with two very different clients: small business owners who want AI to take the
+  repetitive work off their plate, and technology companies that need expert documentation
+  for complex products.</p>
+  <div class="hero-cta">
+    <a href="{{ '/services/#ai-consulting' | relative_url }}" class="btn">I run a small business &rarr;</a>
+    <a href="{{ '/services/#technical-writing' | relative_url }}" class="btn">I need technical writing &rarr;</a>
+  </div>
 </div>
 
-<section class="highlights-section">
-  <h2>Professional Highlights</h2>
-  <div class="highlights-grid">
-    <div class="highlight-card">
-      <h3>30+ Years Experience</h3>
-      <p>Extensive background in software documentation across Oracle products</p>
+<section class="track-section">
+  <div class="track-cards">
+    <div class="track-card">
+      <h3>AI for Small Business</h3>
+      <p>You didn't start your business to spend hours on admin.
+      I help small business owners use AI tools to automate the repetitive stuff:
+      emails, scheduling, data entry, customer communications. So you can focus
+      on the work that actually needs you.</p>
+      <p>I can also build custom AI trained on your business, create systems that answer from your own documents, or teach you and your team to use AI tools yourselves. No tech background needed.</p>
+      <a href="{{ '/services/#ai-consulting' | relative_url }}" class="track-link">&rarr; See how it works</a>
     </div>
-    <div class="highlight-card">
-      <h3>Cloud-Native Expertise</h3>
-      <p>Kubernetes, containers, Oracle Cloud Native Environment, OpenStack</p>
-    </div>
-    <div class="highlight-card">
-      <h3>Published Author</h3>
-      <p>Co-author of The Underground PHP and Oracle Manual</p>
-    </div>
-    <div class="highlight-card">
-      <h3>Technical Innovation</h3>
-      <p>Created Terraform/Ansible deployment scripts adopted by Support teams</p>
+    <div class="track-card">
+      <h3>Technical Documentation</h3>
+      <p>30+ years writing for Oracle, Kubernetes, cloud-native platforms, and
+      enterprise Linux products. I produce documentation that's accurate, usable,
+      and built to survive the next product release.</p>
+      <p>Available for contract and project-based engagements.</p>
+      <a href="{{ '/portfolio/' | relative_url }}" class="track-link">&rarr; View portfolio</a>
     </div>
   </div>
 </section>
-
-<section class="featured-section">
-  <h2>Featured Documentation Projects</h2>
-  
-  <div class="portfolio-grid">
-    {% assign featured = site.portfolio | where: "featured", true | limit: 3 %}
-    {% if featured.size > 0 %}
-      {% for item in featured %}
-        <div class="portfolio-card">
-          <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <p class="portfolio-meta">{{ item.product }} | {{ item.doc_type }}</p>
-          <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
-          {% if item.tags %}
-            <div class="tags">
-              {% for tag in item.tags limit: 3 %}
-                <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
-      {% endfor %}
-    {% else %}
-      {% for item in site.portfolio limit: 3 %}
-        <div class="portfolio-card">
-          <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <p class="portfolio-meta">{{ item.product }} | {{ item.doc_type }}</p>
-          <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 30 }}</p>
-          {% if item.tags %}
-            <div class="tags">
-              {% for tag in item.tags limit: 3 %}
-                <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
-      {% endfor %}
-    {% endif %}
-  </div>
-
-  <div class="section-cta">
-    <a href="{{ '/portfolio/' | relative_url }}" class="btn">View Full Portfolio</a>
-  </div>
-</section>
-

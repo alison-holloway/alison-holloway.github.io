@@ -4,21 +4,48 @@ title: About
 permalink: /about/
 ---
 
-<h1 class="page-title">About Me</h1>
+<h1 class="page-title">About Alison</h1>
 
 <div class="about-intro">
-  <p class="lead">Senior Technical Writer with over 30 years of experience in software documentation, specializing in virtualization, cloud-native platforms, and container technologies.</p>
+  <p class="lead">I'm an AI consultant and senior technical writer based in Melbourne, Australia.</p>
 </div>
 
 <div class="about-content" markdown="1">
 
-## Professional Background
+I spent over 30 years at Oracle writing documentation for some of the most
+complex enterprise software in the world: Kubernetes, cloud-native platforms,
+Linux virtualisation, and Oracle Cloud Infrastructure. I left in 2025 to build
+something of my own.
 
-Throughout my career at Oracle, I've designed, written, and maintained comprehensive documentation sets from concept to delivery, collaborating closely with engineering and product teams to ensure technical accuracy and user-focused content.
+Since then, I've been doing the hands-on work: building AI systems, writing
+code, testing tools, and figuring out how to make AI actually useful
+for small business owners who need it to be simple, and for technical teams
+who need it to be exact.
 
-My expertise spans the complete documentation lifecycle, from requirements gathering and content planning through to publication and maintenance. I'm particularly skilled at translating complex technical concepts into clear, actionable documentation that helps users successfully deploy and manage enterprise software systems.
+## What Makes Me Different
+
+Most AI consultants come from one direction: either they're highly technical
+but struggle to communicate with non-technical people, or they're great
+communicators but light on actual technical depth.
+
+I've spent my career doing both. Explaining Kubernetes to a developer is
+a different skill from explaining AI automation to a café owner. I can do either,
+and that's what makes me useful to very different clients.
 
 ## Core Competencies
+
+### AI & Development
+
+<div class="role-section" markdown="1">
+
+- **Model Deployment:** Running and evaluating local models via Ollama and Hugging Face
+- **Fine-Tuning:** QLoRA and Unsloth on CUDA (GPU) and Apple MLX; synthetic dataset generation with Claude; model benchmarking
+- **RAG Systems:** ChromaDB vector database; REST API with web (browser), desktop (Tauri), and CLI interfaces
+- **Mobile Development:** React Native, Expo, SQLite, TypeScript (Android)
+- **Languages:** Python, TypeScript
+- **Tooling:** Claude Code, VS Code, Git
+
+</div>
 
 ### Documentation & Authoring
 
@@ -56,45 +83,35 @@ My expertise spans the complete documentation lifecycle, from requirements gathe
 
 ## Career Highlights
 
-### Oracle (1993-2025)
+### Oracle (1993–2025)
 
 <div class="role-section" markdown="1">
 
-**Consulting User Assistance Developer (2013-2025)**
+**Consulting User Assistance Developer (2013–2025)**
 
-Led documentation efforts for critical Oracle Linux products, including Oracle Cloud Native Environment, Oracle OpenStack, and Oracle VM. Key achievements include:
+Led documentation for Oracle Cloud Native Environment, a complex, multi-product platform covering Kubernetes, container orchestration, and cloud-native infrastructure. Key achievements:
 
-- **Complete Documentation Sets:** Delivered comprehensive documentation for multiple Oracle Linux products, consistently meeting aggressive release deadlines while maintaining high quality standards
-- **Technical Innovation:** Designed and implemented automated deployment scripts using Terraform and Ansible, which were later adopted by Oracle Support teams to improve internal testing efficiency
-- **Documentation Modernization:** Successfully migrated documentation source code from legacy Subversion/DocBook to Git/DITA, modernizing workflows and significantly reducing maintenance overhead
-- **Cross-Team Collaboration:** Partnered with engineering teams to test features during development, identifying improvements and raising defects early in the product lifecycle
-- **Mentorship Excellence:** Recognized as a trusted mentor for new writers, fostering stronger cross-team relationships and raising content quality standards
+- **Complete Documentation Sets:** Delivered comprehensive documentation for multiple Oracle Linux products, consistently meeting aggressive release deadlines
+- **Technical Innovation:** Designed and implemented automated deployment scripts using Terraform and Ansible, later adopted by Oracle Support teams
+- **Documentation Modernization:** Migrated documentation source from legacy Subversion/DocBook to Git/DITA, modernizing workflows and reducing maintenance overhead
+- **Cross-Team Collaboration:** Partnered with engineering teams to test features during development, raising defects early in the product lifecycle
+- **Mentorship:** Recognized as a trusted mentor for new writers, fostering cross-team collaboration and raising content quality standards
 
 </div>
 
 <div class="role-section" markdown="1">
 
-**Senior Technical Writer (1993-2013)**
+**Senior Technical Writer (1993–2013)**
 
-Produced high-quality documentation for Oracle Database and Oracle Applications, including SQL*Plus and localization features. Notable accomplishments:
+Produced documentation for Oracle Database and Oracle Applications. Notable work:
 
-- **Published Author:** Co-authored *The Underground PHP and Oracle Manual*, expanding Oracle's engagement with the PHP developer community
-- **Global Knowledge Sharing:** Delivered presentations and hands-on training sessions at major international conferences including Oracle OpenWorld and PHP conferences
-- **Training Material Development:** Created comprehensive training materials and customer-facing guides for technical audiences
+- **Published Author:** Co-authored *The Underground PHP and Oracle Manual*
+- **Global Knowledge Sharing:** Presented at Oracle OpenWorld and international PHP conferences
+- **Training Material Development:** Created comprehensive training materials and customer-facing guides
 
 </div>
 
-## Technical Documentation Philosophy
-
-I believe great technical documentation should be:
-
-- **Accurate:** Technical precision is non-negotiable, especially for enterprise systems
-- **User-Centered:** Content must address real user needs and workflows
-- **Action-Oriented:** Every document should guide users to successfully complete their tasks
-- **Testable:** Documentation should be validated through hands-on testing
-- **Maintainable:** Well-structured, modular content that's easy to update
-
-## Education & Development
+## Education
 
 <div class="education-grid">
 <div class="education-item" markdown="1">
@@ -117,11 +134,11 @@ RMIT, 2002
 
 <div class="contact-info">
   <h2>Get in Touch</h2>
-  <p>I'm interested in technical writing opportunities, particularly roles involving cloud-native technologies, virtualization, or complex enterprise systems documentation.</p>
+  <p>Open to new work in AI consulting and technical writing.</p>
   <ul>
     <li><strong>Email:</strong> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
     <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/{{ site.author.linkedin }}">linkedin.com/in/{{ site.author.linkedin }}</a></li>
     <li><strong>GitHub:</strong> <a href="https://github.com/{{ site.author.github }}">github.com/{{ site.author.github }}</a></li>
-    <li><strong>Location:</strong> {{ site.author.location }}</li>
+    <li><strong>Location:</strong> {{ site.author.location }}, available for remote work</li>
   </ul>
 </div>

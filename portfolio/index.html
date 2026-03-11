@@ -6,32 +6,15 @@ title: Portfolio
 <h1 class="page-title">Documentation Portfolio</h1>
 
 <p class="portfolio-intro">
-  A collection of technical documentation for cloud native and virtualization products, including installation guides, release notes, deployment guides, upgrade guides, and CLI reference materials.
+  Technical documentation from my 30+ years working at Oracle.
+  For AI consulting work and automation projects, see my <a href="https://github.com/alison-holloway">GitHub</a>.
 </p>
-
-<!-- Filter by Tag Section -->
-<div class="filter-section">
-  <h2>Filter by Category</h2>
-  <div class="filter-tags">
-    <button class="filter-tag active" data-filter="all">All</button>
-    {% assign all_tags = site.portfolio | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
-    {% for tag in all_tags %}
-      {% if tag != "" %}
-        <button class="filter-tag" data-filter="{{ tag | slugify }}">{{ tag }}</button>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
 
 <!-- Portfolio Grid -->
 <div class="portfolio-grid" id="portfolio-grid">
   {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
   {% for item in sorted_portfolio %}
-    <div class="portfolio-card"
-         data-tags="{% for tag in item.tags %}{{ tag | slugify }} {% endfor %}"
-         data-title="{{ item.title | downcase }}"
-         data-product="{{ item.product | downcase }}"
-         data-description="{{ item.excerpt | strip_html | downcase | truncatewords: 50 }}">
+    <div class="portfolio-card">
       <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
       <p class="portfolio-meta">
         {{ item.product }} | {{ item.doc_type }}
@@ -42,7 +25,7 @@ title: Portfolio
       {% if item.tags %}
         <div class="tags">
           {% for tag in item.tags %}
-            <button class="tag card-tag" data-filter="{{ tag | slugify }}">{{ tag }}</button>
+            <span class="tag">{{ tag }}</span>
           {% endfor %}
         </div>
       {% endif %}
@@ -50,82 +33,8 @@ title: Portfolio
   {% endfor %}
 </div>
 
-<div class="no-results" id="no-results" hidden>
-  <p>No portfolio items match your search.</p>
-  <button class="btn" id="clear-filter">Show All</button>
-</div>
-
 {% if site.portfolio.size == 0 %}
   <div class="empty-state">
     <p>Portfolio items will be added soon.</p>
   </div>
 {% endif %}
-
-<script>
-  const filterTags = document.querySelectorAll('.filter-tag');
-  const cardTags = document.querySelectorAll('.card-tag');
-  const portfolioCards = document.querySelectorAll('.portfolio-card');
-  const noResults = document.getElementById('no-results');
-  const clearFilterBtn = document.getElementById('clear-filter');
-
-  let currentFilter = 'all';
-
-  function updateDisplay() {
-    let visibleCount = 0;
-
-    portfolioCards.forEach(card => {
-      const tags = card.dataset.tags.trim().split(' ');
-
-      // Check filter match
-      const filterMatch = currentFilter === 'all' || tags.includes(currentFilter);
-
-      card.classList.toggle('hidden', !filterMatch);
-      if (filterMatch) visibleCount++;
-    });
-
-    noResults.hidden = visibleCount > 0;
-  }
-
-  function setFilter(filter) {
-    currentFilter = filter;
-    filterTags.forEach(tag => {
-      tag.classList.toggle('active', tag.dataset.filter === filter);
-    });
-    updateDisplay();
-  }
-
-  // Filter tag click handlers
-  filterTags.forEach(tag => {
-    tag.addEventListener('click', () => {
-      setFilter(tag.dataset.filter);
-    });
-  });
-
-  // Card tag click handlers
-  cardTags.forEach(tag => {
-    tag.addEventListener('click', (e) => {
-      e.preventDefault();
-      setFilter(tag.dataset.filter);
-      document.querySelector('.filter-section').scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  // Clear filter button
-  clearFilterBtn.addEventListener('click', () => {
-    setFilter('all');
-  });
-
-  // Handle URL hash for direct linking
-  function handleHashFilter() {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      const matchingTag = Array.from(filterTags).find(tag => tag.dataset.filter === hash);
-      if (matchingTag) {
-        setFilter(hash);
-      }
-    }
-  }
-
-  handleHashFilter();
-  window.addEventListener('hashchange', handleHashFilter);
-</script>
