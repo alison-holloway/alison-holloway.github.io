@@ -6,7 +6,7 @@
     {
       "id": "Start",
       "type": "rectangle",
-      "x": 88.51249504089355,
+      "x": 74,
       "y": 8,
       "width": 144,
       "height": 45,
@@ -34,10 +34,7 @@
       ],
       "updated": 1770953086139,
       "link": null,
-      "locked": false,
-      "roundness": {
-        "type": 3
-      }
+      "locked": false
     },
     {
       "angle": 0,
@@ -61,7 +58,7 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086139_53",
       "type": "text",
-      "x": 100.51249504089355,
+      "x": 86,
       "y": 18,
       "width": 120,
       "height": 25,
@@ -75,13 +72,13 @@
     {
       "id": "RN",
       "type": "rectangle",
-      "x": 28.05859375,
-      "y": 126.75,
+      "x": 38,
+      "y": 103,
       "width": 216,
-      "height": 90,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -131,8 +128,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086139_54",
       "type": "text",
-      "x": 40.05859375,
-      "y": 146.75,
+      "x": 50,
+      "y": 117,
       "width": 192,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -146,12 +143,12 @@
       "id": "UPG1",
       "type": "rectangle",
       "x": 8,
-      "y": 301.75,
+      "y": 231,
       "width": 276,
-      "height": 90,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -202,7 +199,7 @@
       "id": "elem_1770953086139_55",
       "type": "text",
       "x": 20,
-      "y": 321.75,
+      "y": 245,
       "width": 252,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -215,13 +212,13 @@
     {
       "id": "KC",
       "type": "rectangle",
-      "x": 13.419921875,
-      "y": 476.75,
+      "x": 20,
+      "y": 359,
       "width": 252,
-      "height": 90,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -271,8 +268,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086139_56",
       "type": "text",
-      "x": 25.419921875,
-      "y": 496.75,
+      "x": 32,
+      "y": 373,
       "width": 228,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -285,13 +282,13 @@
     {
       "id": "UPG2",
       "type": "rectangle",
-      "x": 35.98828125,
-      "y": 651.75,
+      "x": 44,
+      "y": 487,
       "width": 204,
-      "height": 90,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -341,8 +338,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086139_57",
       "type": "text",
-      "x": 47.98828125,
-      "y": 671.75,
+      "x": 56,
+      "y": 501,
       "width": 180,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -355,13 +352,13 @@
     {
       "id": "UPG3",
       "type": "rectangle",
-      "x": 35.0703125,
-      "y": 826.75,
+      "x": 38,
+      "y": 615,
       "width": 216,
-      "height": 90,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -411,8 +408,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086139_58",
       "type": "text",
-      "x": 47.0703125,
-      "y": 846.75,
+      "x": 50,
+      "y": 629,
       "width": 192,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -425,13 +422,13 @@
     {
       "id": "CLI",
       "type": "rectangle",
-      "x": 45.51953125,
-      "y": 1001.75,
-      "width": 186.671875,
-      "height": 90,
+      "x": 53,
+      "y": 743,
+      "width": 186,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -481,9 +478,9 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086139_59",
       "type": "text",
-      "x": 60.85546875,
-      "y": 1021.75,
-      "width": 156,
+      "x": 65,
+      "y": 757,
+      "width": 162,
       "height": 50,
       "strokeColor": "#1B3A5C",
       "text": "CLI Reference\nLearn new CLI",
@@ -495,8 +492,8 @@
     {
       "id": "Done",
       "type": "rectangle",
-      "x": 88.51249504089355,
-      "y": 1176.75,
+      "x": 74,
+      "y": 871,
       "width": 144,
       "height": 45,
       "angle": 0,
@@ -523,10 +520,7 @@
       ],
       "updated": 1770953086139,
       "link": null,
-      "locked": false,
-      "roundness": {
-        "type": 3
-      }
+      "locked": false
     },
     {
       "angle": 0,
@@ -550,8 +544,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086139_60",
       "type": "text",
-      "x": 100.51249504089355,
-      "y": 1186.75,
+      "x": 86,
+      "y": 881,
       "width": 120,
       "height": 25,
       "strokeColor": "#1B3A5C",
@@ -564,10 +558,10 @@
     {
       "id": "Start_RN",
       "type": "arrow",
-      "x": 162.815,
-      "y": 64.875,
+      "x": 146,
+      "y": 54,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -585,46 +579,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          -0.625,
-          30.625
-        ],
-        [
-          -0.625,
-          56.875
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "Start",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "RN",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "RN_UPG1",
       "type": "arrow",
-      "x": 162.19,
-      "y": 239.25,
+      "x": 146,
+      "y": 182,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -642,46 +623,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          31.25
-        ],
-        [
-          0,
-          57.5
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "RN",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "UPG1",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "UPG1_KC",
       "type": "arrow",
-      "x": 162.19,
-      "y": 414.25,
+      "x": 146,
+      "y": 310,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -699,46 +667,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          31.25
-        ],
-        [
-          0,
-          57.5
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "UPG1",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "KC",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "KC_UPG2",
       "type": "arrow",
-      "x": 162.19,
-      "y": 589.25,
+      "x": 146,
+      "y": 438,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -756,46 +711,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          31.25
-        ],
-        [
-          0,
-          57.5
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "KC",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "UPG2",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "UPG2_UPG3",
       "type": "arrow",
-      "x": 162.19,
-      "y": 764.25,
+      "x": 146,
+      "y": 566,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -813,46 +755,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          31.25
-        ],
-        [
-          0,
-          57.5
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "UPG2",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "UPG3",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "UPG3_CLI",
       "type": "arrow",
-      "x": 162.19,
-      "y": 939.25,
+      "x": 146,
+      "y": 694,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -870,46 +799,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          31.25
-        ],
-        [
-          0,
-          57.5
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "UPG3",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "CLI",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "CLI_Done",
       "type": "arrow",
-      "x": 162.19,
-      "y": 1114.25,
+      "x": 146,
+      "y": 822,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -927,38 +843,25 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          31.25
-        ],
-        [
-          0.5262499999999903,
-          58.12624999999997
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "CLI",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "Done",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     }
   ],
   "appState": {

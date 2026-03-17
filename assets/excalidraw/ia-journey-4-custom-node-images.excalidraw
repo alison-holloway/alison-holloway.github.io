@@ -6,8 +6,8 @@
     {
       "id": "Start",
       "type": "rectangle",
-      "x": 8,
-      "y": 54.875,
+      "x": 80,
+      "y": 8,
       "width": 168,
       "height": 45,
       "angle": 0,
@@ -34,10 +34,7 @@
       ],
       "updated": 1770953086153,
       "link": null,
-      "locked": false,
-      "roundness": {
-        "type": 3
-      }
+      "locked": false
     },
     {
       "angle": 0,
@@ -61,8 +58,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086153_61",
       "type": "text",
-      "x": 20,
-      "y": 64.875,
+      "x": 92,
+      "y": 18,
       "width": 144,
       "height": 25,
       "strokeColor": "#1B3A5C",
@@ -75,13 +72,13 @@
     {
       "id": "CON",
       "type": "rectangle",
-      "x": 256.6039161682129,
-      "y": 8,
+      "x": 20,
+      "y": 103,
       "width": 288,
-      "height": 120,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -131,8 +128,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086153_62",
       "type": "text",
-      "x": 268.6039161682129,
-      "y": 43,
+      "x": 32,
+      "y": 117,
       "width": 264,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -145,13 +142,13 @@
     {
       "id": "KC1",
       "type": "rectangle",
-      "x": 644.1039161682129,
-      "y": 26.75,
+      "x": 38,
+      "y": 231,
       "width": 252,
-      "height": 90,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -201,8 +198,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086153_63",
       "type": "text",
-      "x": 656.1039161682129,
-      "y": 46.75,
+      "x": 50,
+      "y": 245,
       "width": 228,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -215,13 +212,13 @@
     {
       "id": "OCK",
       "type": "rectangle",
-      "x": 1007.1507911682129,
-      "y": 26.75,
+      "x": 32,
+      "y": 359,
       "width": 264,
-      "height": 90,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -271,8 +268,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086153_64",
       "type": "text",
-      "x": 1019.1507911682129,
-      "y": 46.75,
+      "x": 44,
+      "y": 373,
       "width": 240,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -285,13 +282,13 @@
     {
       "id": "KC2",
       "type": "rectangle",
-      "x": 1379.494541168213,
-      "y": 8,
+      "x": 8,
+      "y": 487,
       "width": 312,
-      "height": 120,
+      "height": 78,
       "angle": 0,
       "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -341,8 +338,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086153_65",
       "type": "text",
-      "x": 1391.494541168213,
-      "y": 43,
+      "x": 20,
+      "y": 501,
       "width": 288,
       "height": 50,
       "strokeColor": "#1B3A5C",
@@ -355,8 +352,8 @@
     {
       "id": "Done",
       "type": "rectangle",
-      "x": 1766.994541168213,
-      "y": 54.875,
+      "x": 56,
+      "y": 615,
       "width": 216,
       "height": 45,
       "angle": 0,
@@ -383,10 +380,7 @@
       ],
       "updated": 1770953086153,
       "link": null,
-      "locked": false,
-      "roundness": {
-        "type": 3
-      }
+      "locked": false
     },
     {
       "angle": 0,
@@ -410,8 +404,8 @@
       "lineHeight": 1.25,
       "id": "elem_1770953086153_66",
       "type": "text",
-      "x": 1778.994541168213,
-      "y": 64.875,
+      "x": 68,
+      "y": 625,
       "width": 192,
       "height": 25,
       "strokeColor": "#1B3A5C",
@@ -424,10 +418,10 @@
     {
       "id": "Start_CON",
       "type": "arrow",
-      "x": 194.72875000000002,
-      "y": 83.625,
+      "x": 164,
+      "y": 54,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -445,46 +439,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          30.625,
-          -0.625
-        ],
-        [
-          56.875,
-          -0.625
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "Start",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "CON",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "CON_KC1",
       "type": "arrow",
-      "x": 581.60375,
-      "y": 83,
+      "x": 164,
+      "y": 182,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -502,46 +483,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          31.25,
-          0
-        ],
-        [
-          57.50000000000007,
-          0
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "CON",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "KC1",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "KC1_OCK",
       "type": "arrow",
-      "x": 944.65125,
-      "y": 83,
+      "x": 164,
+      "y": 310,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -559,46 +527,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          31.25,
-          0
-        ],
-        [
-          57.5,
-          0
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "KC1",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "OCK",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "OCK_KC2",
       "type": "arrow",
-      "x": 1316.995,
-      "y": 83,
+      "x": 164,
+      "y": 438,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -616,46 +571,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          31.25,
-          0
-        ],
-        [
-          57.5,
-          0
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "OCK",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "KC2",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     },
     {
       "id": "KC2_Done",
       "type": "arrow",
-      "x": 1704.495,
-      "y": 83,
+      "x": 164,
+      "y": 566,
       "width": 0,
-      "height": 0,
+      "height": 48,
       "angle": 0,
       "strokeColor": "#4A6FA5",
       "backgroundColor": "transparent",
@@ -673,38 +615,25 @@
       "link": null,
       "locked": false,
       "points": [
-        [
-          0,
-          0
-        ],
-        [
-          31.25,
-          0
-        ],
-        [
-          58.125,
-          0.5274999999999963
-        ]
+        [0, 0],
+        [0, 48]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "KC2",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 1]
       },
       "endBinding": {
         "elementId": "Done",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": null
+        "fixedPoint": [0.5, 0]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
-      "elbowed": false,
-      "roundness": {
-        "type": 2
-      }
+      "elbowed": false
     }
   ],
   "appState": {

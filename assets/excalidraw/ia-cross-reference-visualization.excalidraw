@@ -749,7 +749,7 @@
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
-      "strokeStyle": "solid",
+      "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
       "seed": 1977225719,
@@ -792,12 +792,10 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aI",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "RN_KC",
@@ -811,7 +809,7 @@
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
-      "strokeStyle": "solid",
+      "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
       "seed": 1276998337,
@@ -835,23 +833,29 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "RN",
-        "focus": -0.3733904300624594,
-        "gap": 1
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0.75,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "KC",
-        "focus": 0.9063091996201017,
-        "gap": 2.041015625
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0.95,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aJ",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "RN_UPG",
@@ -865,7 +869,7 @@
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
-      "strokeStyle": "solid",
+      "strokeStyle": "dashed",
       "roughness": 0,
       "opacity": 100,
       "seed": 954004379,
@@ -908,12 +912,10 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aK",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "QS_KC",
@@ -951,23 +953,29 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "QS",
-        "focus": -0.32639906514207967,
-        "gap": 1
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "KC",
-        "focus": 0.548357748110405,
-        "gap": 1
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          1,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aL",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "CON_KC",
@@ -1024,12 +1032,10 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aM",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "KC_CLI",
@@ -1067,23 +1073,29 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "KC",
-        "focus": 0.8199039382987944,
-        "gap": 2.5524678050970846
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "CLI",
-        "focus": 0.3896517820072608,
-        "gap": 1
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0.8,
+          0
+        ]
       },
       "startArrowhead": "arrow",
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aN",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "KC_APP",
@@ -1140,12 +1152,10 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aO",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "APP_CLI",
@@ -1183,23 +1193,29 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "APP",
-        "focus": -0.008950675922622513,
-        "gap": 1.622578210106557
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "CLI",
-        "focus": 0.5334927033616422,
-        "gap": 3.8876953125
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          1,
+          0.5
+        ]
       },
       "startArrowhead": "arrow",
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aP",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "KC_OCK",
@@ -1256,19 +1272,17 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aQ",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "KC_K8S",
       "type": "arrow",
       "x": 527.142578125,
       "y": 317,
-      "width": 244,
+      "width": 257.828125,
       "height": 243,
       "angle": 0,
       "strokeColor": "#4A6FA5",
@@ -1279,11 +1293,11 @@
       "roughness": 0,
       "opacity": 100,
       "seed": 746524424,
-      "version": 9,
-      "versionNonce": 1120181322,
+      "version": 25,
+      "versionNonce": 968742783,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1773282883801,
+      "updated": 1773730777506,
       "link": null,
       "locked": false,
       "points": [
@@ -1292,8 +1306,8 @@
           0
         ],
         [
-          244,
-          0
+          257.828125,
+          1.9921875
         ],
         [
           180,
@@ -1303,23 +1317,21 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "KC",
-        "focus": 0,
+        "focus": -0.03511906339567786,
         "gap": 1.142578125
       },
       "endBinding": {
         "elementId": "K8S",
-        "focus": 0.8397812991805509,
+        "focus": 0.803522028734442,
         "gap": 1.408203125
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aR",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "APP_K8S",
@@ -1376,12 +1388,10 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aS",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "UPG_KC",
@@ -1419,23 +1429,29 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "UPG",
-        "focus": -0.148838356434667,
-        "gap": 1
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0.8,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "KC",
-        "focus": -0.54590684508755,
-        "gap": 1
+        "focus": 0,
+        "gap": 1,
+        "fixedPoint": [
+          0,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aT",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     },
     {
       "id": "UPG_CLI",
@@ -1492,12 +1508,10 @@
       "startArrowhead": null,
       "endArrowhead": "arrow",
       "elbowed": false,
-      "roundness": {
-        "type": 2
-      },
       "index": "aU",
       "groupIds": [],
-      "frameId": null
+      "frameId": null,
+      "roundness": null
     }
   ],
   "appState": {

@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio Dev",
+  "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "postCreateCommand": "bundle install && npm install && npx playwright install chromium && sudo npx playwright install-deps chromium",
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "pomdtr.excalidraw-editor"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}

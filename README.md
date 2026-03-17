@@ -32,6 +32,8 @@ This site showcases documentation work across:
 
 ```
 alison-holloway.github.io/
+├── .devcontainer/
+│   └── devcontainer.json    # VS Code dev container configuration
 ├── _config.yml              # Site configuration
 ├── Gemfile                  # Ruby dependencies
 ├── index.html               # Home page with featured projects
@@ -80,18 +82,64 @@ alison-holloway.github.io/
 
 ## Local Development
 
-### Prerequisites
+### Option A: Dev Container (Recommended)
+
+The repository includes a dev container configuration for VS Code that sets up the full environment automatically — Ruby, Node.js, Playwright, and all dependencies.
+
+**Prerequisites:**
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine on Linux)
+- [VS Code](https://code.visualstudio.com/) with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+**Setup:**
+
+1. Clone the repository and open the folder in VS Code
+2. When prompted, click **Reopen in Container** (or open the Command Palette and run `Dev Containers: Reopen in Container`)
+3. Wait for the container to build and the `postCreateCommand` to finish — this installs all Ruby gems, Node packages, and Playwright browser dependencies automatically
+
+**Running the site:**
+
+```bash
+bundle exec jekyll serve
+```
+
+View the site at `http://localhost:4000` (VS Code will offer to open the forwarded port automatically).
+
+**Exporting SVGs after editing diagrams:**
+
+```bash
+npm run export-svg
+```
+
+No additional setup needed — Playwright and Chromium are pre-installed in the container.
+
+---
+
+### Option B: Local Setup (Manual)
+
+**Prerequisites:**
 
 - Ruby 2.7 or higher
 - Bundler gem (`gem install bundler`)
+- Node.js LTS
+- Playwright Chromium and its system dependencies (required for SVG export only)
 
-### Running Locally
+**Setup:**
 
 ```bash
-# Install dependencies
+# Install Ruby dependencies
 bundle install
 
-# Start local server
+# Install Node dependencies
+npm install
+
+# Install Playwright browser and system dependencies (for SVG export)
+npx playwright install chromium
+sudo npx playwright install-deps chromium
+```
+
+**Running the site:**
+
+```bash
 bundle exec jekyll serve
 ```
 
@@ -225,7 +273,7 @@ After editing diagrams, re-export to SVG:
 npm run export-svg
 ```
 
-This bundles `@excalidraw/excalidraw` with esbuild and uses Playwright to render SVGs in a headless browser.
+This bundles `@excalidraw/excalidraw` with esbuild and uses Playwright to render SVGs in a headless browser. Playwright and Chromium are pre-installed when using the dev container. For local setup, see [Option B: Local Setup](#option-b-local-setup-manual) for install steps.
 
 ### Color Palette
 
