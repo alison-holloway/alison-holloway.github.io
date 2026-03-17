@@ -10,31 +10,54 @@ title: Portfolio
   For AI consulting work and automation projects, see my <a href="https://github.com/alison-holloway">GitHub</a>.
 </p>
 
-<!-- Portfolio Grid -->
-<div class="portfolio-grid" id="portfolio-grid">
-  {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
-  {% for item in sorted_portfolio %}
-    <div class="portfolio-card">
-      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-      <p class="portfolio-meta">
-        {{ item.product }} | {{ item.doc_type }}
-        {% if item.version %} | Version {{ item.version }}{% endif %}
-      </p>
-      <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
+{% assign ocne_items = site.portfolio | where: "product", "Oracle Cloud Native Environment" %}
+{% assign other_items = site.portfolio | where_exp: "item", "item.product != 'Oracle Cloud Native Environment'" | sort: "date" | reverse %}
 
-      {% if item.tags %}
-        <div class="tags">
-          {% for tag in item.tags %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  {% endfor %}
-</div>
+{% assign ia_item = ocne_items | where: "doc_type", "Information Architecture" | first %}
+{% assign rest_ocne = ocne_items | where_exp: "item", "item.doc_type != 'Information Architecture'" | sort: "date" | reverse %}
 
-{% if site.portfolio.size == 0 %}
-  <div class="empty-state">
-    <p>Portfolio items will be added soon.</p>
+<!-- Oracle Cloud Native Environment section -->
+<section class="portfolio-section">
+  <h2 class="portfolio-section-title">Oracle Cloud Native Environment Release 2</h2>
+  <div class="portfolio-grid">
+    {% if ia_item %}
+      <div class="portfolio-card">
+        <h3><a href="{{ ia_item.url | relative_url }}">{{ ia_item.title | remove: "Oracle Cloud Native Environment Release 2 - " }}</a></h3>
+        <p class="portfolio-meta">
+          {{ ia_item.product }} | {{ ia_item.doc_type }}
+          {% if ia_item.version %} | Version {{ ia_item.version }}{% endif %}
+        </p>
+        <p class="portfolio-description">{{ ia_item.excerpt | strip_html | truncatewords: 25 }}</p>
+      </div>
+    {% endif %}
+    {% for item in rest_ocne %}
+      <div class="portfolio-card">
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title | remove: "Oracle Cloud Native Environment Release 2 - " }}</a></h3>
+        <p class="portfolio-meta">
+          {{ item.product }} | {{ item.doc_type }}
+          {% if item.version %} | Version {{ item.version }}{% endif %}
+        </p>
+        <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
+      </div>
+    {% endfor %}
   </div>
+</section>
+
+<!-- Other work section -->
+{% if other_items.size > 0 %}
+<section class="portfolio-section">
+  <h2 class="portfolio-section-title">Other Work</h2>
+  <div class="portfolio-grid">
+    {% for item in other_items %}
+      <div class="portfolio-card">
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        <p class="portfolio-meta">
+          {{ item.product }} | {{ item.doc_type }}
+          {% if item.version %} | Version {{ item.version }}{% endif %}
+        </p>
+        <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
 {% endif %}

@@ -43,17 +43,14 @@ layout: default
     </dl>
   </div>
 
+  <nav class="toc" id="toc" aria-label="Table of contents" style="display:none">
+    <div class="toc-title">On this page</div>
+    <ol id="toc-list"></ol>
+  </nav>
+
   <div class="portfolio-content">
     {{ content }}
   </div>
-
-  {% if page.tags %}
-  <div class="tags">
-    {% for tag in page.tags %}
-      <a href="{{ '/portfolio/' | relative_url }}#{{ tag | slugify }}" class="tag">{{ tag }}</a>
-    {% endfor %}
-  </div>
-  {% endif %}
 
   {% if page.pdf_url or page.doc_url %}
   <div class="portfolio-links">
@@ -71,3 +68,48 @@ layout: default
     <a href="{{ '/portfolio/' | relative_url }}">&larr; Back to Portfolio</a>
   </div>
 </article>
+
+<script>
+(function() {
+  var content = document.querySelector('.portfolio-content');
+  var tocList = document.getElementById('toc-list');
+  var toc = document.getElementById('toc');
+  if (!content || !tocList) return;
+
+  var headings = content.querySelectorAll('h2, h3');
+  if (headings.length < 2) return;
+
+  var currentH2Item = null;
+  var currentSubList = null;
+
+  headings.forEach(function(h, i) {
+    var id = h.id || 'toc-' + i;
+    h.id = id;
+
+    var a = document.createElement('a');
+    a.href = '#' + id;
+    a.textContent = h.textContent;
+
+    var li = document.createElement('li');
+    li.appendChild(a);
+
+    if (h.tagName === 'H2') {
+      currentSubList = null;
+      currentH2Item = li;
+      tocList.appendChild(li);
+    } else {
+      if (!currentSubList) {
+        currentSubList = document.createElement('ol');
+        if (currentH2Item) {
+          currentH2Item.appendChild(currentSubList);
+        } else {
+          tocList.appendChild(currentSubList);
+        }
+      }
+      currentSubList.appendChild(li);
+    }
+  });
+
+  toc.style.display = '';
+})();
+</script>
