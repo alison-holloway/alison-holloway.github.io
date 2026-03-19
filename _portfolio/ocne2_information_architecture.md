@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Information Architecture
+title: Information Architecture
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Information Architecture
@@ -27,6 +27,16 @@ The Oracle Cloud Native Environment Release 2 documentation set comprises 9 inte
 
 This portfolio entry documents the architectural decisions, organizational principles, and cross-referencing strategies that create a cohesive documentation experience across the complete documentation set.
 
+## Audience
+
+This portfolio entry demonstrates:
+
+- **Information architecture design** for complex, multi-deliverable documentation sets
+- **User journey mapping** across documentation boundaries
+- **Content strategy** for technical products with multiple deployment models
+- **DITA XML architecture** for enterprise documentation
+- **Cross-reference planning** to create cohesive user experiences
+
 ## The Documentation Set
 
 The 9 books serve distinct purposes while forming an integrated whole:
@@ -40,12 +50,12 @@ The 9 books serve distinct purposes while forming an integrated whole:
 | **Kubernetes Clusters** | Full deployment and administration | Platform engineers, admins |
 | **Applications** | Catalog and application management | DevOps, developers |
 | **Kubernetes** | Platform fundamentals | Users new to Kubernetes |
-| **OCK Image Builder** | Custom node image creation | Security teams, advanced users |
+| **OCK Image Builder** | Custom node image creation | Platform engineers, security teams, advanced users |
 | **Upgrade Guide** | Release 1.x to Release 2 migration | Existing customers |
 
 ## Documentation Set Architecture
 
-The books are organized into five functional categories that reflect how users approach the documentation:
+The books are organized into four functional categories that reflect how users approach the documentation:
 
 <img src="/assets/excalidraw/ia-documentation-set-architecture.svg" alt="Documentation set architecture showing five functional categories: Reference and Updates, Foundation and Concepts, Getting Started, Core Operations, and Advanced and Specialized" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
 
@@ -71,7 +81,7 @@ The information architecture supports several common reader journeys through the
 
 ### Journey 2: Production OCI Deployment
 
-**Persona:** Platform engineer deploying production Kubernetes on Oracle Cloud Infrastructure.
+**Persona:** Platform engineer deploying production Kubernetes on Oracle Cloud Infrastructure (OCI).
 
 **Goal:** Deploy a production-ready, highly-available cluster on OCI.
 
@@ -91,7 +101,7 @@ The information architecture supports several common reader journeys through the
 
 ### Journey 4: Custom Node Images
 
-**Persona:** Security or platform team creating hardened node images.
+**Persona:** Security or platform team creating hardened and custom node images.
 
 **Goal:** Build custom OCK images meeting corporate security standards.
 
@@ -101,7 +111,7 @@ The information architecture supports several common reader journeys through the
 
 ### Journey 5: Day-2 Operations
 
-**Persona:** SRE or operations engineer maintaining production clusters.
+**Persona:** Site reliability engineer (SRE) or operations engineer maintaining production clusters.
 
 **Goal:** Ongoing cluster maintenance including updates, scaling, backups, and troubleshooting.
 
@@ -229,12 +239,3 @@ Maintaining consistent terminology, cross-references, and organization across ne
 | **Task** | Step-by-step procedures | Creating clusters, scaling nodes |
 | **Reference** | Structured data, options | Configuration file options, CLI syntax |
 
-## Target Audience
-
-This portfolio entry demonstrates:
-
-- **Information architecture design** for complex, multi-deliverable documentation sets
-- **User journey mapping** across documentation boundaries
-- **Content strategy** for technical products with multiple deployment models
-- **DITA XML architecture** for enterprise documentation
-- **Cross-reference planning** to create cohesive user experiences

@@ -1,9 +1,8 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Oracle Container Host for Kubernetes
-  Image Builder
+title: Oracle Container Host for Kubernetes Image Builder
 layout: portfolio_item
 product: Oracle Cloud Native Environment
-doc_type: User Guide
+doc_type: Developer Guide
 version: G17139-05
 date: '2024-08-01'
 date_completed: 'August 2025'
@@ -25,7 +24,7 @@ excerpt: Guide for creating customized Oracle Container Host for Kubernetes (OCK
 
 ## Overview
 
-The Oracle Container Host for Kubernetes (OCK) Image Builder Guide documents procedures for creating custom node images for Oracle CNE clusters. OCK is the specialized Oracle Linux-based operating system image optimized for Kubernetes node deployment. The guide covers OCK image architecture and components, image building prerequisites and environment setup, creating custom OCK images with additional software, image customization options (packages, configurations, scripts), testing and validating custom images, deploying clusters using custom OCK images, and troubleshooting image build issues.
+The Oracle Container Host for Kubernetes (OCK) Image Builder Guide documents procedures for creating custom node images for Oracle CNE clusters. OCK is the specialized Oracle Linux-based operating system image optimized for Kubernetes node deployment, based on OSTree. The guide covers OCK image architecture and components, image building prerequisites and environment setup, creating custom OCK images with additional software, image customization options (packages, configurations, scripts), testing and validating custom images, deploying clusters using custom OCK images, and troubleshooting image build issues.
 
 ## Target Audience
 
@@ -43,4 +42,4 @@ Platform engineers, security teams, and system administrators who need to custom
 
 OCK image customization involves multiple technologies: Oracle Linux, image building tools, Kubernetes node requirements, and various provider-specific image formats. Documentation needed to guide users through this complexity while preventing image builds that would produce non-functional Kubernetes nodes.
 
-**Solution:** Developed validation checklists and testing procedures to ensure custom images meet all Kubernetes node requirements. Provided tested examples for common customization scenarios (adding monitoring agents, custom certificates, hardening configurations)
+**Solution:** Provided tested examples for common customization scenarios. Provided clear CLI installation and configuration, and added explanations for all CLI command options. 

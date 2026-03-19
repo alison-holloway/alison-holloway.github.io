@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Release Notes
+title: Release Notes
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Release Notes
@@ -28,6 +28,15 @@ The Oracle Cloud Native Environment (Oracle CNE) Release 2 Release Notes provide
 
 Oracle CNE is a fully integrated suite for the development and management of cloud-native applications, built on open standards from the Open Container Initiative (OCI) and Cloud Native Computing Foundation (CNCF).
 
+## Target Audience
+
+These release notes serve:
+- **System Administrators** planning Oracle CNE deployments or upgrades
+- **DevOps Engineers** evaluating new capabilities
+- **Support Engineers** investigating customer issues
+- **Solution Architects** designing cloud-native infrastructure
+- **Development Teams** building applications on Oracle CNE
+
 ## Documentation Scope
 
 These release notes cover:
@@ -36,9 +45,7 @@ These release notes cover:
 - **Enhanced Features:** Improvements to existing functionality
 - **Deprecated Features:** Features marked for future removal
 - **Known Issues:** Documented limitations and workarounds
-- **Resolved Issues:** Bug fixes and problem resolutions
-- **Compatibility Information:** Supported platforms and component versions
-- **Upgrade Considerations:** Important information for customers upgrading from previous releases
+- **Documentation Changes:** Major changes to the documentation set
 
 ## Key Features Documented
 
@@ -70,39 +77,6 @@ Known issues require particularly careful documentation:
 - **Workaround procedures** - Step-by-step mitigation when available
 - **Tracking information** - Bug IDs for reference with Support
 
-### Compatibility Matrices
-
-Release 2 introduced new deployment options with varying compatibility requirements. The release notes include detailed compatibility matrices covering:
-- Supported Oracle Linux versions
-- Kubernetes versions
-- Container runtime versions
-- Storage provider compatibility
-- Network plugin versions
-
-## Technical Challenges
-
-### Challenge 1: Multi-Provider Documentation
-
-Release 2 introduced multiple cluster providers (libvirt, OCI, OLVM, BYO), each with provider-specific considerations. Release notes needed to clearly identify which features, limitations, and known issues applied to which providers.
-
-**Solution:** Implemented consistent labeling and categorization throughout the document, with provider-specific sections where differences were significant. Created comparison tables for quick reference.
-
-### Challenge 2: Upgrade Path Clarity
-
-Customers upgrading from Release 1.x needed clear guidance on supported upgrade paths, prerequisites, and potential breaking changes.
-
-**Solution:** Created dedicated "Upgrade Considerations" section with:
-- Step-by-step upgrade prerequisites checklist
-- Breaking changes clearly highlighted
-- Version-specific upgrade notes
-- References to detailed upgrade procedures in the Upgrade Guide
-
-### Challenge 3: Rapid Release Cycle
-
-Oracle CNE follows an active development cycle with frequent component updates. Release notes needed to track changes across multiple upstream projects (Kubernetes, container runtimes, CNI plugins, etc.).
-
-**Solution:** Established close collaboration with engineering teams to track changes early in the development cycle. Maintained structured tracking of all component version updates and their implications.
-
 ## Documentation Process
 
 ### Early Involvement
@@ -130,15 +104,6 @@ Release notes underwent review by:
 - Support (for field issue relevance)
 - Documentation team (for clarity and consistency)
 
-## Target Audience
-
-These release notes serve:
-- **System Administrators** planning Oracle CNE deployments or upgrades
-- **DevOps Engineers** evaluating new capabilities
-- **Support Engineers** investigating customer issues
-- **Solution Architects** designing cloud-native infrastructure
-- **Development Teams** building applications on Oracle CNE
-
 ## Documentation Integration
 
 Release notes integrate with the complete Oracle CNE documentation set:
@@ -155,25 +120,3 @@ Release notes integrate with the complete Oracle CNE documentation set:
 - **Testing:** Oracle Linux environments with multiple provider configurations
 - **Validation:** Collaboration with engineering, QA, and Support teams
 
-## Outcome and Impact
-
-The Release 2 Release Notes successfully:
-- Enabled smooth customer transitions to Release 2
-- Reduced support cases related to upgrade issues
-- Provided clear feature documentation for new capabilities
-- Established patterns for future release documentation
-- Received positive feedback from customers and field teams for clarity and completeness
-
-The comprehensive approach to release notes documentation has become a model for subsequent Oracle Linux product releases, emphasizing early involvement in development cycles and thorough coverage of upgrade considerations.
-
-## Related Documentation
-
-Part of the complete Oracle CNE Release 2 documentation set:
-- Concepts Guide
-- Quick Start Guide
-- CLI Reference
-- Kubernetes Clusters Guide
-- Applications Guide
-- Kubernetes Guide
-- Oracle Container Host for Kubernetes Image Builder Guide
-- Upgrade Guide

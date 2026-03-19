@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Applications Guide
+title: Applications Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: User Guide

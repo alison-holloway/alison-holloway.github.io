@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Concepts Guide
+title: Concepts Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Concepts Guide
@@ -43,13 +43,7 @@ Concepts documentation must work for readers at different technical depths: high
 
 Release 2 introduced four distinct cluster providers (libvirt, OCI, OLVM, BYO), each with different architectural implications and use cases.
 
-**Solution:** Created a provider-agnostic architectural foundation, then dedicated sections for provider-specific concepts. Included comparison matrices showing when to choose each provider and architectural diagrams for each deployment model.
-
-### Kubernetes Abstraction
-
-Oracle CNE builds on top of standard Kubernetes while adding Oracle-specific capabilities. Documentation needed to explain both standard Kubernetes concepts and Oracle CNE enhancements without overwhelming readers.
-
-**Solution:** Assumed basic Kubernetes knowledge for most sections while providing "Kubernetes Fundamentals" appendix for readers new to the technology. Clearly distinguished Oracle CNE-specific features from standard Kubernetes throughout.
+**Solution:** Created a provider-agnostic architectural foundation, then dedicated sections for provider-specific concepts. Included architectural diagrams for each deployment model.
 
 ## Documentation Approach
 
@@ -59,11 +53,7 @@ The Concepts Guide deliberately avoids step-by-step procedures, instead focusing
 
 ### Visual Communication
 
-Complex distributed systems like Oracle CNE require visual explanation. The guide includes architecture diagrams showing component relationships, network topology diagrams for different providers, data flow diagrams for key operations, and comparison tables for deployment options.
-
-### Real-World Context
-
-Conceptual documentation becomes more valuable when tied to real-world use cases: development vs. production cluster considerations, small-scale vs. large-scale deployment architectures, high-availability design patterns, and disaster recovery concepts.
+Complex distributed systems like Oracle CNE require visual explanation. The guide includes architecture diagrams showing component relationships, network topology diagrams for different providers, and data flow diagrams for key operations.
 
 ## Technical Contributions
 

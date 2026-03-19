@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Quick Start Guide
+title: Quick Start Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Quick Start Guide
@@ -46,4 +46,10 @@ Developers, system administrators, and DevOps engineers who want to quickly eval
 
 Quick Start guides must balance speed with completeness. Users want to get running quickly but also need enough information to troubleshoot if something goes wrong.
 
-**Solution:** Provided streamlined procedures with clear expected outputs at each step, plus links to detailed troubleshooting and conceptual information for users who need more depth.ß
+**Solution:** Provided streamlined procedures with clear expected outputs at each step, plus links to detailed troubleshooting and conceptual information for users who need more depth.
+
+## Single Source
+
+By design, no information should ever be repeated to ensure the minimum maintenance is required for the documentation set. 
+
+**Solution:** Single source most of the information in this small guide from other areas. Very little is original. It's essentially all pulled from other books! 

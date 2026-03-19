@@ -1,9 +1,9 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - CLI Reference
+title: CLI Reference
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: CLI Reference
-version: F96194-16
+version: F96194-18
 date: '2024-08-01'
 date_completed: 'August 2025'
 featured: false
@@ -18,64 +18,72 @@ tools:
 - Git
 pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/cli/OCNE-2-CLI.pdf
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/cli/
-excerpt: Complete command-line interface reference for Oracle CNE, documenting all
-  commands, options, arguments, and usage examples for cluster management.
+excerpt: Complete command-line interface reference for the ocne tool, documenting
+  installation, configuration, and all commands for Kubernetes cluster lifecycle management
+  in Oracle Cloud Native Environment.
 ---
 
-### Overview
+## Overview
 
-The Oracle Cloud Native Environment Release 2 Release Notes provide complete documentation of changes, new features, enhancements, known issues, and bug fixes for Release 2 of Oracle's Kubernetes-based cloud-native platform. Oracle CNE is a fully integrated suite for the development and management of cloud-native applications, built on open standards from the Open Container Initiative (OCI) and Cloud Native Computing Foundation (CNCF).
+The Oracle Cloud Native Environment CLI Reference documents the `ocne` command-line tool, the single interface for creating and managing Kubernetes clusters in Oracle CNE. The book covers installation on Oracle Linux 8 and 9, CLI usage conventions, a three-layer configuration system, and a complete reference for every command and subcommand.
 
 ## Target Audience
 
-System administrators planning Oracle CNE deployments or upgrades, DevOps engineers evaluating new capabilities, support engineers investigating customer issues, solution architects designing cloud-native infrastructure, and development teams building applications on Oracle CNE.
+System administrators, DevOps engineers, and platform operators who deploy and manage Kubernetes clusters using Oracle CNE. Readers are expected to be comfortable with Linux administration and have a working knowledge of Kubernetes concepts.
 
-## Key Documentation Features
+## Documentation Scope
 
-Release 2 introduces significant enhancements including new cluster provider options (libvirt, OCI, OLVM, Bring Your Own), simplified CLI-based cluster management, application catalog for cloud-native application deployment, enhanced backup and update capabilities, and improved cluster analysis and diagnostics.
+The reference is structured across four chapters:
 
-### Comprehensive Coverage
+- **Installing the CLI:** Prerequisites and installation via Oracle Linux Yum Server or Unbreakable Linux Network (ULN) on Oracle Linux 8 and 9
+- **Using the CLI:** Syntax help, prefix matching for abbreviated commands, shell completion (bash, zsh, fish, PowerShell), and supported environment variables
+- **Configuration Files:** A three-layer hierarchy: global defaults file (`~/.ocne/defaults.yaml`), per-cluster YAML files, and command-line flags, with worked examples for common provider configurations
+- **CLI Command Reference:** Full reference for all command groups and subcommands
 
-Release notes must balance multiple audiences and use cases. Operations teams planning upgrades need different information depth than developers building on the platform or system administrators managing deployments. Each audience requires careful organization and clear categorization of content.
+## Commands Documented
 
-### Issue Documentation
+The reference covers five command groups and two standalone commands:
 
-Known issues require particularly careful documentation with clear symptom descriptions so users can identify if they're experiencing the issue, impact assessment showing severity and scope, workaround procedures with step-by-step mitigation when available, and tracking information with bug IDs for reference with Support.
-
-### Compatibility Matrices
-
-Release 2 introduced new deployment options with varying compatibility requirements. The release notes include detailed compatibility matrices covering supported Oracle Linux versions, Kubernetes versions, container runtime versions, storage provider compatibility, and network plugin versions.
+| Command | Subcommands | Purpose |
+|---------|-------------|---------|
+| `ocne application` | install, list, show, template, uninstall, update | Application lifecycle management |
+| `ocne catalog` | add, copy, get, list, mirror, remove, search | Application catalog and private registry management |
+| `ocne cluster` | analyze, backup, console, delete, dump, info, join, list, show, stage, start, template | Full Kubernetes cluster lifecycle |
+| `ocne completion` | bash, zsh, fish, powershell | Shell completion generation |
+| `ocne image` | create, upload | OCK image creation and upload |
+| `ocne node` | update | Node-level OCK image updates |
+| `ocne info` | — | Environment variable state and version information |
 
 ## Documentation Challenges
 
-### Challenge 1: Multi-Provider Documentation
+### Challenge 1: Four Deployment Providers
 
-Release 2 introduced multiple cluster providers (libvirt, OCI, OLVM, BYO), each with provider-specific considerations. Release notes needed to clearly identify which features, limitations, and known issues applied to which providers.
+The `ocne cluster start` command supports four distinct providers: libvirt, OCI, OLVM, and Bring Your Own, each with different configuration options, prerequisites, and constraints. The configuration file chapter alone covers provider-specific sections for all four, with fields ranging from libvirt storage pool and network settings to full oVirt API server configuration for OLVM.
 
-**Solution:** Implemented consistent labeling and categorization throughout the document, with provider-specific sections where differences were significant. Created comparison tables for quick reference.
+**Solution:** Documented all providers within a unified chapter structure, using consistent field naming conventions and worked configuration examples for each provider. Clear provider labels throughout avoid ambiguity about which options apply where.
 
-### Challenge 2: Upgrade Path Clarity
+### Challenge 2: Three-Layer Configuration System
 
-Customers upgrading from Release 1.x needed clear guidance on supported upgrade paths, prerequisites, and potential breaking changes.
+The CLI uses a priority hierarchy where global defaults, cluster config files, and command-line flags can all set the same options. Users needed to understand precedence rules and know which layer to use for each type of setting.
 
-**Solution:** Created dedicated "Upgrade Considerations" section with step-by-step upgrade prerequisites checklist, breaking changes clearly highlighted, version-specific upgrade notes, and references to detailed upgrade procedures in the Upgrade Guide.
+**Solution:** Introduced the configuration system with an explicit layered model before diving into individual options. Documented all global defaults fields in a single reference table, with cross-references to the provider-specific sections and cluster start command for flags that correspond.
 
-### Challenge 3: Rapid Release Cycle
+### Challenge 3: Living Reference Across Releases
 
-Oracle CNE follows an active development cycle with frequent component updates. Release notes needed to track changes across multiple upstream projects (Kubernetes, container runtimes, CNI plugins).
+As a CLI reference for an actively developed product, every release can change command flags, add subcommands, or modify configuration options. Keeping the reference synchronized with the product while also managing accumulated updates across many revision cycles requires disciplined source management.
 
-**Solution:** Established close collaboration with engineering teams to track changes early in the development cycle. Maintained structured tracking of all component version updates and their implications.
+**Solution:** Maintained close collaboration with engineering to track CLI changes early in each development cycle. Used DITA XML conrefs and conditional attributes to manage provider-specific content efficiently, reducing the risk of inconsistency across related topics.
 
 ## Technical Approach
 
-### Early Involvement
+### Hands-On Verification
 
-Effective release notes begin during development, not at release time. For Release 2, I attended sprint planning and review meetings, tracked feature development in JIRA, documented new features as they were committed, and collaborated with QA on issue documentation.
+CLI reference accuracy depends on testing every command. All documented commands, flags, and configuration options were verified against the actual CLI, with special attention to default values and flag interactions that are easy to mis-document from engineering specs alone.
 
-### Testing and Verification
+### Consistent Formatting
 
-Every documented known issue and workaround was reproduced in test environments when possible, validated with engineering for accuracy, tested for completeness of workaround procedures, and reviewed with Support teams for field feedback.
+Reference content requires rigid structural consistency so users can scan quickly. Every command topic follows the same pattern: purpose, syntax, options table, and examples.
 
-### Stakeholder Review
+### Single Sourcing
 
-Release notes underwent review by product management for feature completeness, engineering for technical accuracy, QA for known issues coverage, support for field issue relevance, and the documentation team for clarity and consistency.
+The CLI reference is designed to complement rather than duplicate the procedural guides. Commands are documented with their options and syntax; the Kubernetes Clusters guide contains the step-by-step deployment procedures that call those commands in context. The syntax and examples included in other documents, like the Kubernetes Clusters guide, are almost all single sourced from the CLI reference!

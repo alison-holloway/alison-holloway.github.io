@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Upgrade Guide
+title: Upgrade Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Upgrade Guide
@@ -24,17 +24,17 @@ excerpt: Comprehensive procedures for upgrading from Oracle CNE Release 1.9 to R
 
 ## Overview
 
-The Oracle Cloud Native Environment Upgrade Guide provides complete procedures for migrating existing Oracle CNE Release 1.x clusters to Release 2. This represents a major version upgrade with significant architectural changes, requiring careful planning and execution. The guide covers upgrade planning and impact assessment, supported upgrade paths from Release 1.x versions, pre-upgrade prerequisites and validation, backup and rollback procedures, step-by-step upgrade execution, post-upgrade validation and testing, troubleshooting upgrade issues, and application compatibility considerations.
+The Oracle Cloud Native Environment Upgrade Guide provides complete procedures for migrating existing Oracle CNE Release 1.9 clusters to Release 2. This represents a major version upgrade with significant architectural changes, requiring careful planning and execution. The guide covers upgrade planning and impact assessment, supported upgrade paths from Release 1.9 versions, pre-upgrade prerequisites and validation, backup and rollback procedures, step-by-step upgrade execution, post-upgrade validation and testing, troubleshooting upgrade issues, and application compatibility considerations.
 
 ## Target Audience
 
-System administrators, platform engineers, and DevOps teams responsible for maintaining production Oracle CNE environments. Requires strong understanding of both Release 1.x and Release 2 architectures.
+System administrators, platform engineers, and DevOps teams responsible for maintaining production Oracle CNE environments. Requires strong understanding of both Release 1.9 and Release 2 architectures.
 
 ## Key Documentation Features
 
 ### Major Version Migration
 
-Release 2 represents a significant architectural shift from Release 1.x including new CLI-based management replacing Platform API and Kubernetes operators, different cluster provider model, new node image architecture (OCK), and updated Kubernetes versions and components. The upgrade guide addresses these breaking changes while providing clear migration paths.
+Release 2 represents a significant architectural shift from Release 1.9 including new CLI-based management replacing Platform API and Kubernetes operators, different cluster provider model, new node image architecture (an OSTree based image named Oracle Container Host for Kubernetes, or OCK), and updated Kubernetes versions and components. The upgrade guide addresses these changes while providing clear migration paths.
 
 ### Risk Mitigation
 
@@ -46,11 +46,11 @@ The upgrade is documented as a multi-stage process: assessment (evaluate current
 
 ## Documentation Challenges
 
-### Challenge 1: Breaking Changes
+### Challenge 1: Architecture Changes
 
-Release 2 is not a drop-in replacement for Release 1.x. The CLI replaces the Platform API, requiring documentation of completely different management workflows.
+Release 2 is not a drop-in replacement for Release 1.9. There are multiple deployment options for Release 2 compared to a single option for Release 1. Upgrade planning needed to show all possible options. 
 
-**Solution:** Created comprehensive mapping documentation showing Release 1.x operations and their Release 2 equivalents. Provided side-by-side comparison of old vs. new workflows to aid in transition planning.
+**Solution:** Created a comparison table with all possible Release 2 deployment options that link to the many upgrade paths available, each one detailed in their own chapter, and following the same structure.
 
 ### Challenge 2: Upgrade Complexity
 
@@ -60,10 +60,7 @@ Major version upgrades of production Kubernetes clusters carry significant risk.
 
 ### Challenge 3: Application Impact
 
-Applications running on Release 1.x clusters needed assessment for Release 2 compatibility, particularly with Kubernetes version changes.
+Applications running on Release 1.9 clusters needed assessment for Release 2 compatibility, particularly with Kubernetes version changes. 
 
-**Solution:** Developed application compatibility assessment checklist. Documented common application migration patterns. Provided guidance on testing applications in pre-production Release 2 environments before upgrading production.
+**Solution:** While most applications automatically updated, some needed workarounds. Provided steps to upgrade these in the Release 2 cluster, while also calling out these steps very early in the planning and preparation phases. 
 
-## Technical Approach
-
-Every upgrade scenario documented was tested in lab environments including upgrades from multiple Release 1.x starting versions, various cluster sizes and configurations, different application workloads, and failure scenario testing with rollback validation. Created Terraform/Ansible scripts for pre-upgrade environment validation, test cluster provisioning for upgrade practice, and post-upgrade validation automation.

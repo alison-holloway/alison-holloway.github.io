@@ -1,12 +1,12 @@
 ---
-title: 'Oracle Linux: Using DTrace for System Tracing'
+title: 'DTrace for System Tracing'
 layout: portfolio_item
 product: Oracle Linux
-doc_type: Reference Guide
+doc_type: Using DTrace for System Tracing Reference Guide
 version: F76721-03 (May 2025)
 date: '2025-05-01'
 date_completed: '2025-05-01'
-featured: fasle
+featured: false
 tags:
 - Reference Guide
 - System Tracing
@@ -27,7 +27,7 @@ excerpt: Comprehensive reference guide for DTrace dynamic tracing tool on Oracle
 
 ## Overview
 
-Oracle Linux: Using DTrace for System Tracing is the definitive reference guide for DTrace, a powerful dynamic tracing framework for Oracle Linux with the Unbreakable Enterprise Kernel (UEK). This guide documents DTrace's complete feature set, including the D programming language, probe providers, aggregation functions, and advanced tracing capabilities for production system analysis. As the primary technical writer for the latest update (F76721-03, May 2025), I restructured the entire guide using DITA XML and incorporated documentation for the new eBPF-based DTrace implementation.
+Oracle Linux: Using DTrace for System Tracing is the definitive reference guide for DTrace, a powerful dynamic tracing framework for Oracle Linux with the Unbreakable Enterprise Kernel (UEK). This guide documents DTrace's complete feature set, including the D programming language, probe providers, aggregation functions, and advanced tracing capabilities for production system analysis. As the primary technical writer for the latest update (F76721-03, May 2025), I restructured the entire guide using DITA XML data types and incorporated documentation for the new eBPF-based DTrace implementation.
 
 ## Target Audience
 
@@ -37,7 +37,7 @@ Administrators, developers, and performance engineers using DTrace for system an
 
 ### Documentation Restructuring
 
-Migrated legacy content to DITA XML, transforming existing documentation into structured DITA architecture. Implemented topic-based authoring by decomposing monolithic chapters into modular, reusable DITA topics. Designed information architecture creating DITA map structure optimizing content organization. Established content reuse strategy implementing conrefs and content references for multi-version documentation.
+Migrated legacy content to DITA XML data types, transforming existing documentation into structured DITA architecture. Implemented topic-based authoring by decomposing monolithic chapters into modular, reusable DITA topics. Designed information architecture creating DITA map structure optimizing content organization. Established content reuse strategy implementing conrefs and content references for multi-version documentation.
 
 ### New Feature Documentation
 
@@ -55,17 +55,11 @@ The new DTrace implementation represents a fundamental architectural shift from 
 
 **Solution:** Created clear sections distinguishing the new implementation from earlier versions. Documented functional compatibility ensuring existing DTrace scripts continue working. Explained eBPF integration benefits (no kernel patches required, modern Linux integration).
 
-### Challenge 2: DITA XML Migration from Legacy Format
+### Challenge 2: DITA XML Data Typing
 
-The previous guide used traditional documentation formats. Migrating to DITA required restructuring content while preserving technical accuracy and completeness.
+The previous guide mixed data types and didn't enforce information data typing. Reworking the content to use DITA data types (concept, task, reference) required restructuring content while preserving technical accuracy and completeness.
 
 **Solution:** Analyzed existing content structure to identify natural topic boundaries. Broke monolithic chapters into concept, task, and reference topics. Established topic relationships and cross-references in DITA maps. Compared output from DITA build against original documentation to ensure no content loss.
-
-### Challenge 3: Multi-Platform, Multi-Kernel Documentation
-
-DTrace supports multiple Oracle Linux releases (7, 8, 9, 10) and UEK versions (6, 7, 8), each with slightly different features and requirements.
-
-**Solution:** Implemented DITA conditional processing using ditaval filters to generate version-specific documentation. Created platform compatibility matrices showing feature availability by Oracle Linux release and UEK version.
 
 ## DITA XML Architecture
 

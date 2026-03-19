@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Kubernetes Guide
+title: Kubernetes Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: User Guide

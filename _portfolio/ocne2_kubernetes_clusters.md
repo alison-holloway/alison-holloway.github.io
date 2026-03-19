@@ -1,5 +1,5 @@
 ---
-title: Oracle Cloud Native Environment Release 2 - Kubernetes Clusters Guide
+title: Kubernetes Clusters Guide
 layout: portfolio_item
 product: Oracle Cloud Native Environment
 doc_type: Administration Guide
@@ -72,7 +72,7 @@ Oracle CNE supports extensive configuration options through YAML files. Document
 
 Kubernetes clusters require careful updates to maintain availability and data integrity across multiple scenarios with varying risk profiles.
 
-**Solution:** Developed comprehensive procedures with pre-update validation checklists, step-by-step updates with verification points, rollback procedures for each stage, and provider-specific considerations.
+**Solution:** Developed comprehensive procedures with verification points for each stage that included provider-specific considerations.
 
 ## Technical Approach
 
@@ -80,9 +80,9 @@ Kubernetes clusters require careful updates to maintain availability and data in
 
 Every procedure was tested across all provider types. Built test clusters for libvirt, OCI, OLVM, and BYO environments. Validated all procedures, captured real output and error messages, and documented provider-specific behaviors.
 
-### Automation Integration
+### Feedback Loop to Engineering
 
-Created Terraform and Ansible automation scripts for rapid test environment provisioning, procedure validation, consistent testing, and support team training. These scripts were later adopted by Oracle Support teams for internal lab environments.
+During validation testing, any bugs or procedure improvements logged with engineering. This improved the product as we iterated through the development and documentation writing. User zero testing. 
 
 ### Engineering Collaboration
 
@@ -97,20 +97,20 @@ This guide is authored in DITA XML using a bookmap structure, demonstrating modu
 The bookmap contains front matter (preface, legal notices) and 10 chapters organized into logical groupings:
 
 **Foundational Chapters (1-4)**
-- Chapter 1: Introduction — Concept topics covering Oracle CNE overview, provider types, configuration hierarchy
-- Chapter 2: Cluster Configuration Files — Concept overview plus reference topics for each provider's configuration options (BYO, libvirt, OCI, OLVM) and configuration examples
-- Chapter 3: Oracle Container Host for Kubernetes Image — Concept and task topics covering OCK image user, custom images, OSTree archive images
-- Chapter 4: Proxy Servers — Task topics for CLI, cluster, and UI proxy configuration
+- **Chapter 1: Introduction**. Concept topics covering Oracle CNE overview, provider types, configuration hierarchy
+- **Chapter 2: Cluster Configuration Files**. Concept overview plus reference topics for each provider's configuration options (BYO, libvirt, OCI, OLVM) and configuration examples
+- **Chapter 3: Oracle Container Host for Kubernetes Image**. Concept and task topics covering OCK image user, custom images, OSTree archive images
+- **Chapter 4: Proxy Servers**. Task topics for CLI, cluster, and UI proxy configuration
 
-**Provider Chapters (5-8)** — Parallel structure across all four providers
-- Chapter 5: libvirt Provider — Setup, cluster creation, connection, deletion
-- Chapter 6: Oracle Linux Virtualization Manager Provider — Setup, configuration, image creation, VM templates, cluster operations, scaling, upgrades, deletion (includes oVirt CSI driver reference)
-- Chapter 7: OCI Provider — Setup, Cluster API templates, compute images, cluster creation, OCI components reference, scaling, upgrades, deletion
-- Chapter 8: Bring Your Own Provider — OS image options (ISO, OSTree), cluster creation, node migration, deletion
+**Provider Chapters (5-8)**. Parallel structure across all four providers
+- **Chapter 5: libvirt Provider**. Setup, cluster creation, connection, deletion
+- **Chapter 6: Oracle Linux Virtualization Manager Provider** Setup, configuration, image creation, VM templates, cluster operations, scaling, upgrades, deletion (includes oVirt CSI driver reference)
+- **Chapter 7: OCI Provider**. Setup, Cluster API templates, compute images, cluster creation, OCI components reference, scaling, upgrades, deletion
+- **Chapter 8: Bring Your Own Provider**. OS image options (ISO, OSTree), cluster creation, node migration, deletion
 
 **Management Chapters (9-10)**
-- Chapter 9: UI — Access tokens, port forwarding, catalog integration
-- Chapter 10: Cluster Administration — Updates (patch and minor releases), backups, cluster analysis, OS console access
+- **Chapter 9: UI**. Headlamp access tokens, port forwarding, catalog integration
+- **Chapter 10: Cluster Administration**. Updates (patch and minor releases), backups, cluster analysis, OS console access
 
 ### Visual Structure
 
