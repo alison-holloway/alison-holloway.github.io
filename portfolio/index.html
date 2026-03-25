@@ -11,10 +11,30 @@ title: Portfolio
 </p>
 
 {% assign ocne_items = site.portfolio | where: "product", "Oracle Cloud Native Environment" %}
-{% assign other_items = site.portfolio | where_exp: "item", "item.product != 'Oracle Cloud Native Environment'" | sort: "date" | reverse %}
+{% assign independent_items = site.portfolio | where: "section", "independent" | sort: "date" | reverse %}
+{% assign other_items = site.portfolio | where_exp: "item", "item.product != 'Oracle Cloud Native Environment' and item.section != 'independent'" | sort: "date" | reverse %}
 
 {% assign ia_item = ocne_items | where: "doc_type", "Information Architecture" | first %}
 {% assign rest_ocne = ocne_items | where_exp: "item", "item.doc_type != 'Information Architecture'" | sort: "date" | reverse %}
+
+<!-- Independent guides section -->
+{% if independent_items.size > 0 %}
+<section class="portfolio-section">
+  <h2 class="portfolio-section-title">Independent Guides</h2>
+  <p class="portfolio-section-intro">Self-initiated guides written to fill gaps in existing documentation for open source tools.</p>
+  <div class="portfolio-grid">
+    {% for item in independent_items %}
+      <div class="portfolio-card">
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        <p class="portfolio-meta">
+          {{ item.product }} | {{ item.doc_type }}
+        </p>
+        <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 <!-- Oracle Cloud Native Environment section -->
 <section class="portfolio-section">
