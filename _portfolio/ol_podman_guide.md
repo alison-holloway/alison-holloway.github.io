@@ -2,6 +2,7 @@
 title: Podman User's Guide
 layout: portfolio_item
 product: Oracle Linux Podman
+section: other
 doc_type: User Guide
 version: F30921-28 (December 2025)
 date: '2025-12-01'

@@ -2,6 +2,7 @@
 title: The Underground PHP and Oracle Manual
 layout: portfolio_item
 product: Oracle Database
+section: other
 doc_type: Published Book
 version: Release 2.0
 date: '2012-12-01'

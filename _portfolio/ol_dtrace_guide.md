@@ -2,6 +2,7 @@
 title: 'DTrace for System Tracing'
 layout: portfolio_item
 product: Oracle Linux
+section: other
 doc_type: Using DTrace for System Tracing Reference Guide
 version: F76721-03 (May 2025)
 date: '2025-05-01'

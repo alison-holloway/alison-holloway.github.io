@@ -12,10 +12,10 @@ title: Portfolio
 
 {% assign ocne_items = site.portfolio | where: "product", "Oracle Cloud Native Environment" %}
 {% assign independent_items = site.portfolio | where: "section", "independent" | sort: "date" | reverse %}
-{% assign other_items = site.portfolio | where_exp: "item", "item.product != 'Oracle Cloud Native Environment' and item.section != 'independent'" | sort: "date" | reverse %}
+{% assign other_items = site.portfolio | where: "section", "other" | sort: "date" | reverse %}
 
 {% assign ia_item = ocne_items | where: "doc_type", "Information Architecture" | first %}
-{% assign rest_ocne = ocne_items | where_exp: "item", "item.doc_type != 'Information Architecture'" | sort: "date" | reverse %}
+{% assign rest_ocne = ocne_items | sort: "date" | reverse %}
 
 <!-- Independent guides section -->
 {% if independent_items.size > 0 %}
@@ -50,7 +50,7 @@ title: Portfolio
         <p class="portfolio-description">{{ ia_item.excerpt | strip_html | truncatewords: 25 }}</p>
       </div>
     {% endif %}
-    {% for item in rest_ocne %}
+    {% for item in rest_ocne %}{% if item.doc_type != "Information Architecture" %}
       <div class="portfolio-card">
         <h3><a href="{{ item.url | relative_url }}">{{ item.title | remove: "Oracle Cloud Native Environment Release 2 - " }}</a></h3>
         <p class="portfolio-meta">
@@ -59,7 +59,7 @@ title: Portfolio
         </p>
         <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
       </div>
-    {% endfor %}
+    {% endif %}{% endfor %}
   </div>
 </section>
 
