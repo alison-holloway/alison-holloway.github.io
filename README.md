@@ -52,10 +52,13 @@ alison-holloway.github.io/
 ├── _layouts/
 │   ├── default.html         # Main layout with navigation
 │   └── portfolio_item.html  # Portfolio project layout
-├── _portfolio/              # Portfolio items (14 items)
+├── _portfolio/              # Portfolio items (18 items)
 │   ├── ocne2_*.md           # Oracle Cloud Native Environment 2 docs
 │   ├── ol_*.md              # Oracle Linux guides
 │   ├── microk8s_*.md        # Independent guides
+│   ├── *_fine_tuning.md     # AI fine-tuning projects
+│   ├── rag_cli_project.md   # RAG CLI project
+│   ├── portfolio_site.md    # This site
 │   └── underground_php.md   # Co-authored book
 ├── portfolio/
 │   └── index.html           # Portfolio listing organized by sections
@@ -76,6 +79,8 @@ alison-holloway.github.io/
 ### GitHub Projects
 - This Portfolio Site
 - RAG CLI
+- Kubernetes Assistant: Fine-Tuned LLM
+- Oracle CNE Assistant: Fine-Tuned LLM
 
 ### Independent Guides
 - Access the Canonical MicroK8s Kubernetes Dashboard
