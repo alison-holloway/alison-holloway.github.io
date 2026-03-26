@@ -16,7 +16,7 @@ tools:
 - Claude API
 - Ollama
 doc_url: https://github.com/alison-holloway/rag-cli-project
-excerpt: A Retrieval-Augmented Generation system for querying local documents using language models, with four interfaces: CLI, REST API, web UI, and a native macOS desktop app.
+excerpt: "A Retrieval-Augmented Generation system for querying local documents using language models, with four interfaces: CLI, REST API, web UI, and a native macOS desktop app."
 ---
 
 ## Overview
