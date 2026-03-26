@@ -1,6 +1,12 @@
-# Alison Holloway - Technical Writing Portfolio
+# Alison Holloway - AI and Technical Writing Portfolio
 
-A professional portfolio site showcasing 30+ years of technical writing experience in virtualization, cloud-native platforms, and container technologies. Built with Jekyll and hosted on GitHub Pages.
+**Portfolio Site:** https://alison-holloway.github.io/
+
+**Contact:** alison.holloway@pm.me
+
+**LinkedIn:** [linkedin.com/in/alison-holloway-au](https://linkedin.com/in/alison-holloway-au)
+
+A professional portfolio and services site for an AI consultant and senior technical writer. Showcases 30+ years of technical writing experience across cloud-native platforms, container technologies, and enterprise Linux, alongside AI consulting services for small businesses. Built with Jekyll and hosted on GitHub Pages.
 
 ## Table of Contents
 
@@ -53,6 +59,8 @@ alison-holloway.github.io/
 │   └── underground_php.md   # Co-authored book
 ├── portfolio/
 │   └── index.html           # Portfolio listing organized by sections
+├── github/
+│   └── index.html           # GitHub projects listing (section: ai portfolio items)
 ├── scripts/
 │   ├── export-excalidraw-svg.mjs  # Excalidraw → SVG export script
 │   ├── _browser-export.mjs        # Browser entry point for export
@@ -64,6 +72,9 @@ alison-holloway.github.io/
 ```
 
 ## Current Portfolio Items
+
+### GitHub Projects
+- This Portfolio Site
 
 ### Independent Guides
 - Access the Canonical MicroK8s Kubernetes Dashboard
@@ -195,7 +206,7 @@ What makes this documentation valuable.
 - **doc_type:** Type of document (Installation Guide, Release Notes, etc.)
 - **version:** Product version (optional)
 - **date:** Publication date (used for sorting)
-- **section:** Portfolio section — `independent`, `other`, or omit for Oracle Cloud Native Environment items
+- **section:** Portfolio section — `ai`, `independent`, `other`, or omit for Oracle Cloud Native Environment items
 - **tools:** Tools used
 - **doc_url:** Link to online documentation (optional)
 - **pdf_url:** Link to PDF version (optional)
@@ -296,8 +307,3 @@ Diagrams use Helvetica font (fontFamily: 2) and no roughness (roughness: 0).
 - [Markdown Guide](https://www.markdownguide.org/)
 - [Excalidraw](https://excalidraw.com/)
 
----
-
-**Portfolio Site:** https://alison-holloway.github.io/
-**Contact:** alison.holloway@pm.me
-**LinkedIn:** [linkedin.com/in/alison-holloway-au](https://linkedin.com/in/alison-holloway-au)

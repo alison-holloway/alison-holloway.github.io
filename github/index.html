@@ -1,0 +1,28 @@
+---
+layout: default
+title: GitHub Projects
+permalink: /github/
+---
+
+<h1 class="page-title">GitHub Projects</h1>
+
+<p class="portfolio-intro">
+  Personal projects in web development, AI tooling, and automation.
+  All source code is on <a href="https://github.com/alison-holloway">GitHub</a>.
+</p>
+
+{% assign ai_items = site.portfolio | where: "section", "ai" | sort: "date" | reverse %}
+
+{% if ai_items.size > 0 %}
+<div class="portfolio-grid">
+  {% for item in ai_items %}
+    <div class="portfolio-card">
+      <h2><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+      <p class="portfolio-meta">
+        {{ item.product }} | {{ item.doc_type }}
+      </p>
+      <p class="portfolio-description">{{ item.excerpt | strip_html | truncatewords: 25 }}</p>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}

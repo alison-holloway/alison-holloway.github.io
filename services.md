@@ -33,7 +33,7 @@ situation, and I set it up so it actually works. You don't need to become a tech
 - Finding out where AI could save you the most time (we start with a simple conversation, not a sales pitch)
 - Setting up AI-powered automations for emails, scheduling, customer communications, and more
 - Connecting your existing tools (your booking system, your CRM, your inbox) so they work together
-- Creating custom mobile or web applications: save yourself the ongoing costs of a big SaaS application by building one that's exactly and only what you need
+- Creating custom mobile or web applications: save yourself the ongoing costs of a big SaaS application by building one that's exactly and only what you need (see [GitHub projects]({{ '/github/' | relative_url }}) for examples)
 - Training AI on your specific business: your products, your pricing, your tone, so it responds like someone who actually knows your business rather than a generic chatbot
 - Building systems where AI can search and answer questions from your own documents, manuals, or knowledge base
 - Teaching you and your team to use AI tools confidently day-to-day, including developer tools like Claude, VS Code, and Git for those who want to go further
@@ -67,6 +67,8 @@ experienced help with:
 - DITA XML structured authoring and single-sourcing
 - Documentation modernisation (migrating legacy toolchains to Git/DITA workflows)
 - AI product documentation: I've built and tested AI systems, so I understand what I'm writing about
+
+See the [portfolio]({{ '/portfolio/' | relative_url }}) for examples of my work.
 
 **A note for engineering teams:**
 
