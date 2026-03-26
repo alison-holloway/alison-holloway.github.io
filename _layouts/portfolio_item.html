@@ -5,7 +5,11 @@ layout: default
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <ol>
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {% if page.section == "ai" %}
+    <li><a href="{{ '/github/' | relative_url }}">GitHub</a></li>
+    {% else %}
     <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
+    {% endif %}
     <li aria-current="page">{{ page.title | truncatewords: 8 }}</li>
   </ol>
 </nav>
