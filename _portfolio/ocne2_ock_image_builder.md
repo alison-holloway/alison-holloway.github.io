@@ -6,12 +6,6 @@ doc_type: Developer Guide
 version: G17139-05
 date: '2024-08-01'
 date_completed: 'August 2025'
-featured: false
-tags:
-- Image Building
-- Kubernetes
-- Node Images
-- Customization
 tools:
 - DITA XML
 - Oxygen XML Editor

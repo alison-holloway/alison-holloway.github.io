@@ -7,13 +7,6 @@ doc_type: Published Book
 version: Release 2.0
 date: '2012-12-01'
 date_completed: '2012-12-01'
-featured: false
-tags:
-- Published Book
-- PHP
-- Oracle Database
-- Developer Guide
-- Community Evangelism
 tools:
 - FrameMaker
 pdf_url: https://www.oracle.com/a/tech/docs/database/201212-ug-php-oracle.pdf

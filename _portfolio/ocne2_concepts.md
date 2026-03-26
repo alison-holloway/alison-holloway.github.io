@@ -6,12 +6,6 @@ doc_type: Concepts Guide
 version: F96190-08
 date: '2024-08-01'
 date_completed: 'August 2025'
-featured: true
-tags:
-- Concepts
-- Architecture
-- Cloud Native
-- Kubernetes
 tools:
 - DITA XML
 - Oxygen XML

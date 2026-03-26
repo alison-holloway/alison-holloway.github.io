@@ -417,35 +417,6 @@ main ol li {
   margin-bottom: 1rem;
 }
 
-/* Tags */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.tag {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  transition: background-color var(--transition-normal), transform var(--transition-fast);
-}
-
-.tag:hover {
-  background-color: var(--secondary-color);
-}
-
-.card-tag:hover {
-  transform: translateY(-1px);
-}
-
 /* Portfolio Page */
 .portfolio-intro {
   margin-bottom: 2rem;
@@ -463,69 +434,6 @@ main ol li {
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--border-color);
-}
-
-.filter-section {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.filter-section h2 {
-  color: var(--secondary-color);
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.filter-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.filter-tag {
-  background-color: var(--bg-light);
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  border: 1px solid var(--border-color);
-  cursor: pointer;
-  font-family: inherit;
-  transition: all var(--transition-fast);
-}
-
-.filter-tag:hover {
-  background-color: var(--accent-color);
-  color: white;
-  border-color: var(--accent-color);
-}
-
-.filter-tag.active {
-  background-color: var(--accent-color);
-  color: white;
-  border-color: var(--accent-color);
-}
-
-.portfolio-card.hidden {
-  display: none;
-}
-
-.no-results,
-.empty-state {
-  text-align: center;
-  padding: 3rem;
-  background: var(--bg-light);
-  border-radius: 8px;
-  margin-top: 2rem;
-}
-
-.no-results p,
-.empty-state p {
-  color: var(--text-light);
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
 }
 
 /* Portfolio Item Page */

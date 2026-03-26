@@ -5,14 +5,7 @@ product: MicroK8s
 doc_type: Technical Guide
 date: '2026-03-25'
 date_completed: 'March 2026'
-featured: false
 section: independent
-tags:
-- Technical Guide
-- Kubernetes
-- MicroK8s
-- Dashboard
-- Personal Project
 tools:
 - Markdown
 - Git

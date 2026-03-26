@@ -6,12 +6,6 @@ doc_type: Upgrade Guide
 version: F96199-04
 date: '2024-08-01'
 date_completed: 'August 2025'
-featured: false
-tags:
-- Upgrade
-- Migration
-- Kubernetes
-- Cloud Native
 tools:
 - DITA XML
 - Oxygen XML Editor

@@ -6,12 +6,6 @@ doc_type: User Guide
 version: F96196-06
 date: '2024-08-01'
 date_completed: 'August 2025'
-featured: false
-tags:
-- Kubernetes
-- Cloud Native
-- Container Management
-- kubectl
 tools:
 - DITA XML
 - Oxygen XML

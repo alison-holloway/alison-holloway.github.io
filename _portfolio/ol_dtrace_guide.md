@@ -7,14 +7,6 @@ doc_type: Using DTrace for System Tracing Reference Guide
 version: F76721-03 (May 2025)
 date: '2025-05-01'
 date_completed: '2025-05-01'
-featured: false
-tags:
-- Reference Guide
-- System Tracing
-- Performance Analysis
-- Oracle Linux
-- DITA XML
-- Documentation Modernization
 tools:
 - DITA XML
 - Oxygen XML Editor

@@ -6,12 +6,6 @@ doc_type: CLI Reference
 version: F96194-18
 date: '2024-08-01'
 date_completed: 'August 2025'
-featured: false
-tags:
-- CLI Reference
-- Command Line
-- Cloud Native
-- Kubernetes
 tools:
 - DITA XML
 - Oxygen XML Editor

@@ -6,15 +6,6 @@ doc_type: Quick Start Guide
 version: F96192-11
 date: '2024-08-01'
 date_completed: '2024-08-01'
-featured: false
-tags:
-- Quick Start
-- Installation
-- Cloud Native
-- Kubernetes
-- KVM
-- OLVM
-- OCI
 tools:
 - DITA XML
 - Oxygen XML Editor

@@ -6,12 +6,6 @@ doc_type: Release Notes
 version: F96191-10
 date: '2024-08-01'
 date_completed: '2024-08-01'
-featured: false
-tags:
-- Release Notes
-- Cloud Native
-- Kubernetes
-- Oracle Linux
 tools:
 - DITA XML
 - Oxygen XML Editor

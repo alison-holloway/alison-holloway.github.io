@@ -6,12 +6,6 @@ doc_type: Administration Guide
 version: F96197-22
 date: '2024-08-01'
 date_completed: 'August 2025'
-featured: true
-tags:
-- Administration
-- Kubernetes
-- Cloud Native
-- Cluster Management
 tools:
 - DITA XML
 - Oxygen XML

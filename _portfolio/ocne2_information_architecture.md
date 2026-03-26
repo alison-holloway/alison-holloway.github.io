@@ -5,13 +5,6 @@ product: Oracle Cloud Native Environment
 doc_type: Information Architecture
 date: '2024-08-01'
 date_completed: 'August 2025'
-featured: true
-tags:
-- Information Architecture
-- Documentation Strategy
-- Cloud Native
-- Kubernetes
-- DITA XML
 tools:
 - DITA XML
 - Oxygen XML

@@ -36,19 +36,23 @@ alison-holloway.github.io/
 │   └── devcontainer.json    # VS Code dev container configuration
 ├── _config.yml              # Site configuration
 ├── Gemfile                  # Ruby dependencies
-├── index.html               # Home page with featured projects
+├── index.html               # Home page for AI consulting and technical writing services
 ├── about.md                 # Professional background and expertise
+├── services.md              # AI consulting and technical writing services
+├── contact.md               # Contact page
 ├── 404.html                 # Error page
 ├── README.md                # This file
+├── CLAUDE.md                # Claude Code instructions
 ├── _layouts/
 │   ├── default.html         # Main layout with navigation
 │   └── portfolio_item.html  # Portfolio project layout
-├── _portfolio/              # Portfolio items (13 items)
+├── _portfolio/              # Portfolio items (14 items)
 │   ├── ocne2_*.md           # Oracle Cloud Native Environment 2 docs
 │   ├── ol_*.md              # Oracle Linux guides
+│   ├── microk8s_*.md        # Independent guides
 │   └── underground_php.md   # Co-authored book
 ├── portfolio/
-│   └── index.html           # Portfolio listing with category filter
+│   └── index.html           # Portfolio listing organized by sections
 ├── scripts/
 │   ├── export-excalidraw-svg.mjs  # Excalidraw → SVG export script
 │   ├── _browser-export.mjs        # Browser entry point for export
@@ -61,23 +65,24 @@ alison-holloway.github.io/
 
 ## Current Portfolio Items
 
+### Independent Guides
+- Access the Canonical MicroK8s Kubernetes Dashboard
+
 ### Oracle Cloud Native Environment 2
-- OCNE 2 Release Notes
+- Release Notes
 - Quick Start Guide
 - Concepts Guide
 - Kubernetes Guide
-- Managing Kubernetes Clusters
-- Managing Applications
-- OCK Image Builder Guide
+- Kubernetes Clusters Guide
+- Applications Guide
+- Oracle Container Host for Kubernetes Image Builder
 - Upgrade Guide
 - CLI Reference
 - **Information Architecture** - Documentation set design with Excalidraw diagrams
 
-### Oracle Linux
-- Podman Guide
-- DTrace Guide
-
-### Publications
+### Other Work
+- Podman User's Guide (Oracle Linux)
+- DTrace for System Tracing (Oracle Linux)
 - The Underground PHP and Oracle Manual (co-author)
 
 ## Local Development
@@ -165,10 +170,7 @@ product: "Product Name"
 doc_type: "Installation Guide"
 version: "1.0"
 date: 2024-12-30
-featured: true
-tags:
-  - Installation
-  - Cloud Native
+section: "independent"
 tools:
   - DITA XML
   - Git
@@ -193,10 +195,10 @@ What makes this documentation valuable.
 - **doc_type:** Type of document (Installation Guide, Release Notes, etc.)
 - **version:** Product version (optional)
 - **date:** Publication date (used for sorting)
-- **featured:** Set to `true` to display on home page
-- **tags:** Categories for filtering
+- **section:** Portfolio section — `independent`, `other`, or omit for Oracle Cloud Native Environment items
 - **tools:** Tools used
 - **doc_url:** Link to online documentation (optional)
+- **pdf_url:** Link to PDF version (optional)
 - **excerpt:** Brief description for listings
 
 ## Deploying Changes
@@ -236,7 +238,7 @@ Edit `_layouts/default.html` to modify navigation links.
 
 ### Portfolio Display
 
-Edit `portfolio/index.html` to modify the portfolio listing. Items can be filtered by category tags.
+Edit `portfolio/index.html` to modify the portfolio listing. Items are organized into sections using the `section` front matter field (`independent`, `other`, or Oracle Cloud Native Environment).
 
 ## Troubleshooting
 

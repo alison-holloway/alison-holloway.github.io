@@ -7,14 +7,6 @@ doc_type: User Guide
 version: F30921-28 (December 2025)
 date: '2025-12-01'
 date_completed: '2025-12-01'
-featured: false
-tags:
-- User Guide
-- Containers
-- Podman
-- Kubernetes
-- Oracle Linux
-- DITA XML
 tools:
 - DITA XML
 - Oxygen XML
