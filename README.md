@@ -75,6 +75,7 @@ alison-holloway.github.io/
 
 ### GitHub Projects
 - This Portfolio Site
+- RAG CLI
 
 ### Independent Guides
 - Access the Canonical MicroK8s Kubernetes Dashboard
