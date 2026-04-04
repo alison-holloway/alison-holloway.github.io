@@ -14,7 +14,13 @@ permalink: /about/
 
 I spent 32 years at Oracle writing documentation for some of the most technically demanding enterprise software in the world. For the last 12 of those years, I was the sole documentation owner for Oracle Cloud Native Environment, a multi-component Kubernetes platform used by enterprise customers globally. I owned the documentation architecture end to end, worked directly with engineering through each release cycle, and tested features against live deployments. I left Oracle in October 2025 to build my own practice.
 
-Since then I've been doing hands-on AI work: deploying local LLM infrastructure using Ollama and Open WebUI on Ubuntu 24.04 with NVIDIA CUDA, fine-tuning models with QLoRA, and building a RAG system against technical documentation using ChromaDB. See my [GitHub projects]({{ '/github/' | relative_url }}) for the details.
+Since leaving Oracle, I've built an AI portfolio focused on areas I want to work in:
+
+- **Kubernetes Assistant:** fine-tuning Llama 3.1 8B on 2,000 labelled examples covering YAML generation, kubectl commands, and error troubleshooting. The fine-tuned model scores 97% on the test set, against 73% for the base model.
+- **Oracle Cloud Native Environment Assistant:** the same approach applied to Q&A pairs scraped from the Oracle Cloud Native Environment Release 2 documentation I spent 12 years writing.
+- **RAG CLI:** a retrieval-augmented generation system for querying local documents, with four interfaces: CLI, REST API, web UI, and a native macOS desktop app.
+
+All three are on the [GitHub projects]({{ '/github/' | relative_url }}) page with source code and documentation.
 
 ## Oracle (1993–2025)
 

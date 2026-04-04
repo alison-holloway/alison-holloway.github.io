@@ -1,5 +1,5 @@
 ---
-title: "Oracle CNE Assistant: Fine-Tuned LLM"
+title: "Oracle Cloud Native Environment Assistant: Fine-Tuned LLM"
 layout: portfolio_item
 product: ocne-model-fine-tuning
 doc_type: Python / Machine Learning
@@ -19,9 +19,9 @@ excerpt: "Fine-tuning Llama 3.1 8B Instruct on 285 curated Q&A pairs scraped fro
 
 ## Overview
 
-This project fine-tunes Llama 3.1 8B Instruct on Oracle Cloud Native Environment (CNE) Release 2 documentation. The result is a locally-runnable model that can answer questions about CNE CLI usage, cluster administration, architectural concepts, and quick start procedures.
+This project fine-tunes Llama 3.1 8B Instruct on Oracle Cloud Native Environment Release 2 documentation. The result is a locally-runnable model that can answer questions about Oracle Cloud Native Environment CLI usage, cluster administration, architectural concepts, and quick start procedures.
 
-The dataset was created without external APIs. Two automation scripts handle the work: one scrapes all nine sections of the Oracle CNE Release 2 documentation, and another generates Q&A pairs from the scraped content using a local Ollama model.
+The dataset was created without external APIs. Two automation scripts handle the work: one scrapes all nine sections of the Oracle Cloud Native Environment Release 2 documentation, and another generates Q&A pairs from the scraped content using a local Ollama model.
 
 The source code is on GitHub.
 
