@@ -7,109 +7,32 @@ permalink: /about/
 <h1 class="page-title">About Alison</h1>
 
 <div class="about-intro">
-  <p class="lead">I'm an AI consultant and senior technical writer based in Melbourne, Australia.</p>
+  <p class="lead">I'm a senior technical writer and AI consultant based in Melbourne, Australia.</p>
 </div>
 
 <div class="about-content" markdown="1">
 
-I spent over 30 years at Oracle writing documentation for some of the most
-complex enterprise software in the world: Kubernetes, cloud-native platforms,
-Linux virtualisation, and Oracle Cloud Infrastructure. I left in 2025 to build
-something of my own.
+I spent 32 years at Oracle writing documentation for some of the most technically demanding enterprise software in the world. For the last 12 of those years, I was the sole documentation owner for Oracle Cloud Native Environment, a multi-component Kubernetes platform used by enterprise customers globally. I owned the documentation architecture end to end, worked directly with engineering through each release cycle, and tested features against live deployments. I left Oracle in October 2025 to build my own practice.
 
-Since then, I've been doing the hands-on work: building AI systems, writing
-code, testing tools, and figuring out how to make AI actually useful
-for small business owners who need it to be simple, and for technical teams
-who need it to be exact.
+Since then I've been doing hands-on AI work: deploying local LLM infrastructure using Ollama and Open WebUI on Ubuntu 24.04 with NVIDIA CUDA, fine-tuning models with QLoRA, and building a RAG system against technical documentation using ChromaDB. See my [GitHub projects]({{ '/github/' | relative_url }}) for the details.
 
-## What Makes Me Different
+## Oracle (1993–2025)
 
-Most AI consultants come from one direction: either they're highly technical
-but struggle to communicate with non-technical people, or they're great
-communicators but light on actual technical depth.
+### Consulting User Assistance Developer (2013–2025)
 
-I've spent my career doing both. Explaining Kubernetes to a developer is
-a different skill from explaining AI automation to a café owner. I can do either,
-and that's what makes me useful to very different clients.
+Oracle Cloud Native Environment is a multi-component Kubernetes deployment stack for enterprise customers. I was the sole technical writer for this product across all versions, which meant I owned the documentation architecture from the ground up, not just the writing.
 
-## Core Competencies
+I designed the complete documentation structure covering installation, configuration, administration, and reference content across multiple concurrent product versions. I used strict DITA XML content typing with maximum content reuse across shared components, and structured content for distinct user pathways: new users, those evaluating the product, experienced administrators, and customers upgrading from earlier versions.
 
-### AI & Development
+I worked with engineering and QA throughout each development cycle to test features, identify gaps, and raise defects before release. I wrote Terraform and Ansible scripts to provision and validate my own test environments. Oracle Support later adopted those scripts for their own internal testing. All documentation was verified against live deployments, not specifications.
 
-<div class="role-section" markdown="1">
+I also migrated the documentation source from DocBook XML and Subversion to DITA XML and Git, implementing a docs-as-code workflow that reduced publication overhead and improved version control. I mentored junior technical writers in DITA authoring and structured writing practices, and collaborated with the training team to produce tutorials consistent with the product documentation.
 
-- **Model Deployment:** Running and evaluating local models via Ollama and Hugging Face
-- **Fine-Tuning:** QLoRA and Unsloth on CUDA (GPU) and Apple MLX; synthetic dataset generation with Claude; model benchmarking
-- **RAG Systems:** ChromaDB vector database; REST API with web (browser), desktop (Tauri), and CLI interfaces
-- **Mobile Development:** React Native, Expo, SQLite, TypeScript (Android)
-- **Languages:** Python, TypeScript
-- **Tooling:** Claude Code, VS Code, Git
+Earlier work in this role included documentation for Oracle OpenStack, Oracle VM, Oracle Linux Virtualisation Manager, and related open-source technologies including Podman, DTrace, Gluster Storage, and Ceph Storage.
 
-</div>
+### Senior Technical Writer (1993–2013)
 
-### Documentation & Authoring
-
-<div class="role-section" markdown="1">
-
-- **Structured Authoring:** DITA XML, DocBook XML, Oxygen XML
-- **Version Control:** Git, Jira, Confluence
-- **Content Strategy:** Information architecture, single-sourcing, topic-based authoring
-- **Doc Types:** Installation guides, release notes, upgrade guides, CLI references
-
-</div>
-
-### Technical Expertise
-
-<div class="role-section" markdown="1">
-
-- **Cloud-Native:** Kubernetes, Docker, Podman, Oracle Cloud Native Environment
-- **Virtualization:** KVM, VirtualBox, WSL2, Oracle Linux Virtualization Manager
-- **Cloud Infrastructure:** Oracle Cloud Infrastructure, OpenStack
-- **Automation:** Terraform, Ansible, CI/CD workflows
-
-</div>
-
-### Project Leadership
-
-<div class="role-section" markdown="1">
-
-- **Design & Delivery:** End-to-end documentation design and delivery
-- **Project Management:** Documentation releases and coordination
-- **Mentoring:** Supporting junior technical writers
-- **Stakeholder Engagement:** Cross-functional collaboration
-- **Process Improvement:** Documentation modernization
-
-</div>
-
-## Career Highlights
-
-### Oracle (1993–2025)
-
-<div class="role-section" markdown="1">
-
-**Consulting User Assistance Developer (2013–2025)**
-
-Led documentation for Oracle Cloud Native Environment, a complex, multi-product platform covering Kubernetes, container orchestration, and cloud-native infrastructure. Key achievements:
-
-- **Complete Documentation Sets:** Delivered comprehensive documentation for multiple Oracle Linux products, consistently meeting aggressive release deadlines
-- **Technical Innovation:** Designed and implemented automated deployment scripts using Terraform and Ansible, later adopted by Oracle Support teams
-- **Documentation Modernization:** Migrated documentation source from legacy Subversion/DocBook to Git/DITA, modernizing workflows and reducing maintenance overhead
-- **Cross-Team Collaboration:** Partnered with engineering teams to test features during development, raising defects early in the product lifecycle
-- **Mentorship:** Recognized as a trusted mentor for new writers, fostering cross-team collaboration and raising content quality standards
-
-</div>
-
-<div class="role-section" markdown="1">
-
-**Senior Technical Writer (1993–2013)**
-
-Produced documentation for Oracle Database and Oracle Applications. Notable work:
-
-- **Published Author:** Co-authored *The Underground PHP and Oracle Manual*
-- **Global Knowledge Sharing:** Presented at Oracle OpenWorld and international PHP conferences
-- **Training Material Development:** Created comprehensive training materials and customer-facing guides
-
-</div>
+I produced documentation for Oracle Database and Oracle Applications across multiple release cycles, covering SQL\*Plus, localisation features, and developer tools. I co-authored *The Underground PHP and Oracle Manual*, a practical guide for PHP developers integrating with Oracle Database. I presented technical sessions and ran hands-on training at Oracle OpenWorld and international PHP conferences in Germany and New York.
 
 ## Education
 
@@ -130,15 +53,4 @@ RMIT, 2002
 </div>
 </div>
 
-</div>
-
-<div class="contact-info">
-  <h2>Get in Touch</h2>
-  <p>Open to new work in AI consulting and technical writing.</p>
-  <ul>
-    <li><strong>Email:</strong> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/{{ site.author.linkedin }}">linkedin.com/in/{{ site.author.linkedin }}</a></li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/{{ site.author.github }}">github.com/{{ site.author.github }}</a></li>
-    <li><strong>Location:</strong> {{ site.author.location }}, available for remote work</li>
-  </ul>
 </div>

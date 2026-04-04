@@ -8,14 +8,12 @@ permalink: /contact/
 
 <div class="about-content" markdown="1">
 
-Small business owner wondering if AI could help? Tech company looking for an experienced technical writer? Email me. I'll get back to you within one business day.
+Technical writing enquiry or AI consulting question? Email me. I'll get back to you within one business day.
 
-</div>
+<a href="mailto:{{ site.author.email }}" class="btn">{{ site.author.email }}</a>
 
-<div class="contact-info">
-  <ul>
-    <li><strong>Email:</strong> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/{{ site.author.linkedin }}">linkedin.com/in/{{ site.author.linkedin }}</a></li>
-    <li><strong>Location:</strong> Melbourne, Victoria. Available for remote work nationally and internationally.</li>
-  </ul>
+You can also find me on [LinkedIn](https://linkedin.com/in/{{ site.author.linkedin }}) and [GitHub](https://github.com/{{ site.author.github }}).
+
+Based in Melbourne, Victoria. Available for remote work nationally and internationally.
+
 </div>

@@ -10,8 +10,36 @@ permalink: /services/
 
 I offer two distinct services. Here's how I can help.
 
-- [AI Consulting for Small Business](#ai-consulting)
 - [Technical Writing and Documentation](#technical-writing)
+- [AI Consulting for Small Business](#ai-consulting)
+
+---
+
+## Technical Writing and Documentation {#technical-writing}
+
+I've been writing technical documentation for enterprise software since 1993.
+Most recently, I led documentation for Oracle Cloud Native Environment,
+a complex, multi-product platform covering Kubernetes, container orchestration,
+and cloud-native infrastructure.
+
+I work on a contract and project basis for technology companies that need
+experienced help with:
+
+- Documentation strategy and information architecture
+- Installation guides, administration guides, CLI references, release notes, upgrade guides
+- DITA XML structured authoring and single-sourcing
+- Documentation modernisation (migrating legacy toolchains to Git/DITA workflows)
+- AI product documentation: I've built and tested AI systems, so I understand what I'm writing about
+
+See my [GitHub projects]({{ '/github/' | relative_url }}) for hands-on examples including fine-tuned LLMs and a RAG system built against real documentation.
+
+See the [portfolio]({{ '/portfolio/' | relative_url }}) for examples of my work.
+
+**A note for engineering teams:**
+
+I test what I document. I've written Terraform and Ansible scripts that were
+later adopted by Oracle Support teams. I'll work directly with your engineers,
+raise issues early, and deliver documentation that holds up under real use.
 
 ---
 
@@ -33,7 +61,7 @@ situation, and I set it up so it actually works. You don't need to become a tech
 - Finding out where AI could save you the most time (we start with a simple conversation, not a sales pitch)
 - Setting up AI-powered automations for emails, scheduling, customer communications, and more
 - Connecting your existing tools (your booking system, your CRM, your inbox) so they work together
-- Creating custom mobile or web applications: save yourself the ongoing costs of a big SaaS application by building one that's exactly and only what you need (see [GitHub projects]({{ '/github/' | relative_url }}) for examples)
+- Creating custom web applications: save yourself the ongoing costs of a big SaaS application by building one that's exactly and only what you need (see [GitHub projects]({{ '/github/' | relative_url }}) for examples)
 - Training AI on your specific business: your products, your pricing, your tone, so it responds like someone who actually knows your business rather than a generic chatbot
 - Building systems where AI can search and answer questions from your own documents, manuals, or knowledge base
 - Teaching you and your team to use AI tools confidently day-to-day, including developer tools like Claude, VS Code, and Git for those who want to go further
@@ -49,32 +77,6 @@ I send you a plain-English summary of what I think would help most, and what it 
 
 **Step 3: Implementation**
 I set it up. I show you how it works. You get on with running your business.
-
----
-
-## Technical Writing and Documentation {#technical-writing}
-
-I've been writing technical documentation for enterprise software since 1993.
-Most recently, I led documentation for Oracle Cloud Native Environment,
-a complex, multi-product platform covering Kubernetes, container orchestration,
-and cloud-native infrastructure.
-
-I work on a contract and project basis for technology companies that need
-experienced help with:
-
-- Documentation strategy and information architecture
-- Installation guides, administration guides, CLI references, release notes, upgrade guides
-- DITA XML structured authoring and single-sourcing
-- Documentation modernisation (migrating legacy toolchains to Git/DITA workflows)
-- AI product documentation: I've built and tested AI systems, so I understand what I'm writing about
-
-See the [portfolio]({{ '/portfolio/' | relative_url }}) for examples of my work.
-
-**A note for engineering teams:**
-
-I test what I document. I've written Terraform and Ansible scripts that were
-later adopted by Oracle Support teams. I'll work directly with your engineers,
-raise issues early, and deliver documentation that holds up under real use.
 
 </div>
 
