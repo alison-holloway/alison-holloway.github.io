@@ -11,8 +11,8 @@
       "width": 504,
       "height": 120,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "strokeColor": "#b45309",
+      "backgroundColor": "#faebd7",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -23,7 +23,10 @@
       "versionNonce": 618644458,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_3", "type": "text" }
+        {
+          "id": "elem_1770953086053_3",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -55,7 +58,7 @@
       "y": 16,
       "width": 252,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Foundation & Concepts",
       "fontSize": 20,
       "verticalAlign": "top",
@@ -70,7 +73,7 @@
       "width": 128.234375,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -82,7 +85,10 @@
       "versionNonce": 1590469010,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_7", "type": "text" }
+        {
+          "id": "elem_1770953086053_7",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -114,7 +120,7 @@
       "y": 72.5,
       "width": 96,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Concepts",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -129,7 +135,7 @@
       "width": 145.734375,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -141,7 +147,10 @@
       "versionNonce": 1802449719,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_8", "type": "text" }
+        {
+          "id": "elem_1770953086053_8",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -173,7 +182,7 @@
       "y": 72.5,
       "width": 120,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Kubernetes",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -188,8 +197,8 @@
       "width": 504,
       "height": 120,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "strokeColor": "#b45309",
+      "backgroundColor": "#faebd7",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -200,7 +209,10 @@
       "versionNonce": 769259420,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_2", "type": "text" }
+        {
+          "id": "elem_1770953086053_2",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -232,7 +244,7 @@
       "y": 152,
       "width": 180,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Getting Started",
       "fontSize": 20,
       "verticalAlign": "top",
@@ -247,7 +259,7 @@
       "width": 156,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -259,7 +271,10 @@
       "versionNonce": 1194069570,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_9", "type": "text" }
+        {
+          "id": "elem_1770953086053_9",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -291,7 +306,7 @@
       "y": 208.5,
       "width": 132,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Quick Start",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -306,7 +321,7 @@
       "width": 180,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -318,7 +333,10 @@
       "versionNonce": 463442296,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_5", "type": "text" }
+        {
+          "id": "elem_1770953086053_5",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -350,7 +368,7 @@
       "y": 208.5,
       "width": 156,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Release Notes",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -365,8 +383,8 @@
       "width": 504,
       "height": 190,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "strokeColor": "#b45309",
+      "backgroundColor": "#faebd7",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -377,7 +395,10 @@
       "versionNonce": 563810966,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_1", "type": "text" }
+        {
+          "id": "elem_1770953086053_1",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -409,7 +430,7 @@
       "y": 288,
       "width": 180,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Core Operations",
       "fontSize": 20,
       "verticalAlign": "top",
@@ -424,7 +445,7 @@
       "width": 252,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -436,7 +457,10 @@
       "versionNonce": 1167775430,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_10", "type": "text" }
+        {
+          "id": "elem_1770953086053_10",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -468,7 +492,7 @@
       "y": 344.5,
       "width": 228,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Kubernetes Clusters",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -483,7 +507,7 @@
       "width": 168,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -495,7 +519,10 @@
       "versionNonce": 104658407,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_11", "type": "text" }
+        {
+          "id": "elem_1770953086053_11",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -527,7 +554,7 @@
       "y": 344.5,
       "width": 144,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Applications",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -542,8 +569,8 @@
       "width": 504,
       "height": 120,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "strokeColor": "#b45309",
+      "backgroundColor": "#faebd7",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -554,7 +581,10 @@
       "versionNonce": 1183699446,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_0", "type": "text" }
+        {
+          "id": "elem_1770953086053_0",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -586,7 +616,7 @@
       "y": 494,
       "width": 264,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Advanced & Specialized",
       "fontSize": 20,
       "verticalAlign": "top",
@@ -601,7 +631,7 @@
       "width": 228,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -613,7 +643,10 @@
       "versionNonce": 1094460438,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_12", "type": "text" }
+        {
+          "id": "elem_1770953086053_12",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -645,7 +678,7 @@
       "y": 550.5,
       "width": 204,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "OCK Image Builder",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -660,7 +693,7 @@
       "width": 180,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -672,7 +705,10 @@
       "versionNonce": 580578778,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_13", "type": "text" }
+        {
+          "id": "elem_1770953086053_13",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -704,7 +740,7 @@
       "y": 550.5,
       "width": 156,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Upgrade Guide",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -719,7 +755,7 @@
       "width": 180,
       "height": 54,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -731,7 +767,10 @@
       "versionNonce": 1348027182,
       "isDeleted": false,
       "boundElements": [
-        { "id": "elem_1770953086053_6", "type": "text" }
+        {
+          "id": "elem_1770953086053_6",
+          "type": "text"
+        }
       ],
       "updated": 1770953086053,
       "link": null,
@@ -763,7 +802,7 @@
       "y": 414.5,
       "width": 156,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "CLI Reference",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -773,7 +812,7 @@
   ],
   "appState": {
     "gridSize": null,
-    "viewBackgroundColor": "#F8FAFC"
+    "viewBackgroundColor": "#fdf6ee"
   },
   "files": {}
 }
