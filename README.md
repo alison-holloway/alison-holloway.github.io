@@ -42,9 +42,9 @@ alison-holloway.github.io/
 │   └── devcontainer.json    # VS Code dev container configuration
 ├── _config.yml              # Site configuration
 ├── Gemfile                  # Ruby dependencies
-├── index.html               # Home page for AI consulting and technical writing services
+├── index.html               # Home page (senior technical writer positioning)
 ├── about.md                 # Professional background and expertise
-├── services.md              # AI consulting and technical writing services
+├── services.md              # "What I do" page (/what-i-do/): technical writing + how I use AI
 ├── contact.md               # Contact page
 ├── 404.html                 # Error page
 ├── README.md                # This file
