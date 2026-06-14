@@ -242,12 +242,26 @@ Edit CSS variables in `assets/css/main.css`:
 
 ```css
 :root {
-  --primary-color: #2c3e50;
-  --accent-color: #3498db;
-  --text-color: #333;
-  --bg-color: #ffffff;
+  --primary-color:   #1c1008;  /* warm near-black — text, headings */
+  --accent-color:    #b45309;  /* amber — buttons, links, accents */
+  --accent-light:    #fef3c7;  /* light amber tint — pill badges, icon backgrounds */
+  --accent-dark:     #92400e;  /* dark amber — hover states */
+  --text-light:      #78716c;  /* muted warm grey — secondary text */
+  --bg-color:        #fdf6ee;  /* warm cream — page background */
+  --bg-light:        #faebd7;  /* warm mid — section backgrounds, fills */
+  --bg-card:         #ffffff;  /* white — card backgrounds */
+  --border-color:    #e8d5c4;  /* warm border */
 }
 ```
+
+### Typography
+
+The site uses two typefaces loaded from Google Fonts:
+
+- **Fraunces** — variable optical-size serif, used for all `h1`, `h2`, `h3` headings
+- **Inter** — clean sans-serif, used for body text and UI elements
+
+Both are loaded in `_layouts/default.html`. Small uppercase labels (`.toc-title`, competency card headings) override to Inter explicitly.
 
 ### Navigation
 
@@ -298,11 +312,11 @@ This bundles `@excalidraw/excalidraw` with esbuild and uses Playwright to render
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Navy | `#1B3A5C` | Category headings, card labels |
-| Medium blue | `#4A6FA5` | Container borders, card borders, arrow strokes |
-| Blue-grey tint | `#EEF2F7` | Category container fills |
+| Warm near-black | `#1c1008` | Category headings, card labels, text |
+| Amber | `#b45309` | Container borders, card borders, arrow strokes |
+| Warm cream (mid) | `#faebd7` | Category container fills |
 | White | `#FFFFFF` | Card fills |
-| Off-white | `#F8FAFC` | Canvas background |
+| Warm cream (bg) | `#fdf6ee` | Canvas background |
 
 Diagrams use Helvetica font (fontFamily: 2) and no roughness (roughness: 0).
 
