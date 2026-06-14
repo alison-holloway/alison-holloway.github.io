@@ -1,7 +1,7 @@
 # Site settings
 title: Alison Holloway
-tagline: Senior Technical Writer & AI Consultant
-description: I help small businesses work smarter with AI, and help technology companies document complex products clearly.
+tagline: Senior Technical Writer
+description: Senior technical writer with 30+ years documenting enterprise software, cloud-native platforms, and Kubernetes, now using AI to write faster and deepen my understanding of the technology I document.
 baseurl: "" # Leave empty for GitHub Pages at username.github.io
 url: "https://alison-holloway.github.io"
 

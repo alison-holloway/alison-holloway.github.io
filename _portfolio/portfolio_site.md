@@ -21,7 +21,7 @@ excerpt: A Jekyll-based portfolio and services site with a custom Excalidraw-to-
 
 ## Overview
 
-This site is both a portfolio and a working example of what I build. It's a Jekyll static site hosted on GitHub Pages, built for two audiences: small businesses looking for AI consulting, and technology companies looking for technical documentation.
+This site is both a portfolio and a working example of what I build. It's a Jekyll static site hosted on GitHub Pages, presenting my technical writing work alongside the AI experiments that keep it current.
 
 The source code is on GitHub.
 

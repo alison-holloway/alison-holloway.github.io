@@ -7,14 +7,14 @@ permalink: /about/
 <h1 class="page-title">About Alison</h1>
 
 <div class="about-intro">
-  <p class="lead">I'm a senior technical writer and AI consultant based in Melbourne, Australia.</p>
+  <p class="lead">I'm a senior technical writer based in Melbourne, Australia.</p>
 </div>
 
 <div class="about-content" markdown="1">
 
 I spent 32 years at Oracle writing documentation for some of the most technically demanding enterprise software in the world. For the last 12 of those years, I was the sole documentation owner for Oracle Cloud Native Environment, a multi-component Kubernetes platform used by enterprise customers globally. I owned the documentation architecture end to end, worked directly with engineering through each release cycle, and tested features against live deployments. I left Oracle in October 2025 to build my own practice.
 
-Since leaving Oracle, I've built an AI portfolio focused on areas I want to work in:
+Since leaving Oracle, I've been deepening my AI skills through hands-on experiments, building, fine-tuning, and documenting AI systems to understand them from the inside:
 
 - **Kubernetes Assistant:** fine-tuning Llama 3.1 8B on 2,000 labelled examples covering YAML generation, kubectl commands, and error troubleshooting. The fine-tuned model scores 97% on the test set, against 73% for the base model.
 - **Oracle Cloud Native Environment Assistant:** the same approach applied to Q&A pairs scraped from the Oracle Cloud Native Environment Release 2 documentation I spent 12 years writing.
