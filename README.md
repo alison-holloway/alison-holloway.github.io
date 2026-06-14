@@ -1,4 +1,4 @@
-# Alison Holloway - AI and Technical Writing Portfolio
+# Alison Holloway - Technical Writing Portfolio
 
 **Portfolio Site:** https://alison-holloway.github.io/
 
@@ -6,7 +6,7 @@
 
 **LinkedIn:** [linkedin.com/in/alison-holloway-au](https://linkedin.com/in/alison-holloway-au)
 
-A professional portfolio and services site for an AI consultant and senior technical writer. Showcases 30+ years of technical writing experience across cloud-native platforms, container technologies, and enterprise Linux, alongside AI consulting services for small businesses. Built with Jekyll and hosted on GitHub Pages.
+A professional portfolio site for a senior technical writer. Showcases 30+ years of technical writing experience across cloud-native platforms, container technologies, and enterprise Linux, alongside hands-on AI experiments that keep that writing current. Built with Jekyll and hosted on GitHub Pages.
 
 ## Table of Contents
 
