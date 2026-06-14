@@ -11,8 +11,8 @@
       "width": 144,
       "height": 45,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "strokeColor": "#b45309",
+      "backgroundColor": "#faebd7",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -62,7 +62,7 @@
       "y": 18,
       "width": 120,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "R1 Cluster",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -77,7 +77,7 @@
       "width": 216,
       "height": 78,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -132,7 +132,7 @@
       "y": 117,
       "width": 192,
       "height": 50,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Release Notes\nBreaking changes",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -147,7 +147,7 @@
       "width": 276,
       "height": 78,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -202,7 +202,7 @@
       "y": 245,
       "width": 252,
       "height": 50,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Upgrade Guide\nCh 1-2: Prerequisites",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -217,7 +217,7 @@
       "width": 252,
       "height": 78,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -272,7 +272,7 @@
       "y": 373,
       "width": 228,
       "height": 50,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Kubernetes Clusters\nCh 10: Backup",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -287,7 +287,7 @@
       "width": 204,
       "height": 78,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -342,7 +342,7 @@
       "y": 501,
       "width": 180,
       "height": 50,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Upgrade Guide\nCh 3-6: Execute",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -357,7 +357,7 @@
       "width": 216,
       "height": 78,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -412,7 +412,7 @@
       "y": 629,
       "width": 192,
       "height": 50,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "Upgrade Guide\nCh 7-9: Validate",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -427,7 +427,7 @@
       "width": 186,
       "height": 78,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "#FFFFFF",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -482,7 +482,7 @@
       "y": 757,
       "width": 162,
       "height": 50,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "CLI Reference\nLearn new CLI",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -497,8 +497,8 @@
       "width": 144,
       "height": 45,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
-      "backgroundColor": "#EEF2F7",
+      "strokeColor": "#b45309",
+      "backgroundColor": "#faebd7",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -548,7 +548,7 @@
       "y": 881,
       "width": 120,
       "height": 25,
-      "strokeColor": "#1B3A5C",
+      "strokeColor": "#1c1008",
       "text": "R2 Cluster",
       "fontSize": 20,
       "verticalAlign": "middle",
@@ -563,7 +563,7 @@
       "width": 0,
       "height": 48,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -579,21 +579,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [0, 0],
-        [0, 48]
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          48
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "Start",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 1]
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "RN",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 0]
+        "fixedPoint": [
+          0.5,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -607,7 +619,7 @@
       "width": 0,
       "height": 48,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -623,21 +635,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [0, 0],
-        [0, 48]
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          48
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "RN",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 1]
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "UPG1",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 0]
+        "fixedPoint": [
+          0.5,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -651,7 +675,7 @@
       "width": 0,
       "height": 48,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -667,21 +691,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [0, 0],
-        [0, 48]
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          48
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "UPG1",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 1]
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "KC",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 0]
+        "fixedPoint": [
+          0.5,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -695,7 +731,7 @@
       "width": 0,
       "height": 48,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -711,21 +747,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [0, 0],
-        [0, 48]
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          48
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "KC",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 1]
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "UPG2",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 0]
+        "fixedPoint": [
+          0.5,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -739,7 +787,7 @@
       "width": 0,
       "height": 48,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -755,21 +803,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [0, 0],
-        [0, 48]
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          48
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "UPG2",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 1]
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "UPG3",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 0]
+        "fixedPoint": [
+          0.5,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -783,7 +843,7 @@
       "width": 0,
       "height": 48,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -799,21 +859,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [0, 0],
-        [0, 48]
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          48
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "UPG3",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 1]
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "CLI",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 0]
+        "fixedPoint": [
+          0.5,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -827,7 +899,7 @@
       "width": 0,
       "height": 48,
       "angle": 0,
-      "strokeColor": "#4A6FA5",
+      "strokeColor": "#b45309",
       "backgroundColor": "transparent",
       "fillStyle": "solid",
       "strokeWidth": 2,
@@ -843,21 +915,33 @@
       "link": null,
       "locked": false,
       "points": [
-        [0, 0],
-        [0, 48]
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          48
+        ]
       ],
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "CLI",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 1]
+        "fixedPoint": [
+          0.5,
+          1
+        ]
       },
       "endBinding": {
         "elementId": "Done",
         "focus": 0,
         "gap": 1,
-        "fixedPoint": [0.5, 0]
+        "fixedPoint": [
+          0.5,
+          0
+        ]
       },
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -866,7 +950,7 @@
   ],
   "appState": {
     "gridSize": null,
-    "viewBackgroundColor": "#F8FAFC"
+    "viewBackgroundColor": "#fdf6ee"
   },
   "files": {}
 }
