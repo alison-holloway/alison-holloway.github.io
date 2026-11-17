@@ -15,13 +15,13 @@ tools:
 pdf_url: "https://docs.oracle.com/en/operating-systems/olcne/2/clusters/OCNE-2-CLUSTERS.pdf"
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/clusters/
 excerpt: Comprehensive guide covering Kubernetes cluster creation, configuration,
-  and lifecycle management across all Oracle CNE provider types (libvirt, OCI, OLVM,
+  and lifecycle management across all Oracle Cloud Native Environment provider types (libvirt, OCI, OLVM,
   and Bring Your Own).
 ---
 
 ## Overview
 
-The Oracle Cloud Native Environment Kubernetes Clusters Guide is the primary administration reference for Oracle CNE, covering complete procedures for creating, configuring, updating, backing up, and managing Kubernetes clusters across all supported deployment models: libvirt (KVM-based), Oracle Cloud Infrastructure, Oracle Linux Virtualization Manager, and Bring Your Own (bare metal or other platforms).
+The Oracle Cloud Native Environment Kubernetes Clusters Guide is the primary administration reference for the platform, covering complete procedures for creating, configuring, updating, backing up, and managing Kubernetes clusters across all supported deployment models: libvirt (KVM-based), Oracle Cloud Infrastructure, Oracle Linux Virtualization Manager, and Bring Your Own (bare metal or other platforms).
 
 <aside class="demo-callout">
   <p class="demo-callout-label">Interactive demo</p>
@@ -63,7 +63,7 @@ Each provider represents fundamentally different infrastructure with varying cap
 
 ### Challenge 2: Configuration Complexity
 
-Oracle CNE supports extensive configuration options through YAML files. Documenting all options, interactions, and use cases required careful organization.
+Oracle Cloud Native Environment supports extensive configuration options through YAML files. Documenting all options, interactions, and use cases required careful organization.
 
 **Solution:** Implemented layered approach—quick examples for common scenarios, complete reference for all options, use-case-driven patterns, and troubleshooting for common errors.
 
@@ -96,7 +96,7 @@ This guide is authored in DITA XML using a bookmap structure, demonstrating modu
 The bookmap contains front matter (preface, legal notices) and 10 chapters organized into logical groupings:
 
 **Foundational Chapters (1-4)**
-- **Chapter 1: Introduction**. Concept topics covering Oracle CNE overview, provider types, configuration hierarchy
+- **Chapter 1: Introduction**. Concept topics covering Oracle Cloud Native Environment overview, provider types, configuration hierarchy
 - **Chapter 2: Cluster Configuration Files**. Concept overview plus reference topics for each provider's configuration options (BYO, libvirt, OCI, OLVM) and configuration examples
 - **Chapter 3: Oracle Container Host for Kubernetes Image**. Concept and task topics covering OCK image user, custom images, OSTree archive images
 - **Chapter 4: Proxy Servers**. Task topics for CLI, cluster, and UI proxy configuration

@@ -18,18 +18,18 @@ excerpt: Comprehensive release notes documenting new features, enhancements, kno
 
 ## Overview
 
-The Oracle Cloud Native Environment (Oracle CNE) Release 2 Release Notes provide complete documentation of changes, new features, enhancements, known issues, and bug fixes for Release 2 of Oracle's Kubernetes-based cloud-native platform.
+The Oracle Cloud Native Environment Release 2 Release Notes provide complete documentation of changes, new features, enhancements, known issues, and bug fixes for Release 2 of Oracle's Kubernetes-based cloud-native platform.
 
-Oracle CNE is a fully integrated suite for the development and management of cloud-native applications, built on open standards from the Open Container Initiative (OCI) and Cloud Native Computing Foundation (CNCF).
+Oracle Cloud Native Environment is a fully integrated suite for the development and management of cloud-native applications, built on open standards from the Open Container Initiative (OCI) and Cloud Native Computing Foundation (CNCF).
 
 ## Target Audience
 
 These release notes serve:
-- **System Administrators** planning Oracle CNE deployments or upgrades
+- **System Administrators** planning Oracle Cloud Native Environment deployments or upgrades
 - **DevOps Engineers** evaluating new capabilities
 - **Support Engineers** investigating customer issues
 - **Solution Architects** designing cloud-native infrastructure
-- **Development Teams** building applications on Oracle CNE
+- **Development Teams** building applications on Oracle Cloud Native Environment
 
 ## Documentation Scope
 
@@ -100,7 +100,7 @@ Release notes underwent review by:
 
 ## Documentation Integration
 
-Release notes integrate with the complete Oracle CNE documentation set:
+Release notes integrate with the complete Oracle Cloud Native Environment documentation set:
 - Links to detailed feature documentation in Concepts guide
 - Cross-references to procedures in Quick Start and Clusters guides
 - References to upgrade procedures in Upgrade guide

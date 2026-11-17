@@ -12,22 +12,22 @@ tools:
 - Git
 pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/applications/OCNE-2-APPS.pdf
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/applications/
-excerpt: Guide for deploying and managing cloud-native applications on Oracle CNE
+excerpt: Guide for deploying and managing cloud-native applications on Oracle Cloud Native Environment
   using application catalogs, covering installation, configuration, and lifecycle
   management of applications.
 ---
 
 ## Overview
 
-The Oracle Cloud Native Environment Applications Guide documents how to deploy, configure, and manage cloud-native applications on Kubernetes clusters using Oracle CNE's application catalog system. The guide covers application catalog concepts and architecture, installing applications from catalogs, configuring application deployments, managing application lifecycle (updates, scaling, removal), creating custom application catalogs, integration with Helm charts, and application monitoring and troubleshooting.
+The Oracle Cloud Native Environment Applications Guide documents how to deploy, configure, and manage cloud-native applications on Kubernetes clusters using the platform's application catalog system. The guide covers application catalog concepts and architecture, installing applications from catalogs, configuring application deployments, managing application lifecycle (updates, scaling, removal), creating custom application catalogs, integration with Helm charts, and application monitoring and troubleshooting.
 
 ## Target Audience
 
-DevOps engineers, application developers, and system administrators deploying applications on Oracle CNE. Assumes basic Kubernetes knowledge and familiarity with containerized applications.
+DevOps engineers, application developers, and system administrators deploying applications on Oracle Cloud Native Environment. Assumes basic Kubernetes knowledge and familiarity with containerized applications.
 
 ## Key Features
 
-**Catalog-Based Deployment:** Oracle CNE provides curated application catalogs containing tested, enterprise-grade applications. The guide documents how to browse, select, and deploy applications from these catalogs.
+**Catalog-Based Deployment:** Oracle Cloud Native Environment provides curated application catalogs containing tested, enterprise-grade applications. The guide documents how to browse, select, and deploy applications from these catalogs.
 
 **Helm Integration:** Documentation covers Helm chart usage for application deployment, including customization through values files and command-line overrides.
 
@@ -35,6 +35,6 @@ DevOps engineers, application developers, and system administrators deploying ap
 
 ## Documentation Challenge
 
-Balancing generic Kubernetes application deployment patterns with Oracle CNE-specific catalog features required careful organization. Users needed to understand both standard Kubernetes application concepts and Oracle CNE's simplified deployment workflows.
+Balancing generic Kubernetes application deployment patterns with catalog features specific to Oracle Cloud Native Environment required careful organization. Users needed to understand both standard Kubernetes application concepts and the platform's simplified deployment workflows.
 
-**Solution:** Structured documentation to introduce Oracle CNE catalog features first (the simplified path), then provided deeper coverage of underlying Kubernetes/Helm concepts for users requiring more control.
+**Solution:** Structured documentation to introduce Oracle Cloud Native Environment catalog features first (the simplified path), then provided deeper coverage of underlying Kubernetes/Helm concepts for users requiring more control.
