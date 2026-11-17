@@ -23,6 +23,11 @@ excerpt: Comprehensive guide covering Kubernetes cluster creation, configuration
 
 The Oracle Cloud Native Environment Kubernetes Clusters Guide is the primary administration reference for Oracle CNE, covering complete procedures for creating, configuring, updating, backing up, and managing Kubernetes clusters across all supported deployment models: libvirt (KVM-based), Oracle Cloud Infrastructure, Oracle Linux Virtualization Manager, and Bring Your Own (bare metal or other platforms).
 
+<aside class="demo-callout">
+  <p class="demo-callout-label">Interactive demo</p>
+  <p>See how this guide's task-based headings hold up when an AI assistant retrieves from them, compared with the same content written as one long page. <a href="{{ '/how-ai-reads-docs/' | relative_url }}">Try the retrieval demo&nbsp;&rarr;</a></p>
+</aside>
+
 ## Target Audience
 
 System administrators deploying production Kubernetes clusters, platform engineers building cloud-native infrastructure, DevOps teams automating cluster deployment, and site reliability engineers maintaining cluster health. Assumes strong Linux administration skills, networking knowledge, and basic Kubernetes familiarity.

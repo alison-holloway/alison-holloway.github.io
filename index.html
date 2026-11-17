@@ -42,7 +42,7 @@ title: "Senior Technical Writer"
       <div class="service-icon">⚡</div>
       <div>
         <div class="service-title">Content for People and AI</div>
-        <div class="service-desc">Documentation structured so that people and AI assistants can find and use it accurately.</div>
+        <div class="service-desc">Documentation structured so that people and AI assistants can find and use it accurately. <a href="{{ '/how-ai-reads-docs/' | relative_url }}" class="service-link">See how it works&nbsp;&rarr;</a></div>
       </div>
     </div>
     <div class="service-item">
@@ -83,9 +83,40 @@ title: "Senior Technical Writer"
       <h3>A writer who builds what she documents</h3>
       <p>I use Claude Code and Cursor every day for drafting, restructuring, consistency checks, and Python scripting, and verify AI output by running the procedures it describes.</p>
       <p>To understand how AI assistants retrieve and use documentation, I've built a RAG system with an API, CLI, and UI, run local LLMs, and fine-tuned models with QLoRA. In recent contracts I've designed content so platform assistants such as ServiceNow Now Assist can retrieve it accurately.</p>
-      <a href="{{ '/github/' | relative_url }}" class="track-link">See my experiments &rarr;</a>
+      <div class="track-links">
+        <a href="{{ '/github/' | relative_url }}" class="track-link">See my experiments &rarr;</a>
+        <a href="{{ '/how-ai-reads-docs/' | relative_url }}" class="track-link">Try the retrieval demo &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rd-teaser" aria-labelledby="rd-teaser-title">
+  <div class="rd-teaser-text">
+    <p class="track-card-num">03 · How AI reads your docs</p>
+    <h3 id="rd-teaser-title">Same facts. Different answers.</h3>
+    <p>An AI assistant can only answer from the few chunks it retrieves. I ran content from the Oracle CNE Kubernetes Clusters guide through real keyword retrieval, written two ways, and asked the same questions.</p>
+    <a href="{{ '/how-ai-reads-docs/' | relative_url }}" class="btn">Try the retrieval demo &rarr;</a>
+  </div>
+  <div class="rd-teaser-compare" data-rd-teaser="upgrade">
+    <p class="rd-teaser-q" data-slot="question">&ldquo;How do I upgrade a cluster to a new Kubernetes release?&rdquo;</p>
+    <div class="rd-teaser-row is-pass" data-mode="structured">
+      <span class="rd-teaser-mark" data-slot="mark" aria-hidden="true">&#10003;</span>
+      <div>
+        <p class="rd-teaser-label">Structured for retrieval</p>
+        <p class="rd-teaser-detail" data-slot="detail">Top result: Upgrading to a Kubernetes Minor Release</p>
+      </div>
+    </div>
+    <div class="rd-teaser-row is-fail" data-mode="unstructured">
+      <span class="rd-teaser-mark" data-slot="mark" aria-hidden="true">&#10007;</span>
+      <div>
+        <p class="rd-teaser-label">One long page</p>
+        <p class="rd-teaser-detail" data-slot="detail">Missing from the model&rsquo;s context: ocne node update</p>
+      </div>
     </div>
   </div>
 </section>
 
 <script src="{{ '/assets/js/hero-terminal.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/retrieval-demo-data.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/retrieval-demo.js' | relative_url }}" defer></script>
