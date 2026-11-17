@@ -85,6 +85,7 @@ alison-holloway.github.io/
     │   ├── reveal.js              # Scroll reveals on every page
     │   ├── hero-terminal.js       # Home page hero terminal animation
     │   ├── diagrams.js            # Diagram draw-on animation and IA journey explorer
+    │   ├── editing-replay.js      # "Watch a draft become documentation" replay (What I do page)
     │   ├── retrieval-demo.js      # Retrieval demo engine (BM25), UI, and home page teaser
     │   └── retrieval-demo-data.js # Retrieval demo questions and sample docs
     └── excalidraw/          # Diagram source files (.excalidraw) and exported SVGs
@@ -404,6 +405,12 @@ On the Information Architecture page, the documentation set architecture diagram
 | `data-target` | Heading anchor for the "Read the journey" link |
 
 Card labels must match the text in the SVG exactly. The explorer only treats white-filled shapes as cards, so category containers aren't affected.
+
+### Editing Replay
+
+The What I do page has a "Watch a draft become documentation" section (`#watch-a-draft-become-documentation`, linked from home track card 01). A made-up engineering draft about backing up an Oracle Cloud Native Environment cluster is edited into a procedure in six steps. Each step shows as tracked changes (deletions struck through in red, insertions typed in green) with a margin note explaining the edit. Controls: play/pause, previous/next, a Draft-to-Final slider, and a "Show changes" toggle for the clean version. It plays once when it first scrolls into view (not under reduced motion).
+
+The draft and the edits are defined at the top of `assets/js/editing-replay.js`: `DRAFT.blocks` (types `h`, `s` for an inline draft sentence, `p`, `note`, `step`, `code`) and `EDITS`, each with a `title`, a `why`, and `ops` (`set`, `remove`, `add`). Changed text is shown word by word; when less than half of a sentence survives, it's shown as one deletion and one insertion instead. The facts and command come from the Kubernetes Clusters guide's "Backing Up a Cluster" topic; the draft is invented.
 
 ### Retrieval Demo
 

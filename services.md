@@ -48,6 +48,38 @@ raise issues early, and deliver documentation that holds up under real use.
 
 ---
 
+## Watch a draft become documentation
+
+Here's a made-up engineering draft about backing up an Oracle Cloud Native Environment cluster, and the six edits I'd make to turn it into a procedure. The draft is invented; the command and facts come from the [Kubernetes Clusters guide]({{ '/portfolio/ocne2_kubernetes_clusters/' | relative_url }}) I wrote. Press play, or step through the edits.
+
+</div>
+
+<p class="er-noscript">This interactive example needs JavaScript.</p>
+
+<section class="er" data-editing-replay hidden aria-label="Editing replay">
+  <div class="er-controls">
+    <button type="button" class="er-btn er-play" aria-pressed="false" aria-label="Play">
+      <svg class="icon-play" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 2.5v11a.75.75 0 0 0 1.14.64l9-5.5a.75.75 0 0 0 0-1.28l-9-5.5A.75.75 0 0 0 4 2.5z"/></svg>
+      <svg class="icon-pause" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
+    </button>
+    <button type="button" class="er-btn er-prev" aria-label="Previous edit">&lsaquo;</button>
+    <div class="er-track">
+      <input type="range" class="er-slider" min="0" max="6" step="1" value="0" aria-label="Edit">
+      <div class="er-scale" aria-hidden="true"><span>Draft</span><span>Final</span></div>
+    </div>
+    <button type="button" class="er-btn er-next" aria-label="Next edit">&rsaquo;</button>
+    <label class="er-toggle"><input type="checkbox" class="er-changes" checked> Show changes</label>
+  </div>
+  <div class="er-layout">
+    <div class="er-doc" role="region" aria-label="Document being edited"></div>
+    <aside class="er-note" aria-live="polite"></aside>
+  </div>
+</section>
+
+<div class="about-content" markdown="1">
+
+---
+
 ## How I use AI
 
 AI is part of my writing toolkit. It makes me a faster, sharper technical writer, and it
@@ -71,3 +103,5 @@ keeps my understanding of the technology first-hand.
   <h2>Ready to talk?</h2>
   <p><a href="{{ '/contact/' | relative_url }}">Get in touch</a> to talk about what you're working on.</p>
 </div>
+
+<script src="{{ '/assets/js/editing-replay.js' | relative_url }}" defer></script>
