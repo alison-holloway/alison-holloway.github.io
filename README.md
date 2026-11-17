@@ -19,6 +19,7 @@ A professional portfolio site for a senior technical writer. Showcases technical
 - [Custom Domain and HTTPS](#custom-domain-and-https)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
+- [Interactive Features](#interactive-features)
 - [Excalidraw Diagrams](#excalidraw-diagrams)
 - [Resources](#resources)
 
@@ -48,9 +49,10 @@ alison-holloway.github.io/
 ├── CNAME                    # Custom domain (managed by GitHub — see Custom Domain and HTTPS)
 ├── Gemfile                  # Ruby dependencies
 ├── package.json             # Node dependencies and the export-svg script
-├── index.html               # Home page (senior technical writer positioning)
+├── index.html               # Home page: hero with animated terminal, track cards, retrieval demo teaser
 ├── about.md                 # Professional background and expertise
 ├── services.md              # "What I do" page (/what-i-do/): technical writing + how I use AI
+├── how-ai-reads-docs.md     # Interactive retrieval demo page (/how-ai-reads-docs/)
 ├── contact.md               # Contact page
 ├── 404.html                 # Error page
 ├── README.md                # This file
@@ -79,6 +81,11 @@ alison-holloway.github.io/
 └── assets/
     ├── css/
     │   └── main.css         # Site styling
+    ├── js/
+    │   ├── hero-terminal.js       # Home page hero terminal animation
+    │   ├── diagrams.js            # Diagram draw-on animation and IA journey explorer
+    │   ├── retrieval-demo.js      # Retrieval demo engine (BM25), UI, and home page teaser
+    │   └── retrieval-demo-data.js # Retrieval demo questions and sample docs
     └── excalidraw/          # Diagram source files (.excalidraw) and exported SVGs
 ```
 
@@ -315,7 +322,29 @@ Both are loaded in `_layouts/default.html`. Small uppercase labels (`.toc-title`
 
 ### Navigation
 
-Edit `_layouts/default.html` to modify navigation links.
+Edit `_layouts/default.html` to modify navigation links. The retrieval demo page is not in the nav; it is linked from the home page (track card 02 and the demo teaser), the What I do page, and the Kubernetes Clusters and Information Architecture portfolio pages.
+
+### Home Page Layout
+
+`index.html` runs, in order: the hero (availability pill, heading, intro, and the animated terminal), track cards 01 Technical Documentation and 02 AI in my practice, the 03 retrieval demo teaser, and the "View portfolio" and "Get in touch" buttons. Sections are spaced 48px apart.
+
+### Page Banners
+
+Main pages open with a banner under the page title: a cream panel with an amber left border and large lead text. Use the `.page-intro` class:
+
+```html
+<h1 class="page-title">Page Title</h1>
+
+<div class="page-intro">
+  <p class="lead">One or two short sentences that introduce the page.</p>
+</div>
+```
+
+Keep the lead short; longer explanation belongs in the body below it. Portfolio item pages don't use a banner; they open with a breadcrumb, title, and details box.
+
+### Spacing
+
+Page content starts 32px below the header on desktop (24px on tablets, 20px on phones). This comes from the top padding on `main`; `.page-title` and `.hero` have no top margin or padding of their own.
 
 ### Portfolio Display
 
@@ -344,9 +373,55 @@ gh api repos/alison-holloway/alison-holloway.github.io/pages/builds/latest \
   --jq '{status, error: .error.message, created_at}'
 ```
 
+## Interactive Features
+
+All interactive features are plain JavaScript with no build step or dependencies. Each one respects `prefers-reduced-motion` and falls back to static content when JavaScript is off.
+
+### Hero Terminal
+
+The home page hero shows a terminal that types out short procedures (starting an Oracle Cloud Native Environment cluster, running a Podman pod, and a RAG CLI query), prints their output, and ends each with a verified line. It loops, pauses when off screen or when the tab is hidden, and has a pause/play button. With reduced motion it shows the first scenario as a still.
+
+Edit the scenarios in the `scenarios` array at the top of `assets/js/hero-terminal.js`. Keep lines to 46 characters or fewer so they fit on a phone. The sample output is illustrative, so keep it accurate to the real commands.
+
+### Diagram Draw-On and Journey Explorer
+
+`assets/js/diagrams.js` (loaded by `_layouts/portfolio_item.html`) swaps each Excalidraw `<img>` on a portfolio page for the same SVG inline and draws it in (strokes, then fills and labels) when it scrolls into view. Without JavaScript the original `<img>` stays.
+
+On the Information Architecture page, the documentation set architecture diagram also has a **journey explorer**: persona buttons that dim the other books and light up a journey's books in order with numbered badges. Journey data lives in the button attributes in `_portfolio/ocne2_information_architecture.md`:
+
+| Attribute | Purpose |
+|-----------|---------|
+| `data-steps` | Card labels in journey order, separated by `\|` (repeats allowed, shown as "2, 4") |
+| `data-hub` | Optional hub card; `data-steps` are then its spokes |
+| `data-caption` | Path text shown under the diagram |
+| `data-target` | Heading anchor for the "Read the journey" link |
+
+Card labels must match the text in the SVG exactly. The explorer only treats white-filled shapes as cards, so category containers aren't affected.
+
+### Retrieval Demo
+
+`/how-ai-reads-docs/` runs real BM25 keyword retrieval in the browser over two versions of the same cluster administration content, adapted from the Oracle Cloud Native Environment Release 2 Kubernetes Clusters guide: one structured by topic, one written as long pages and split into fixed-size chunks. For each question it shows the search terms, scores every chunk, lifts the top 3 into "all the model sees", and gives a computed verdict:
+
+- **Pass** — every phrase a complete answer needs reached the model's context
+- **Only just** — the answer reached the context but barely beat a chunk that was left out
+- **Fail** — part of the answer never reached the model
+
+Questions, the phrases each answer needs (`needs`), and both doc sets are in `assets/js/retrieval-demo-data.js`. Rankings recompute live, so editing the text changes the results. To check results without a browser:
+
+```bash
+node -e '
+const vm=require("vm"),fs=require("fs");const ctx={window:{}};vm.createContext(ctx);
+vm.runInContext(fs.readFileSync("assets/js/retrieval-demo-data.js","utf8"),ctx);
+const d=ctx.window.RETRIEVAL_DEMO,e=require("./assets/js/retrieval-demo.js");
+for(const q of d.questions)for(const m of ["structured","unstructured"]){const r=e.run(d,m,q);
+console.log(m.padEnd(12),r.complete?(r.close?"only just":"pass"):"fail",q.text)}'
+```
+
+The home page teaser (`data-rd-teaser="upgrade"` in `index.html`) runs the same engine for one question, so it never drifts from the demo. The static HTML inside it is the no-JS fallback; update it if the results change.
+
 ## Excalidraw Diagrams
 
-Portfolio items use Excalidraw diagrams for visualizing information architecture, user flows, and documentation structure. Diagrams are authored as `.excalidraw` files and exported to SVG.
+Portfolio items use Excalidraw diagrams for visualizing information architecture, user flows, and documentation structure. Diagrams are authored as `.excalidraw` files and exported to SVG. On the site they animate in as they scroll into view; see [Diagram Draw-On and Journey Explorer](#diagram-draw-on-and-journey-explorer).
 
 ### Editing Diagrams
 
