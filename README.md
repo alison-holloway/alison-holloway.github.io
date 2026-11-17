@@ -1,6 +1,6 @@
 # Alison Holloway - Technical Writing Portfolio
 
-**Portfolio Site:** https://alison-holloway.github.io/
+**Portfolio Site:** https://www.alison-holloway.com/
 
 **Contact:** alison.holloway@pm.me
 
@@ -16,6 +16,7 @@ A professional portfolio site for a senior technical writer. Showcases technical
 - [Local Development](#local-development)
 - [Adding Portfolio Items](#adding-portfolio-items)
 - [Deploying Changes](#deploying-changes)
+- [Custom Domain and HTTPS](#custom-domain-and-https)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
 - [Excalidraw Diagrams](#excalidraw-diagrams)
@@ -27,12 +28,15 @@ This site showcases documentation work across:
 - Oracle Cloud Native Environment 2 (Kubernetes, containers)
 - Oracle Linux products and tools
 - Cloud infrastructure technologies
+- Independent guides and hands-on AI projects (fine-tuned LLMs, a RAG system)
 
 **Specializations:**
-- DITA XML structured authoring
+- Information architecture and structured authoring (DITA XML, content typing, reuse)
+- Docs-as-code workflows (Markdown, Git, publishing pipelines)
 - Installation, upgrade, and deployment guides
 - CLI reference documentation
 - Release notes and conceptual guides
+- Content design for AI retrieval
 
 ## Directory Structure
 
@@ -41,7 +45,9 @@ alison-holloway.github.io/
 ├── .devcontainer/
 │   └── devcontainer.json    # VS Code dev container configuration
 ├── _config.yml              # Site configuration
+├── CNAME                    # Custom domain (managed by GitHub — see Custom Domain and HTTPS)
 ├── Gemfile                  # Ruby dependencies
+├── package.json             # Node dependencies and the export-svg script
 ├── index.html               # Home page (senior technical writer positioning)
 ├── about.md                 # Professional background and expertise
 ├── services.md              # "What I do" page (/what-i-do/): technical writing + how I use AI
@@ -52,14 +58,15 @@ alison-holloway.github.io/
 ├── _layouts/
 │   ├── default.html         # Main layout with navigation
 │   └── portfolio_item.html  # Portfolio project layout
-├── _portfolio/              # Portfolio items (18 items)
+├── _portfolio/              # Portfolio items (18 items, plus sample PDFs)
 │   ├── ocne2_*.md           # Oracle Cloud Native Environment 2 docs
 │   ├── ol_*.md              # Oracle Linux guides
 │   ├── microk8s_*.md        # Independent guides
 │   ├── *_fine_tuning.md     # AI fine-tuning projects
 │   ├── rag_cli_project.md   # RAG CLI project
 │   ├── portfolio_site.md    # This site
-│   └── underground_php.md   # Co-authored book
+│   ├── underground_php.md   # Co-authored book
+│   └── *.pdf                # Sample PDFs linked from portfolio items
 ├── portfolio/
 │   └── index.html           # Portfolio listing organized by sections
 ├── github/
@@ -80,7 +87,7 @@ alison-holloway.github.io/
 - This Portfolio Site
 - RAG CLI
 - Kubernetes Assistant: Fine-Tuned LLM
-- Oracle CNE Assistant: Fine-Tuned LLM
+- Oracle Cloud Native Environment Assistant: Fine-Tuned LLM
 
 ### Independent Guides
 - Access the Canonical MicroK8s Kubernetes Dashboard
@@ -187,6 +194,7 @@ product: "Product Name"
 doc_type: "Installation Guide"
 version: "1.0"
 date: 2024-12-30
+date_completed: "Month Year"
 section: "independent"
 tools:
   - DITA XML
@@ -212,6 +220,7 @@ What makes this documentation valuable.
 - **doc_type:** Type of document (Installation Guide, Release Notes, etc.)
 - **version:** Product version (optional)
 - **date:** Publication date (used for sorting)
+- **date_completed:** Display date shown as "Last Publish Date" on the item page (optional — omit to hide the row)
 - **section:** Portfolio section — `ai`, `independent`, `other`, or omit for Oracle Cloud Native Environment items
 - **tools:** Tools used
 - **doc_url:** Link to online documentation (optional)
@@ -233,6 +242,46 @@ git push origin main
 ```
 
 GitHub Pages automatically rebuilds the site within 1-2 minutes.
+
+## Custom Domain and HTTPS
+
+The site is served at **https://www.alison-holloway.com/**. The apex domain `alison-holloway.com` redirects to the `www` host.
+
+**DNS (managed at VentraIP):**
+
+| Record | Host | Value |
+|--------|------|-------|
+| A | `@` | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
+| CNAME | `www` | `alison-holloway.github.io` |
+
+**Do not edit the `CNAME` file by hand.** GitHub writes it automatically when the custom domain is changed in **Settings → Pages**. Editing it directly causes Pages to reconfigure the domain, which can drop the TLS certificate.
+
+### Checking certificate status
+
+```bash
+# What GitHub thinks the certificate state is
+gh api repos/alison-holloway/alison-holloway.github.io/pages \
+  --jq '{cname, https_enforced, cert: .https_certificate}'
+
+# What the live site actually serves
+echo | openssl s_client -connect www.alison-holloway.com:443 \
+  -servername www.alison-holloway.com 2>/dev/null | openssl x509 -noout -dates
+
+# DNS and HTTPS health as GitHub sees it
+gh api repos/alison-holloway/alison-holloway.github.io/pages/health
+```
+
+### If the certificate expires
+
+Certificates renew automatically. If the live site serves an expired certificate while the API reports `"state": "issued"`, GitHub has renewed it but not deployed it to its edge servers. Removing and re-adding the same domain does not fix this — GitHub re-attaches the same undeployed record.
+
+The fix is to change the primary domain, which forces a genuinely new certificate request:
+
+1. In **Settings → Pages**, change the custom domain to the other hostname (`alison-holloway.com` if currently `www`, or vice versa) and save.
+2. Confirm the state changes to `new` ("The certificate request process will begin shortly").
+3. Wait for issuance and edge rollout. This took about two hours when it last happened; GitHub allows up to 24.
+4. Verify the serial number and expiry date have both changed, not just the expiry.
+5. Re-enable **Enforce HTTPS** once the new certificate is live.
 
 ## Customization
 
@@ -287,7 +336,12 @@ bundle exec jekyll serve --port 4001
 
 ### GitHub Pages Not Updating
 
-Check the Actions tab in GitHub for build errors.
+This site uses the legacy Pages build (no Actions workflow), so builds do not appear in the Actions tab. Check **Settings → Pages** in GitHub for the build status and any error message, or query the API:
+
+```bash
+gh api repos/alison-holloway/alison-holloway.github.io/pages/builds/latest \
+  --jq '{status, error: .error.message, created_at}'
+```
 
 ## Excalidraw Diagrams
 
