@@ -6,7 +6,6 @@ section: other
 doc_type: Published Book
 version: Release 2.0
 date: '2012-12-01'
-date_completed: '2012-12-01'
 tools:
 - FrameMaker
 pdf_url: https://www.oracle.com/a/tech/docs/database/201212-ug-php-oracle.pdf

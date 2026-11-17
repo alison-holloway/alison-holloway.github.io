@@ -14,6 +14,6 @@ Have a technical writing role or project in mind? Email me. I'll get back to you
 
 You can also find me on [LinkedIn](https://linkedin.com/in/{{ site.author.linkedin }}) and [GitHub](https://github.com/{{ site.author.github }}).
 
-Based in Melbourne, Victoria. Open to contract or full-time work, hybrid or remote, nationally and internationally.
+Based in Melbourne, Australia. Open to contract or full-time work: hybrid or remote in Melbourne, remote across Australia, or remote with international teams across US and global time zones, with flexible scheduling to support collaboration.
 
 </div>

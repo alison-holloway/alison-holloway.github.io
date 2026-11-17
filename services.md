@@ -8,23 +8,28 @@ permalink: /what-i-do/
 
 <div class="about-content" markdown="1">
 
-I'm a senior technical writer with 30+ years documenting complex enterprise software. AI is woven into how I work today. Here's what I do.
+I'm a senior technical writer for developer and platform-engineering audiences. AI is woven into how I work today. Here's what I do.
 
 ---
 
 ## Technical Writing and Documentation
 
-I've been writing technical documentation for enterprise software since 1993.
-Most recently, I led documentation for Oracle Cloud Native Environment,
-a complex, multi-product platform covering Kubernetes, container orchestration,
-and cloud-native infrastructure.
+I write documentation for complex enterprise software. For 12 years I was the sole
+documentation owner for Oracle Cloud Native Environment, an enterprise Kubernetes
+platform, across 14 major releases. More recently, I've worked with two major
+Australian banks to uplift internal documentation for software upgrades and
+platform migrations, and for use by AI assistants.
 
 I help technology companies with:
 
 - Documentation strategy and information architecture
 - Installation guides, administration guides, CLI references, release notes, upgrade guides
-- DITA XML structured authoring and single-sourcing
+- Content design for AI retrieval, so RAG systems and platform assistants (such as ServiceNow Now Assist) can find and use content accurately
+- Docs-as-code: Markdown, Git, GitHub and GitLab pull/merge requests, release branching, YAML and JSON, publishing pipelines
+- DITA XML structured authoring, content typing (concept, task, reference, tutorial), and content reuse
 - Documentation modernisation (migrating legacy toolchains to Git/DITA workflows)
+- Documentation in regulated environments, working with risk and compliance stakeholders
+- Plain-English writing and accessibility (WCAG, Section 508)
 - Documenting AI and ML systems, grounded in the models and tools I build and document myself
 
 See my [GitHub projects]({{ '/github/' | relative_url }}) for hands-on examples including fine-tuned LLMs and a RAG system built against real documentation.
@@ -33,8 +38,10 @@ See the [portfolio]({{ '/portfolio/' | relative_url }}) for examples of my work.
 
 **A note for engineering teams:**
 
-I test what I document. I've written Terraform and Ansible scripts that were
-later adopted by Oracle Support teams. I'll work directly with your engineers,
+I test what I document. I verified every procedure for Oracle Cloud Native Environment
+against live deployments, and wrote Terraform and Ansible scripts to provision my own
+test environments, cutting setup time from 6 hours to 20 minutes. Oracle Support later
+adopted those scripts for internal testing. I'll work directly with your engineers,
 raise issues early, and deliver documentation that holds up under real use.
 
 ---
@@ -44,12 +51,16 @@ raise issues early, and deliver documentation that holds up under real use.
 AI is part of my writing toolkit. It makes me a faster, sharper technical writer, and it
 keeps my understanding of the technology first-hand.
 
-- **AI-assisted writing.** I use AI to draft, edit, summarise, and research faster, while
-  applying the same scrutiny I'd give any source. Speed never comes at the cost of accuracy.
-- **Documenting what I build.** I build, fine-tune, and run models myself, and I document those
-  projects end to end. It means I can write about AI systems from real understanding, not a spec sheet.
-- **Hands-on experiments.** In my own time, I build AI and developer tooling to stay current,
-  including fine-tuned LLMs and a retrieval-augmented system built against real documentation.
+- **AI-assisted writing.** I use Claude Code and Cursor every day for drafting, restructuring,
+  consistency checks, and Python scripting. I check their output the way I check engineering
+  specifications: by running the steps and confirming the result.
+- **Documentation automation.** On a recent bank contract I used Cursor to write Python scripts
+  that converted almost 600 PDF source files to standardised Word documents, saving about 60 hours,
+  and mentored other writers in AI tools, GitHub, and documentation automation.
+- **Documenting what I build.** I've built a RAG system with an API, CLI, and web UI, run local LLMs,
+  and fine-tuned models with QLoRA, and I document those projects end to end. It means I understand
+  how AI assistants retrieve and use documentation, and I can write about AI systems from real
+  understanding, not a spec sheet.
   See my [GitHub projects]({{ '/github/' | relative_url }}) for source code and write-ups.
 
 </div>
