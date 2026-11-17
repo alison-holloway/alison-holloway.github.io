@@ -20,6 +20,11 @@ The Oracle Cloud Native Environment Release 2 documentation set comprises 9 inte
 
 This portfolio entry documents the architectural decisions, organizational principles, and cross-referencing strategies that create a cohesive documentation experience across the complete documentation set.
 
+<aside class="demo-callout">
+  <p class="demo-callout-label">Interactive demo</p>
+  <p>The principles on this page, such as task-based organization and descriptive headings, also decide what an AI assistant can retrieve. See them tested against content from the Kubernetes Clusters guide. <a href="{{ '/how-ai-reads-docs/' | relative_url }}">Try the retrieval demo&nbsp;&rarr;</a></p>
+</aside>
+
 ## Audience
 
 This portfolio entry demonstrates:

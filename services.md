@@ -24,7 +24,7 @@ I help technology companies with:
 
 - Documentation strategy and information architecture
 - Installation guides, administration guides, CLI references, release notes, upgrade guides
-- Content design for AI retrieval, so RAG systems and platform assistants (such as ServiceNow Now Assist) can find and use content accurately
+- Content design for AI retrieval, so RAG systems and platform assistants (such as ServiceNow Now Assist) can find and use content accurately ([see how retrieval works]({{ '/how-ai-reads-docs/' | relative_url }}))
 - Docs-as-code: Markdown, Git, GitHub and GitLab pull/merge requests, release branching, YAML and JSON, publishing pipelines
 - DITA XML structured authoring, content typing (concept, task, reference, tutorial), and content reuse
 - Documentation modernisation (migrating legacy toolchains to Git/DITA workflows)
