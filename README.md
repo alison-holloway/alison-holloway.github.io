@@ -6,7 +6,7 @@
 
 **LinkedIn:** [linkedin.com/in/alison-holloway-au](https://linkedin.com/in/alison-holloway-au)
 
-A professional portfolio site for a senior technical writer. Showcases 30+ years of technical writing experience across cloud-native platforms, container technologies, and enterprise Linux, alongside hands-on AI experiments that keep that writing current. Built with Jekyll and hosted on GitHub Pages.
+A professional portfolio site for a senior technical writer. Showcases technical writing for developer and platform-engineering audiences across cloud-native platforms, container technologies, and enterprise Linux, alongside hands-on AI experiments that keep that writing current. Built with Jekyll and hosted on GitHub Pages.
 
 ## Table of Contents
 
