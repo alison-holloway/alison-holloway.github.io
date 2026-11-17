@@ -73,6 +73,7 @@ alison-holloway.github.io/
 │   └── index.html           # GitHub projects listing (section: ai portfolio items)
 ├── scripts/
 │   ├── export-excalidraw-svg.mjs  # Excalidraw → SVG export script
+│   ├── restyle_excalidraw.py      # Batch-apply diagram design tokens to .excalidraw files
 │   ├── _browser-export.mjs        # Browser entry point for export
 │   └── _browser-export-bundle.mjs # esbuild bundle (generated)
 └── assets/
@@ -351,6 +352,20 @@ Portfolio items use Excalidraw diagrams for visualizing information architecture
 
 1. Open `.excalidraw` files in VS Code using the [Excalidraw extension](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor)
 2. Source files are in `assets/excalidraw/`
+
+### Applying the Design Tokens
+
+`scripts/restyle_excalidraw.py` batch-applies the colour palette, Helvetica font, and zero roughness described below, so diagrams stay consistent without hand-editing each element:
+
+```bash
+# Single file
+python3 scripts/restyle_excalidraw.py assets/excalidraw/diagram.excalidraw
+
+# All .excalidraw files in a directory
+python3 scripts/restyle_excalidraw.py assets/excalidraw/
+```
+
+Restyled copies are written alongside the originals with a `-restyled` suffix, so the source files are never overwritten. Review the output, then replace the original if it looks right. The design tokens are configurable at the top of the script.
 
 ### Exporting SVGs
 
