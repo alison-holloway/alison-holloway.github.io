@@ -6,9 +6,11 @@ permalink: /contact/
 
 <h1 class="page-title">Let's talk</h1>
 
-<div class="about-content" markdown="1">
+<div class="page-intro">
+  <p class="lead">Have a technical writing role or project in mind? Email me. I'll get back to you within one business day.</p>
+</div>
 
-Have a technical writing role or project in mind? Email me. I'll get back to you within one business day.
+<div class="about-content" markdown="1">
 
 <a href="mailto:{{ site.author.email }}" class="btn">{{ site.author.email }}</a>
 

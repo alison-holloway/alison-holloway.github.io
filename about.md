@@ -6,7 +6,7 @@ permalink: /about/
 
 <h1 class="page-title">About Alison</h1>
 
-<div class="about-intro">
+<div class="page-intro">
   <p class="lead">I'm a senior technical writer based in Melbourne, Australia.</p>
 </div>
 
