@@ -8,3 +8,9 @@ _site/
 node_modules/
 scripts/_browser-export-bundle.mjs
 
+# Claude Code local configuration
+.claude/
+
+# Local scratch files
+temp/
+
