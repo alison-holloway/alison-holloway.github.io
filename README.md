@@ -82,6 +82,7 @@ alison-holloway.github.io/
     ├── css/
     │   └── main.css         # Site styling
     ├── js/
+    │   ├── reveal.js              # Scroll reveals on every page
     │   ├── hero-terminal.js       # Home page hero terminal animation
     │   ├── diagrams.js            # Diagram draw-on animation and IA journey explorer
     │   ├── retrieval-demo.js      # Retrieval demo engine (BM25), UI, and home page teaser
@@ -376,6 +377,12 @@ gh api repos/alison-holloway/alison-holloway.github.io/pages/builds/latest \
 ## Interactive Features
 
 All interactive features are plain JavaScript with no build step or dependencies. Each one respects `prefers-reduced-motion` and falls back to static content when JavaScript is off.
+
+### Scroll Reveals and Page Transitions
+
+`assets/js/reveal.js` (loaded on every page by `_layouts/default.html`) fades and lifts block-level content into place as it scrolls into view: banners, cards, section headings, tables, callouts, the demo panels, and the closing buttons. Only content that starts below the fold animates, so nothing above the fold flickers. Elements entering together are staggered slightly. To animate another kind of block, add its selector to the `SELECTOR` list at the top of the script.
+
+Pages cross-fade into each other on same-site navigation using CSS cross-document view transitions (`@view-transition` in `main.css`). The header keeps its own transition name, so it stays still. Browsers without support navigate normally.
 
 ### Hero Terminal
 
