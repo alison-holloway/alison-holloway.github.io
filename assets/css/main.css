@@ -860,6 +860,128 @@ main ol li {
   text-decoration: underline;
 }
 
+/* Excalidraw diagrams: draw-on animation (assets/js/diagrams.js) */
+.excalidraw-diagram.draw-ready .draw-stroke {
+  transition: stroke-dashoffset 0.8s ease-in-out var(--draw-delay, 0ms);
+}
+
+.excalidraw-diagram.draw-ready .draw-fade {
+  opacity: 0;
+  transition: opacity 0.5s ease calc(var(--draw-delay, 0ms) + 250ms);
+}
+
+.excalidraw-diagram.draw-ready.is-drawn .draw-fade { opacity: 1; }
+
+/* Journey explorer (OCNE information architecture page) */
+.journey-explorer {
+  margin: 1.5rem 0 2rem;
+}
+
+.journey-explorer .excalidraw-diagram,
+.journey-explorer img {
+  margin: 0 auto;
+}
+
+.journey-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.journey-tabs-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-right: 0.25rem;
+}
+
+.journey-tabs button {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.journey-tabs button:hover { border-color: var(--accent-color); }
+
+.journey-tabs button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.journey-tabs button[aria-pressed="true"] {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .journey-tabs button[aria-pressed="true"] { color: #0c0a09; }
+}
+
+.journey-caption {
+  min-height: 3.2em;
+  margin-top: 0.85rem;
+  font-size: 0.92rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.journey-card,
+.journey-label {
+  transition: opacity 0.35s ease;
+}
+
+.journey-card path {
+  transition: fill 0.35s ease, stroke-width 0.35s ease;
+}
+
+.journey-active .journey-card:not(.is-step),
+.journey-active .journey-label:not(.is-step) {
+  opacity: 0.22;
+}
+
+.journey-card.is-step path[stroke="none"] { fill: #fef3c7; }
+.journey-card.is-hub path[stroke="none"] { fill: #fde68a; }
+.journey-card.is-step path[fill="none"] { stroke-width: 3.5; }
+
+.journey-badge {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: journey-badge-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.journey-badge rect { fill: #b45309; stroke: #fff; stroke-width: 2; }
+
+.journey-badge text {
+  fill: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@keyframes journey-badge-in {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-badge { animation: none; }
+  .journey-card,
+  .journey-label,
+  .journey-card path { transition: none; }
+}
+
 .portfolio-content table {
   width: 100%;
   border-collapse: collapse;

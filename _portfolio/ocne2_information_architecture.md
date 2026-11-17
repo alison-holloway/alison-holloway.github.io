@@ -50,7 +50,18 @@ The 9 books serve distinct purposes while forming an integrated whole:
 
 The books are organized into four functional categories that reflect how users approach the documentation:
 
+<div class="journey-explorer" data-journey-explorer>
+<div class="journey-tabs" role="group" aria-label="Highlight a user journey" hidden>
+<span class="journey-tabs-label">Trace a journey</span>
+<button type="button" aria-pressed="false" data-steps="Quick Start|Applications|Concepts" data-caption="Quick Start (complete) → Applications (deploy sample app) → Concepts (optional exploration)." data-target="#journey-1-quick-evaluation">Quick evaluation</button>
+<button type="button" aria-pressed="false" data-steps="Release Notes|Concepts|CLI Reference|Kubernetes Clusters|Applications" data-caption="Release Notes → Concepts (OCI architecture) → CLI (installation, OCI config) → Kubernetes Clusters (OCI deployment) → Applications." data-target="#journey-2-production-oci-deployment">Production OCI</button>
+<button type="button" aria-pressed="false" data-steps="Release Notes|Upgrade Guide|Kubernetes Clusters|Upgrade Guide|CLI Reference" data-caption="Release Notes (breaking changes) → Upgrade Guide (prerequisites) → Kubernetes Clusters (backup) → Upgrade Guide (execute, validate) → CLI Reference (new commands)." data-target="#journey-3-upgrade-from-release-1x">Upgrade from 1.x</button>
+<button type="button" aria-pressed="false" data-steps="Concepts|Kubernetes Clusters|OCK Image Builder|Kubernetes Clusters" data-caption="Concepts (OCK architecture) → Kubernetes Clusters (image options) → OCK Image Builder (build custom) → Kubernetes Clusters (deploy)." data-target="#journey-4-custom-node-images">Custom node images</button>
+<button type="button" aria-pressed="false" data-hub="Kubernetes Clusters" data-steps="CLI Reference|Release Notes|Kubernetes|Applications" data-caption="Kubernetes Clusters Chapter 10 serves as the operations hub, with frequent cross-references to CLI Reference, Release Notes, Kubernetes guide, and Applications." data-target="#journey-5-day-2-operations">Day-2 operations</button>
+</div>
 <img src="/assets/excalidraw/ia-documentation-set-architecture.svg" alt="Documentation set architecture showing five functional categories: Reference and Updates, Foundation and Concepts, Getting Started, Core Operations, and Advanced and Specialized" style="max-width:100%;background:#fff;padding:1rem;border-radius:8px;">
+<p class="journey-caption" aria-live="polite">Select a journey to trace its path through the documentation set.</p>
+</div>
 
 ## Information Flow
 
