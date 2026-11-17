@@ -80,7 +80,7 @@ The information architecture supports several common reader journeys through the
 
 ### Journey 1: Quick Evaluation
 
-**Persona:** Developer or DevOps engineer evaluating Oracle CNE for a project.
+**Persona:** Developer or DevOps engineer evaluating Oracle Cloud Native Environment for a project.
 
 **Goal:** Get a working Kubernetes cluster as fast as possible.
 
@@ -196,7 +196,7 @@ The **Kubernetes Clusters** guide serves as the central hub of the documentation
 
 ### Challenge 1: Four Provider Models
 
-Oracle CNE supports libvirt, OCI, OLVM, and BYO providers with fundamentally different prerequisites, capabilities, and procedures.
+Oracle Cloud Native Environment supports libvirt, OCI, OLVM, and BYO providers with fundamentally different prerequisites, capabilities, and procedures.
 
 **Solution:** Created provider-agnostic foundational content (Concepts, configuration principles) with provider-specific chapters using parallel structure. Comparison matrices help users choose providers. DITA conditional processing enables shared content where procedures overlap.
 

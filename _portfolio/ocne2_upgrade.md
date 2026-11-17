@@ -12,17 +12,17 @@ tools:
 - Git
 pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/upgrade/OCNE-2-UPGRADE.pdf
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/upgrade/
-excerpt: Comprehensive procedures for upgrading from Oracle CNE Release 1.9 to Release
+excerpt: Comprehensive procedures for upgrading from Oracle Cloud Native Environment Release 1.9 to Release
   2, including planning, prerequisites, upgrade execution, and post-upgrade validation.
 ---
 
 ## Overview
 
-The Oracle Cloud Native Environment Upgrade Guide provides complete procedures for migrating existing Oracle CNE Release 1.9 clusters to Release 2. This represents a major version upgrade with significant architectural changes, requiring careful planning and execution. The guide covers upgrade planning and impact assessment, supported upgrade paths from Release 1.9 versions, pre-upgrade prerequisites and validation, backup and rollback procedures, step-by-step upgrade execution, post-upgrade validation and testing, troubleshooting upgrade issues, and application compatibility considerations.
+The Oracle Cloud Native Environment Upgrade Guide provides complete procedures for migrating existing Release 1.9 clusters to Release 2. This represents a major version upgrade with significant architectural changes, requiring careful planning and execution. The guide covers upgrade planning and impact assessment, supported upgrade paths from Release 1.9 versions, pre-upgrade prerequisites and validation, backup and rollback procedures, step-by-step upgrade execution, post-upgrade validation and testing, troubleshooting upgrade issues, and application compatibility considerations.
 
 ## Target Audience
 
-System administrators, platform engineers, and DevOps teams responsible for maintaining production Oracle CNE environments. Requires strong understanding of both Release 1.9 and Release 2 architectures.
+System administrators, platform engineers, and DevOps teams responsible for maintaining production Oracle Cloud Native Environment environments. Requires strong understanding of both Release 1.9 and Release 2 architectures.
 
 ## Key Documentation Features
 

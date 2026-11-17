@@ -19,11 +19,11 @@ excerpt: Foundational concepts and architecture documentation for Oracle Cloud N
 
 ## Overview
 
-The Oracle Cloud Native Environment Release 2 Concepts Guide provides comprehensive conceptual and architectural information about Oracle CNE, Oracle's Kubernetes-based platform for cloud-native application development and management. This guide serves as the foundational reference for understanding Oracle CNE's architecture, components, deployment models, and design principles.
+The Oracle Cloud Native Environment Release 2 Concepts Guide provides comprehensive conceptual and architectural information about Oracle's Kubernetes-based platform for cloud-native application development and management. This guide serves as the foundational reference for understanding the platform's architecture, components, deployment models, and design principles.
 
 ## Target Audience
 
-Solution architects evaluating Oracle CNE for cloud-native projects, system administrators planning Oracle CNE deployments, platform engineers designing Kubernetes infrastructure, technical decision makers comparing platform options, and new users learning Oracle CNE fundamentals.
+Solution architects evaluating Oracle Cloud Native Environment for cloud-native projects, system administrators planning deployments, platform engineers designing Kubernetes infrastructure, technical decision makers comparing platform options, and new users learning the platform's fundamentals.
 
 ## Key Documentation Features
 
@@ -47,7 +47,7 @@ The Concepts Guide deliberately avoids step-by-step procedures, instead focusing
 
 ### Visual Communication
 
-Complex distributed systems like Oracle CNE require visual explanation. The guide includes architecture diagrams showing component relationships, network topology diagrams for different providers, and data flow diagrams for key operations.
+Complex distributed systems like Oracle Cloud Native Environment require visual explanation. The guide includes architecture diagrams showing component relationships, network topology diagrams for different providers, and data flow diagrams for key operations.
 
 ## Technical Contributions
 

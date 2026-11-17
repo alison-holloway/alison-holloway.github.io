@@ -13,12 +13,12 @@ tools:
 pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/ockforge/OCNE-2-OCKFORGE.pdf
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/ockforge/
 excerpt: Guide for creating customized Oracle Container Host for Kubernetes (OCK)
-  images used as node operating systems in Oracle CNE Kubernetes clusters.
+  images used as node operating systems in Oracle Cloud Native Environment Kubernetes clusters.
 ---
 
 ## Overview
 
-The Oracle Container Host for Kubernetes (OCK) Image Builder Guide documents procedures for creating custom node images for Oracle CNE clusters. OCK is the specialized Oracle Linux-based operating system image optimized for Kubernetes node deployment, based on OSTree. The guide covers OCK image architecture and components, image building prerequisites and environment setup, creating custom OCK images with additional software, image customization options (packages, configurations, scripts), testing and validating custom images, deploying clusters using custom OCK images, and troubleshooting image build issues.
+The Oracle Container Host for Kubernetes (OCK) Image Builder Guide documents procedures for creating custom node images for Oracle Cloud Native Environment clusters. OCK is the specialized Oracle Linux-based operating system image optimized for Kubernetes node deployment, based on OSTree. The guide covers OCK image architecture and components, image building prerequisites and environment setup, creating custom OCK images with additional software, image customization options (packages, configurations, scripts), testing and validating custom images, deploying clusters using custom OCK images, and troubleshooting image build issues.
 
 ## Target Audience
 
@@ -30,7 +30,7 @@ Platform engineers, security teams, and system administrators who need to custom
 
 **Build Process:** Detailed documentation of the image build process, including required tools, build environment setup, and build configuration options.
 
-**Integration with Cluster Deployment:** Shows how custom OCK images integrate with standard Oracle CNE cluster deployment workflows across all provider types.
+**Integration with Cluster Deployment:** Shows how custom OCK images integrate with standard Oracle Cloud Native Environment cluster deployment workflows across all provider types.
 
 ## Documentation Challenge
 

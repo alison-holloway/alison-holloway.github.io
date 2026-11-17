@@ -19,11 +19,11 @@ excerpt: Complete command-line interface reference for the ocne tool, documentin
 
 ## Overview
 
-The Oracle Cloud Native Environment CLI Reference documents the `ocne` command-line tool, the single interface for creating and managing Kubernetes clusters in Oracle CNE. The book covers installation on Oracle Linux 8 and 9, CLI usage conventions, a three-layer configuration system, and a complete reference for every command and subcommand.
+The Oracle Cloud Native Environment CLI Reference documents the `ocne` command-line tool, the single interface for creating and managing Kubernetes clusters on the platform. The book covers installation on Oracle Linux 8 and 9, CLI usage conventions, a three-layer configuration system, and a complete reference for every command and subcommand.
 
 ## Target Audience
 
-System administrators, DevOps engineers, and platform operators who deploy and manage Kubernetes clusters using Oracle CNE. Readers are expected to be comfortable with Linux administration and have a working knowledge of Kubernetes concepts.
+System administrators, DevOps engineers, and platform operators who deploy and manage Kubernetes clusters using Oracle Cloud Native Environment. Readers are expected to be comfortable with Linux administration and have a working knowledge of Kubernetes concepts.
 
 ## Documentation Scope
 
