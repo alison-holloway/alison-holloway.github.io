@@ -94,6 +94,39 @@
   }
 }
 
+/* Page transitions: pages cross-fade on same-site navigation in browsers
+   that support cross-document view transitions; others navigate normally.
+   The header keeps its own transition name so it stays put. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+
+  header { view-transition-name: site-header; }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.28s;
+    animation-timing-function: ease;
+  }
+}
+
+/* Scroll reveals (assets/js/reveal.js). The script adds .reveal only to
+   content below the fold; uses translate/opacity animation so it doesn't
+   clash with hover transforms or existing transitions. */
+.reveal:not(.is-revealed) { opacity: 0; }
+
+.reveal.is-revealed {
+  animation: reveal-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes reveal-in {
+  from { opacity: 0; translate: 0 18px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+@media print {
+  .reveal { opacity: 1 !important; animation: none !important; }
+}
+
 /* Keep the hidden attribute working on elements styled with display: flex/grid */
 [hidden] { display: none !important; }
 
