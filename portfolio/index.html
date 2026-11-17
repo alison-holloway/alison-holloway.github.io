@@ -5,9 +5,9 @@ title: Portfolio
 
 <h1 class="page-title">Documentation Portfolio</h1>
 
-<p class="portfolio-intro">
-  Technical documentation for cloud-native platforms, container technologies, and enterprise software, written for developer and platform-engineering audiences.
-</p>
+<div class="page-intro">
+  <p class="lead">Technical documentation for cloud-native platforms, container technologies, and enterprise software, written for developer and platform-engineering audiences.</p>
+</div>
 
 {% assign ocne_items = site.portfolio | where: "product", "Oracle Cloud Native Environment" %}
 {% assign independent_items = site.portfolio | where: "section", "independent" | sort: "date" | reverse %}

@@ -7,11 +7,17 @@ description: An interactive demo of how AI assistants retrieve documentation, an
 
 <h1 class="page-title">How AI reads your docs</h1>
 
+<div class="page-intro">
+  <p class="lead">An AI assistant doesn't read your documentation the way a person does. It retrieves a few chunks that look relevant and answers from those alone.</p>
+</div>
+
 <div class="about-content rd-intro" markdown="1">
 
-When someone asks an AI assistant about your product, it doesn't read your documentation the way a person does. It retrieves a few chunks that look relevant to the question and answers from those alone. If the answer isn't in those chunks, the assistant can't give it, however good the rest of your docs are.
+If the answer isn't in the chunks it retrieves, the assistant can't give it, however good the rest of your docs are.
 
-This demo runs real keyword retrieval (BM25) in your browser over two versions of the same cluster administration content, adapted from the [Kubernetes Clusters guide]({{ '/portfolio/ocne2_kubernetes_clusters/' | relative_url }}) I wrote for Oracle Cloud Native Environment Release 2. The structured version follows the guide's own headings and topics. The other version holds the same facts, written as one long page and split into fixed-size chunks. Pick a question, then switch between the versions. Try all three questions: the unstructured version sometimes gets lucky, and that inconsistency is part of the problem.
+This demo runs real keyword retrieval (BM25) in your browser over two versions of the same cluster administration content, adapted from the [Kubernetes Clusters guide]({{ '/portfolio/ocne2_kubernetes_clusters/' | relative_url }}) I wrote for Oracle Cloud Native Environment Release 2. The structured version follows the guide's own headings and topics. The other holds the same facts, written as one long page and split into fixed-size chunks.
+
+Pick a question, then switch between the versions. Try all three: the unstructured version sometimes gets lucky, and that inconsistency is part of the problem.
 
 </div>
 

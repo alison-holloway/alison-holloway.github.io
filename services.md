@@ -6,9 +6,11 @@ permalink: /what-i-do/
 
 <h1 class="page-title">What I do</h1>
 
-<div class="about-content" markdown="1">
+<div class="page-intro">
+  <p class="lead">I'm a senior technical writer for developer and platform-engineering audiences. AI is woven into how I work today. Here's what I do.</p>
+</div>
 
-I'm a senior technical writer for developer and platform-engineering audiences. AI is woven into how I work today. Here's what I do.
+<div class="about-content" markdown="1">
 
 ---
 
