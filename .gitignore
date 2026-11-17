@@ -8,3 +8,9 @@ _site/
 node_modules/
 scripts/_browser-export-bundle.mjs
 
+# Claude Code: share project settings, ignore per-machine overrides
+.claude/settings.local.json
+
+# Local scratch files
+temp/
+

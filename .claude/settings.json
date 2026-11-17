@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(git pull:*)",
+      "Bash(xargs -I{} basename {} .md)",
+      "Bash(git config:*)",
+      "Bash(bundle exec *)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx playwright *)",
+      "Bash(node node_modules/.bin/esbuild scripts/_browser-export.mjs --bundle --format=esm --outfile=scripts/_browser-export-bundle.mjs --platform=browser)",
+      "Bash(sudo apt-get install -y libnspr4 libnss3 libatk1.0-0 libatspi2.0-0 libx11-6 libxcomposite1)",
+      "Bash(git branch *)",
+      "Bash(git pull *)",
+      "Bash(echo \"exit $?\")",
+      "Bash(git fetch *)",
+      "WebFetch(domain:alison-holloway.com)",
+      "WebFetch(domain:www.githubstatus.com)",
+      "WebFetch(domain:www.alison-holloway.com)",
+      "Bash(ruby --version)",
+      "Bash(gh pr *)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(git mv *)",
+      "Bash(echo \"\\(exit $?\\)\")"
+    ]
+  }
+}
