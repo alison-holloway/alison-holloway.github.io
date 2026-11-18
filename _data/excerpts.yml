@@ -1,0 +1,373 @@
+# Annotated excerpts shown on portfolio item pages ("Inside the guide").
+#
+# Keyed by the portfolio file name (page.slug), for example ocne2_quickstart.
+# Rendered by _includes/annotated-excerpt.html; behaviour in
+# assets/js/annotated-excerpt.js.
+#
+# - topic / url: the published topic the excerpt is quoted from.
+# - html: the excerpt, quoted from the published HTML. Wrap each annotated
+#   phrase in <mark data-n="N">…</mark>; N matches the note's position below.
+#   Use <h4>, <p>, <ol class="ax-steps">, <pre>, <ul>,
+#   <div class="ax-admon"><strong>Caution:</strong> …</div> and
+#   <figure><img src="/assets/images/portfolio/…" alt="…"><figcaption>…</figcaption></figure>.
+# - notes: one per mark, in order. title is a short label; text says why.
+
+ocne2_quickstart:
+  topic: Installing the CLI
+  url: https://docs.oracle.com/en/operating-systems/olcne/2/quickstart/ocne_install_task.html
+  html: |
+    <h4>Installing the CLI</h4>
+    <p><mark data-n="1">Install the Oracle Cloud Native Environment (Oracle CNE) Command Line Interface (CLI) on an Oracle Linux host, using the Oracle Linux Yum Server, or the Unbreakable Linux Network (ULN).</mark></p>
+    <p><mark data-n="2">The Oracle CNE CLI is the command line tool to create and manage Kubernetes clusters in Oracle CNE.</mark> The CLI (<code>ocne</code> command) includes a help system to show all command options, and a set of configuration files at various levels to configure the environment and clusters.</p>
+    <ol class="ax-steps">
+      <li>
+        <p><strong>Set up the Oracle Linux Yum Server Repository.</strong></p>
+        <p><mark data-n="3">If the system uses the Oracle Linux Yum Server,</mark> set it up to install the CLI:</p>
+        <p><mark data-n="4">Oracle Linux 9:</mark></p>
+        <pre>sudo dnf install -y oracle-ocne-release-el9
+    sudo dnf config-manager --enable ol9_ocne</pre>
+        <p>Oracle Linux 8:</p>
+        <pre>sudo dnf install -y oracle-ocne-release-el8
+    sudo dnf config-manager --enable ol8_ocne</pre>
+      </li>
+      <li>
+        <p><strong>Set up ULN.</strong></p>
+        <p>If the system is registered to use ULN, use the ULN web interface to subscribe the system to the appropriate channel.</p>
+        <p>For Oracle Linux 9, subscribe to <code>ol9_x86_64_ocne</code> or <code>ol9_aarch64_ocne</code>.</p>
+        <p>For Oracle Linux 8, subscribe to <code>ol8_x86_64_ocne</code> or <code>ol8_aarch64_ocne</code>.</p>
+      </li>
+      <li>
+        <p><strong><mark data-n="5">Install the CLI.</mark></strong></p>
+        <pre>sudo dnf install -y ocne</pre>
+      </li>
+    </ol>
+  notes:
+    - title: What, where, and which way
+      text: The first sentence says what you'll install, where, and the two ways to do it, so readers know at once whether this topic is for them.
+    - title: Just enough context
+      text: One sentence on what the CLI is for, then what it comes with. That's enough to orient a first-time reader without sending them off to a concept topic.
+    - title: Condition first
+      text: The step opens with its condition, so ULN users can see they can skip it without reading the commands.
+    - title: Label before code
+      text: Each command block is labelled with its OS release, newest first, so readers copy the one that matches their system.
+    - title: The common step stands alone
+      text: The steps that depend on the system come first. The one command everyone runs is last, in a step of its own. The same topic appears word for word in the CLI guide, written once and reused so the two can't drift apart.
+
+ocne2_ock_image_builder:
+  topic: Installation
+  url: https://docs.oracle.com/en/operating-systems/olcne/2/ockforge/install.html
+  html: |
+    <h4>Installation</h4>
+    <p>Install the OCK Image Builder utility on an Oracle Linux 9 host.</p>
+    <p><mark data-n="1">OCK Image Builder must be installed on Oracle Linux 9, from the OCK Image Builder GitHub repository. The prerequisites are Podman, and the <code>qemu-img</code> utility.</mark></p>
+    <ol class="ax-steps">
+      <li>
+        <p><strong>Install Podman.</strong></p>
+        <pre>sudo dnf install container-tools</pre>
+        <p><mark data-n="2">For more information on installing and using Podman, see the Oracle Linux: Podman User's Guide.</mark></p>
+      </li>
+      <li>
+        <p><strong>Install <code>qemu-img</code>.</strong></p>
+        <p><mark data-n="3">The <code>qemu-img</code> utility is used to manipulate Qcow2 images.</mark> Install <code>qemu-img</code> from the <code>ol9_kvm_utils</code> repository.</p>
+        <p><mark data-n="4">First,</mark> enable the repository:</p>
+        <pre>sudo dnf config-manager --enable ol9_kvm_utils</pre>
+        <p>Then, install <code>qemu-img</code>:</p>
+        <pre>sudo dnf install qemu-img</pre>
+      </li>
+      <li>
+        <p><strong>Install Git.</strong></p>
+        <p>Install the Git client:</p>
+        <pre>sudo dnf install git</pre>
+      </li>
+      <li>
+        <p><strong><mark data-n="5">Install OCK Image Builder.</mark></strong></p>
+        <p>Clone the OCK Image Builder GitHub repository:</p>
+        <pre>git clone https://github.com/oracle-cne/ock-forge</pre>
+      </li>
+    </ol>
+  notes:
+    - title: Requirements up front
+      text: The OS, the source, and the prerequisites are all stated before step 1, so nobody gets three steps in on the wrong system.
+    - title: Link, don't duplicate
+      text: Podman has its own guide. A pointer keeps this topic short and leaves the Podman details in one place to maintain.
+    - title: Say why it's needed
+      text: One line explains what qemu-img is for. A prerequisite with no reason looks arbitrary, and readers start to wonder if they can skip it.
+    - title: Sequence inside a step
+      text: “First” and “Then” keep two small commands in order without splitting a trivial action into two numbered steps.
+    - title: Build up to the goal
+      text: Each prerequisite gets its own step, in the order they're needed, so the last step is the one readers came for.
+
+ocne2_upgrade:
+  topic: Prerequisites
+  url: https://docs.oracle.com/en/operating-systems/olcne/2/upgrade/prereq.html
+  html: |
+    <h4>Prerequisites</h4>
+    <p>Set up the required prerequisites to upgrade from Oracle CNE Release 1 to Release 2.</p>
+    <p><mark data-n="1">The upgrade is performed on an Oracle Linux host that's outside the Release 1 cluster.</mark> This host must have network access to the Kubernetes nodes in the Release 1 cluster.</p>
+    <div class="ax-admon"><strong>Caution:</strong> <mark data-n="2">The upgrade must not be performed on any of the Release 1 Kubernetes nodes.</mark> The upgrade steps must be performed on a host outside the cluster.</div>
+    <p><mark data-n="3">Before you begin, identify any OS Customizations in the Release 1 cluster.</mark> If you have OS customizations that can't be set up using a configuration file, you might need to use Oracle Container Host for Kubernetes Image Builder to build a custom image to use during the upgrade.</p>
+    <p>To prepare for the upgrade, on an Oracle Linux host, set up:</p>
+    <ul>
+      <li>The Oracle CNE Command Line Interface (CLI), <code>ocne</code>.</li>
+      <li>The Oracle CNE libvirt provider. <mark data-n="4">This is used to create temporary Kubernetes clusters to perform some steps in the upgrade.</mark></li>
+      <li>The Kubernetes CLI, <code>kubectl</code>.</li>
+      <li><mark data-n="5">A copy of the Release 1 Kubernetes configuration file, <code>kubeconfig</code>.</mark></li>
+    </ul>
+  notes:
+    - title: The costliest mistake first
+      text: Where you run the upgrade is the first fact, because running it in the wrong place is the most expensive mistake a reader can make.
+    - title: Save cautions for real risk
+      text: The same fact is repeated as a Caution, with a plain “must not”. Cautions are kept for things that can break a cluster, so readers still notice them.
+    - title: Surface the exception early
+      text: Readers with OS customizations need extra work. Saying so before they begin, and naming the tool, means they find out now and not halfway through the upgrade.
+    - title: Explain the surprise
+      text: A libvirt provider looks out of place in an upgrade of an existing cluster, so the list says why it's needed.
+    - title: A list that doubles as a checklist
+      text: Each item names one exact thing, with the command or file name in code font, so readers can tick them off.
+
+ocne2_release_notes:
+  topic: Component Versions
+  url: https://docs.oracle.com/en/operating-systems/olcne/2/relnotes/components.html
+  html: |
+    <h4>Oracle Container Host for Kubernetes Image</h4>
+    <p><mark data-n="1">Kubernetes Releases 1.35 and 1.34 are included with Oracle CNE Release 2.4.</mark> Updated Oracle Container Host for Kubernetes images are also available for Kubernetes Releases 1.33 and 1.32.</p>
+    <p><mark data-n="2">The Oracle Container Host for Kubernetes (OCK) image includes both the host Oracle Linux OS, and the Kubernetes software distribution.</mark> The OCK image is distributed on the Oracle Container Registry.</p>
+    <p><mark data-n="3">A bootable container image, in the Qcow2 format,</mark> is available at:</p>
+    <pre>container-registry.oracle.com/olcne/ock</pre>
+    <p>An OSTree commit based container image, is available at:</p>
+    <pre>container-registry.oracle.com/olcne/ock-ostree</pre>
+    <p><mark data-n="4">Both images use the container label for the Kubernetes version they match, for example, 1.35.</mark></p>
+  notes:
+    - title: Answer first
+      text: Version numbers lead, because that's what release notes readers come looking for.
+    - title: Same words everywhere
+      text: The one-line definition uses the same wording as the Kubernetes Clusters guide, so the term means the same thing in every guide in the set.
+    - title: Format, then location
+      text: Each image is introduced by its format, then the exact registry path to copy, on its own line.
+    - title: Don't leave them guessing
+      text: The topic ends with how the tags are named, with an example, so readers can pull the right image first time.
+
+ocne2_kubernetes_clusters:
+  topic: Introduction
+  url: https://docs.oracle.com/en/operating-systems/olcne/2/clusters/intro_concept.html
+  html: |
+    <h4>Introduction</h4>
+    <p>Oracle CNE includes a Command Line Interface (CLI) that can manage the life cycle of Kubernetes clusters, using OSTree based container images. <mark data-n="1">The container images include both the host Oracle Linux OS, and the Kubernetes software distribution.</mark> <mark data-n="2">These images are deployed to hosts or Virtual Machines (VMs) to create nodes in a Kubernetes cluster.</mark> <mark data-n="3">These images are referred to in this documentation set as Oracle Container Host for Kubernetes (OCK) images.</mark></p>
+    <p>You can make custom installations of the Oracle Container Host for Kubernetes (OCK) image on arbitrary platforms. <mark data-n="4">This means you can create a Kubernetes cluster using bare metal or other virtual instances, not provided explicitly by Oracle CNE.</mark> <mark data-n="5">These installations are known as Bring Your Own (BYO) installations. You use the <code>byo</code> provider to perform these installations.</mark></p>
+  notes:
+    - title: What's inside
+      text: Before naming anything, say what the image contains. Readers can picture it before they have to remember it.
+    - title: What it does for you
+      text: Then connect it to what the reader is here to do, which is to create nodes in a cluster.
+    - title: Name it last
+      text: The name comes once it means something, and “in this documentation set” sets it as the term used in every guide from here on.
+    - title: Turn a feature into an outcome
+      text: “This means” turns “custom installations on arbitrary platforms” into something readers can picture doing.
+    - title: The concept, then what you type
+      text: The concept gets a name (BYO), then the provider name readers will actually type, in code font.
+
+ocne2_concepts:
+  topic: OCI Provider
+  url: https://docs.oracle.com/en/operating-systems/olcne/2/concepts/oci_provider_concept.html
+  html: |
+    <h4>OCI Provider</h4>
+    <p>Use the <code>oci</code> provider to create Kubernetes clusters on Oracle Cloud Infrastructure (OCI).</p>
+    <p>Kubernetes clusters are deployed to OCI using the <code>oci</code> provider. The <code>oci</code> provider uses the Kubernetes Cluster API Provider for OCI to perform the deployment. This is an implementation of the Kubernetes Cluster API. The Kubernetes Cluster API is implemented as Kubernetes Custom Resources (CRs), that are serviced by applications running in a Kubernetes cluster. <mark data-n="1">The Kubernetes Cluster API has a large interface and is explained in the upstream documentation.</mark> For information on the Kubernetes Cluster API, see the <a href="https://cluster-api.sigs.k8s.io/">Kubernetes Cluster API documentation</a>. For information on the Cluster API implementation for OCI, see the <a href="https://oracle.github.io/cluster-api-provider-oci/">Kubernetes Cluster API Provider for OCI</a> documentation.</p>
+    <p class="ax-skip">Two paragraphs on tenancy credentials and compartments are left out here.</p>
+    <p><mark data-n="2">The controllers that implement the Kubernetes Cluster API run inside a Kubernetes cluster. These clusters are known as <em>management clusters</em>. Management clusters control the life cycle of other clusters, known as <em>workload clusters</em>.</mark> A workload cluster can be its own management cluster.</p>
+    <p>Using the Kubernetes Cluster API to deploy a cluster on OCI requires that a Kubernetes cluster is available to use as the management cluster. Any running cluster can be used. To set the management cluster, set the <code>KUBECONFIG</code> environment variable, or use the <code>--kubeconfig</code> option of <code>ocne</code> commands. You could also set this cluster using a configuration file. <mark data-n="3">If no management cluster is available, a cluster is created automatically using the <code>libvirt</code> provider, with the default configuration.</mark></p>
+    <p class="ax-skip">Two paragraphs on managing workload clusters and self-managed clusters are left out here.</p>
+    <figure>
+      <img src="/assets/images/portfolio/ocne2-concepts-cluster-oci.png" width="1351" height="611" loading="lazy" alt="This diagram shows the architecture of a Kubernetes cluster created with the OCI provider. The CLI pulls the OCK image from the container registry, converts it to an OCI version, and pushes it to the Compartment. The OCK image is then used as the basis for compute instances to create nodes in a Kubernetes cluster.">
+      <figcaption>Figure 3-4 OCI Cluster</figcaption>
+    </figure>
+    <p class="ax-alt"><span class="ax-alt-label">Alt text</span> <mark data-n="4">This diagram shows the architecture of a Kubernetes cluster created with the OCI provider. The CLI pulls the OCK image from the container registry, converts it to an OCI version, and pushes it to the Compartment. The OCK image is then used as the basis for compute instances to create nodes in a Kubernetes cluster.</mark></p>
+    <p><mark data-n="5">The OCI cluster architecture has the following components:</mark></p>
+    <ul>
+      <li><strong>CLI</strong>: The CLI used to create and manage Kubernetes clusters. The <code>ocne</code> command.</li>
+      <li><strong>Default configuration</strong>: A YAML file that contains configuration for all <code>ocne</code> commands.</li>
+      <li><strong>Cluster configuration</strong>: A YAML file that contains configuration for a specific Kubernetes cluster.</li>
+      <li><strong>Cluster API template</strong>: A YAML file that contains Cluster Resources for the Kubernetes Cluster API to create a cluster.</li>
+      <li><strong>OCI CLI</strong>: The OCI CLI is installed on the localhost, including the configuration to read and write to the tenancy and compartment.</li>
+      <li><strong>Container registry</strong>: A container registry used to pull the images used to create nodes in a Kubernetes cluster. The default is the Oracle Container Registry.</li>
+      <li><strong>OCI OCK image</strong>: <mark data-n="6">The CLI is used to create this image, based on the OCK image, pulled from the container registry. The CLI is then used to upload this image to OCI.</mark></li>
+      <li><strong>Ephemeral or management cluster</strong>: A Kubernetes cluster used to perform a CLI command. This cluster might also be used to start the cluster services, or to manage the cluster.</li>
+      <li><strong>Compartment</strong>: An OCI compartment in which the cluster is created.</li>
+      <li><strong>OCK images</strong>: The OCK image is loaded into an Object Storage bucket. When the upload is complete, a custom compute image is created from the OCK image.</li>
+      <li><strong>Custom compute images</strong>: The OCK image is available as a custom compute image and can be used to create compute nodes in a Kubernetes cluster.</li>
+      <li><strong>Control plane load balancer</strong>: A network load balancer used for High Availability (HA) of the control plane nodes.</li>
+      <li><strong>Control plane nodes</strong>: Compute instances running control plane nodes in a Kubernetes cluster.</li>
+      <li><strong>Worker nodes</strong>: Compute instances running worker nodes in a Kubernetes cluster.</li>
+    </ul>
+  notes:
+    - title: Point upstream, don't re-document
+      text: One sentence says what the Cluster API is, then it links to the upstream docs. Copying a large interface that changes on someone else's schedule would go out of date fast.
+    - title: Define terms where they're needed
+      text: Management and workload clusters are defined at first use, in italics, each by what it does. Everything after this depends on that distinction.
+    - title: Answer the next question
+      text: Readers without a management cluster will wonder what happens. The topic tells them, so a libvirt VM appearing on their host isn't a surprise.
+    - title: Alt text gives the big picture
+      text: The alt text is three sentences on the overall flow, which is what a screen reader user needs first. It doesn't try to list every box.
+    - title: A full text equivalent
+      text: The list is the diagram's long description. Every labelled box appears, in the order the diagram reads from left to right, with its label in bold. Readers who can't see the image, or can't read it at that size, get the same information, which is what WCAG asks for with complex images.
+    - title: Describe the arrows, not just the boxes
+      text: Items like this one say how the image moves (pulled, converted, uploaded, turned into a compute image), so the list carries the flow as well as the parts.
+
+ocne2_cli_reference:
+  topic: ocne cluster start
+  url: https://docs.oracle.com/en/operating-systems/olcne/2/cli/cluster_start_ref.html
+  html: |
+    <h4>ocne cluster start</h4>
+    <p>Deploys a Kubernetes cluster using default or customized configuration.</p>
+    <p>Four primary types of deployments are available:</p>
+    <ul>
+      <li>Local virtualization</li>
+      <li>Preprovisioned compute resources</li>
+      <li>Self provisioned compute resources</li>
+      <li>Cloud provider or other infrastructure automation</li>
+    </ul>
+    <p class="ax-reuse">Reused across the doc set</p>
+    <pre><mark data-n="1"><strong>ocne cluster start</strong> [{-u|--auto-start-ui} {true|false}] [{-o|--boot-volume-container-image} <var>URI</var>] [{-C|--cluster-name} <var>name</var>] [{-c|--config} <var>path</var>] [{-n|--control-plane-nodes} <var>integer</var>] [{-i|--key} <var>path</var>] [--load-balancer <var>address</var>] [{-P|--provider} <var>provider</var>] [{-s|--session} <var>URI</var>] [{-v|--version} <var>version</var>] [--virtual-ip <var>IP</var>] [{-w|--worker-nodes} <var>integer</var>]</mark></pre>
+    <p>Where:</p>
+    <dl>
+      <dt><code>{-u|--auto-start-ui} {true|false}</code></dt>
+      <dd>Sets whether the UI is automatically loaded in a browser window after the cluster has started. The default is <code>true</code>.</dd>
+      <dt><code>{-C|--cluster-name} <var>name</var></code></dt>
+      <dd>The name of the cluster to start. <mark data-n="2">The default is <code>ocne</code>.</mark></dd>
+      <dt><code>{-c|--config} <var>path</var></code></dt>
+      <dd>The path to a configuration file that contains the definition of the cluster. <mark data-n="3">If this value isn't provided, a small (ephemeral) cluster might be created, using the default hypervisor, for the system where the command is run.</mark></dd>
+      <dt><code>{-P|--provider} <var>provider</var></code></dt>
+      <dd>The provider to use when interacting with the cluster. Options are: <code>byo</code>, <code>libvirt</code> (the default), <code>none</code>, <code>oci</code>, <code>olvm</code>.</dd>
+      <dt><code>{-s|--session} <var>URI</var></code></dt>
+      <dd>The session URI for the <code>libvirt</code> provider. For local sessions, use <code>qemu:///system</code>. For remote sessions, use the format <code>qemu+ssh://<var>host</var>/system</code> where <var>host</var> is the name or IP address of the remote system.</dd>
+    </dl>
+    <p class="ax-skip">Seven more options are left out here.</p>
+    <p class="ax-example-title"><mark data-n="4">Example 4-61 Create a default cluster using the <code>libvirt</code> provider</mark></p>
+    <p>To create a libvirt cluster, using all default settings:</p>
+    <p class="ax-reuse">Reused across the doc set</p>
+    <pre><mark data-n="5">ocne cluster start</mark></pre>
+    <p class="ax-example-title">Example 4-62 Create a default cluster using the <code>oci</code> provider</p>
+    <p>To create a cluster on OCI, using the default settings and default configuration files on the system:</p>
+    <pre>ocne cluster start --provider oci</pre>
+    <p class="ax-skip">One example is left out here.</p>
+    <p class="ax-example-title">Example 4-64 Create a <code>libvirt</code> cluster using a configuration file</p>
+    <p>To create a <code>libvirt</code> cluster using a configuration file:</p>
+    <pre>ocne cluster start --config myconfig.yaml</pre>
+    <p class="ax-skip">One example is left out here.</p>
+    <p class="ax-example-title">Example 4-66 Create a <code>libvirt</code> cluster with specified nodes and virtual IP</p>
+    <p>To create a cluster with a specified number of worker and control plane nodes, and a virtual IP address:</p>
+    <pre>ocne cluster start --control-plane-nodes 3 --worker-nodes 5 --virtual-ip 192.168.0.100</pre>
+    <p class="ax-example-title">Example 4-67 Create a remote <code>libvirt</code> cluster using a configuration file</p>
+    <p>To create a cluster on a remote host using a configuration file:</p>
+    <pre>ocne cluster start --session qemu+ssh://myuser@myhost.example.com/system --config myconfig.yaml</pre>
+    <p class="ax-skip">One more example is left out here.</p>
+  notes:
+    - title: Write the syntax once, use it everywhere
+      text: This syntax block is the single source for the command. Other guides, such as the Quick Start's “Creating a libvirt Cluster” task, pull it in by reference, so readers get the full syntax right where they need it. When an option changes, it's updated here once, and every guide picks up the change at the next build.
+    - title: Every default stated
+      text: Each option says what happens if you don't set it. Readers shouldn't have to run a command to find out what it does by default.
+    - title: Say what leaving it out means
+      text: Leaving out a configuration file is the most common way to run this command, so the reference says exactly what you get without one.
+    - title: Titles that name the situation
+      text: Each example title says what you're trying to do, then a one-line lead-in sets it up. Readers scan the titles for their own case and copy the command under it.
+    - title: The examples are reused too
+      text: Like the syntax, each example is a reusable element. The same tested commands appear in the task topics in other guides, so a command is never correct in one book and out of date in another.
+
+ol_podman_guide:
+  topic: Private Container Registries
+  url: https://docs.oracle.com/en/operating-systems/oracle-linux/podman/registry-private.html
+  html: |
+    <h4>Private Container Registries</h4>
+    <p>Set up a local, private container registry server to host container images within an organization. A private registry can also be used to mirror the Oracle Container Registry.</p>
+    <p>The registry server is a container application. The host must have an Internet connection to download the registry image from Docker Hub or, if support is required, from the Oracle Container Registry.</p>
+    <p>You can create a secure private registry, which requires you to set up TLS. When you set up TLS, you can use a self signed Certificate Authority (CA) certificate, or a certificate signed by a CA. <mark data-n="1">Otherwise, the registry can be created as an insecure registry for testing and development purposes.</mark></p>
+    <div class="ax-admon"><strong>Note:</strong> <mark data-n="2">The registry image from Docker Hub can be used to set up both an insecure registry and a secure registry. The registry image from the Oracle Container Registry can only be used to set up a secure registry.</mark></div>
+    <h4>Creating an Insecure Registry</h4>
+    <p>Create a local container registry without TLS. This can be used for testing or development. A secure registry that uses TLS is recommended for a production system.</p>
+    <p><mark data-n="3">If you create an insecure registry, you can add it to the Podman registry configuration file to avoid using the <code>--tls-verify=false</code> option when using the registry.</mark> For more information, see Adding Insecure Registries.</p>
+    <ol class="ax-steps">
+      <li>
+        <p><strong>Create the registry.</strong></p>
+        <p>Use the <code>podman run</code> command to create the registry. For example:</p>
+        <pre>sudo podman run -d -p 5000:5000 --name registry --restart always registry:2</pre>
+        <p><mark data-n="4">Or for a standard user:</mark></p>
+        <pre>podman run -d -p 5000:5000 --name registry --restart always registry:2</pre>
+        <p>The <code>-d</code> option runs the container in the background.</p>
+        <p>The <code>-p</code> option publishes the port mapping. If you're using the default ports, set this to <code>5000:5000</code>. <mark data-n="5">If port 5000 is already in use, assign another port, for example use <code>5001:5000</code>.</mark></p>
+        <p>The <code>--name</code> option sets the name of the registry container. This is commonly set to <code>registry</code>.</p>
+        <p><mark data-n="6">The container registry image is pulled from Docker Hub using the short name of <code>registry:2</code>, though you could also use the full image location of <code>docker.io/library/registry:2</code>.</mark></p>
+        <p>For more information on the options, use the <code>podman run --help</code> command.</p>
+      </li>
+      <li>
+        <p><strong>Verify the registry container is running:</strong></p>
+        <p>Use the <code>podman ps</code> command to verify the registry container is running.</p>
+        <pre>sudo podman ps</pre>
+        <p>Or for a standard user:</p>
+        <pre>podman ps</pre>
+      </li>
+    </ol>
+    <p class="ax-skip">The secure registry, certificate, and image import sections are left out here.</p>
+  notes:
+    - title: Name the path most readers want
+      text: Most people setting up a registry are testing or developing, not running production. The chapter says up front that an insecure registry is a supported choice for that, so readers don't assume they have to set up TLS first.
+    - title: The note that ended years of support issues
+      text: The registry image on the Oracle Container Registry only works for a secure registry. For years nobody knew, and users who picked the Oracle image to set up a test registry hit failures they couldn't explain. This note tells readers which image works for which kind of registry, before they pull anything.
+    - title: Head off the next error
+      text: Once an insecure registry is running, the next thing that trips readers up is TLS errors on every push and pull. The topic says how to avoid them before the first step, and links to the fix.
+    - title: Root and rootless, side by side
+      text: Podman runs both as root and as a standard user, and readers use both. Every command is shown both ways, so nobody has to translate.
+    - title: Plan for the common failure
+      text: Port 5000 is often already taken. The topic says what to do about it right where the port is set, with an example.
+    - title: Short name and full name
+      text: Podman resolves short image names through its registry configuration, so the result can depend on the system. Giving the fully qualified name as well lets readers be explicit about where the image comes from.
+
+microk8s_dashboard_access:
+  topic: NodePort method
+  url: https://github.com/alison-holloway/microk8s-dashboard-local-access-patterns#nodeport-method
+  html: |
+    <h4>Choose your method</h4>
+    <p>Before you delve into the details, you might want a very quick suggestion on which method is right for you. Here are my thoughts:</p>
+    <ul>
+      <li><mark data-n="1">Most developers: use the port-forward method</mark></li>
+      <li>Homelabs: use the NodePort method</li>
+      <li>Production: use the Ingress method</li>
+    </ul>
+    <p class="ax-skip">The method comparison and prerequisites are left out here.</p>
+    <h4>NodePort method</h4>
+    <p class="ax-flow"><span>Browser<br><code>https://localhost:30380</code></span><span class="ax-flow-arrow" aria-label="to">→</span><span>NodePort Service<br><code>:443</code></span><span class="ax-flow-arrow" aria-label="to">→</span><span>Dashboard Pod<br><code>:443</code></span></p>
+    <p>The method I much prefer in my testing lab is to edit the <code>kubernetes-dashboard</code> service to use NodePort instead of ClusterIP. <mark data-n="2">It's important to know this is less secure, but in my development environment I'm confident that nobody can get through my firewall and then through to my cluster.</mark> It's such an easy method, that it's worth writing about. I know from personal experience that technical writers out there are discouraged from documenting it.</p>
+    <div class="ax-admon"><strong>Warning:</strong> This method leaves cluster access open to your whole network, so consider your environment security needs before you do this. <mark data-n="3">An access token is still required to access the cluster.</mark></div>
+    <ol class="ax-steps">
+      <li>
+        <p>Edit the <code>kubernetes-dashboard</code> service and change <code>type: ClusterIP</code> to <code>type: NodePort</code>:</p>
+        <pre>microk8s kubectl edit svc kubernetes-dashboard-kong-proxy -n kubernetes-dashboard</pre>
+      </li>
+      <li>
+        <p>Find the port on which the service is being served:</p>
+        <pre>microk8s kubectl get svc -n kubernetes-dashboard kubernetes-dashboard-kong-proxy -o jsonpath='{.spec.ports[0].nodePort}'</pre>
+        <p>You'll see output similar to:</p>
+        <pre>30380</pre>
+        <p><mark data-n="4">This is the port number to use to access the service, so use this in the next step for the <code>PORT</code> variable.</mark></p>
+      </li>
+      <li>
+        <p>Open your browser and navigate to <code>https://localhost:PORT</code>, substituting <code>PORT</code> with the port number from the previous step.</p>
+        <p>In this example you would use <code>https://localhost:30380</code>, but make sure you use the correct <code>PORT</code> number for your service. <mark data-n="5">This is dynamic and can change if you delete and recreate the service, and the port number I have here is unlikely to be your port number.</mark></p>
+        <p><strong>Note</strong>: <mark data-n="6">Because this uses a self-signed certificate, your browser will show a "Privacy error." Click <strong>Advanced</strong> and then <strong>Proceed to localhost</strong>.</mark> You will be prompted for your bearer token to authenticate.</p>
+      </li>
+      <li>
+        <p>Paste your bearer token at the login screen to authenticate and access the Dashboard.</p>
+      </li>
+    </ol>
+  notes:
+    - title: An answer before the details
+      text: Readers who just want to know what to do get an answer in three lines, one per situation. The comparison is there for anyone who wants the reasons.
+    - title: Honest about the trade-off
+      text: Most docs leave this method out because it's less secure. This guide documents it anyway, says plainly why it's riskier, and says when that risk is acceptable. The first-person voice suits an independent guide written from hands-on use.
+    - title: Say what still protects you
+      text: The warning names the risk, then the safeguard that's still in place, so readers can weigh it up instead of just being scared off.
+    - title: Connect output to the next step
+      text: The output of one step is the input to the next. The topic says so, and names the placeholder the value goes into.
+    - title: An example is only an example
+      text: NodePort numbers are assigned dynamically. The topic says outright that the reader's number will differ, so nobody copies 30380 and wonders why it doesn't work.
+    - title: Expect the expected warning
+      text: The browser's privacy error is normal here. Telling readers in advance, and exactly what to click, stops them deciding something has gone wrong and giving up.

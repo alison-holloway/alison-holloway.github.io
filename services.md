@@ -80,6 +80,86 @@ Here's a made-up engineering draft about backing up an Oracle Cloud Native Envir
 
 ---
 
+## One idea, four readers
+
+Good documentation explains the same thing differently depending on who's reading. Here's how
+the Oracle Cloud Native Environment doc set I wrote explains one idea, the Oracle Container Host
+for Kubernetes (OCK) image, to four different readers. The text is quoted from the published guides.
+Pick a reader.
+
+</div>
+
+<section class="aud" data-audience-switcher aria-label="One idea, four readers">
+  <div class="aud-tabs" role="tablist" aria-label="Reader" hidden>
+    <button type="button" role="tab" class="aud-tab" id="aud-tab-create" aria-controls="aud-create">
+      <span class="aud-tab-who">Creating a cluster</span>
+      <span class="aud-tab-guide">Kubernetes Clusters</span>
+    </button>
+    <button type="button" role="tab" class="aud-tab" id="aud-tab-custom" aria-controls="aud-custom">
+      <span class="aud-tab-who">Needs a custom image</span>
+      <span class="aud-tab-guide">OCK Image Builder</span>
+    </button>
+    <button type="button" role="tab" class="aud-tab" id="aud-tab-upgrade" aria-controls="aud-upgrade">
+      <span class="aud-tab-who">Upgrading from Release 1</span>
+      <span class="aud-tab-guide">Upgrade</span>
+    </button>
+    <button type="button" role="tab" class="aud-tab" id="aud-tab-versions" aria-controls="aud-versions">
+      <span class="aud-tab-who">Checking what's available</span>
+      <span class="aud-tab-guide">Release Notes</span>
+    </button>
+  </div>
+
+  <div class="aud-panel" role="tabpanel" id="aud-create" aria-labelledby="aud-tab-create">
+    <p class="aud-ask"><span class="aud-ask-label">Their question</span> What is this thing I'm deploying to my nodes?</p>
+    <blockquote class="aud-quote">
+      <p>Oracle CNE includes a Command Line Interface (CLI) that can manage the life cycle of Kubernetes clusters, using OSTree based container images. <mark>The container images include both the host Oracle Linux OS, and the Kubernetes software distribution.</mark> These images are deployed to hosts or Virtual Machines (VMs) to create nodes in a Kubernetes cluster. These images are referred to in this documentation set as Oracle Container Host for Kubernetes (OCK) images.</p>
+      <footer><a href="https://docs.oracle.com/en/operating-systems/olcne/2/clusters/intro_concept.html">Kubernetes Clusters guide: Introduction</a></footer>
+    </blockquote>
+    <p class="aud-why"><span class="aud-why-label">Why it's written this way</span> This is where most readers meet the term for the first time, so it says what the image contains and what it does (becomes a node) before it gives the name. The name comes last, once it means something.</p>
+  </div>
+
+  <div class="aud-panel" role="tabpanel" id="aud-custom" aria-labelledby="aud-tab-custom">
+    <p class="aud-ask"><span class="aud-ask-label">Their question</span> The standard image doesn't fit. Can I make my own, and what do I get?</p>
+    <blockquote class="aud-quote">
+      <p>Use OCK Image Builder to build custom OCK images for situations where the standard OCK image isn't adequate.</p>
+      <p>For a specific configuration, OCK Image Builder can generate:</p>
+      <ul>
+        <li>A bootable Qcow2 image, to create cluster nodes.</li>
+        <li>An OSTree container image, which Oracle CNE uses to update nodes in a running cluster.</li>
+      </ul>
+      <footer><a href="https://docs.oracle.com/en/operating-systems/olcne/2/ockforge/intro.html">OCK Image Builder guide: Introduction</a></footer>
+    </blockquote>
+    <p class="aud-why"><span class="aud-why-label">Why it's written this way</span> This reader already knows what an OCK image is, so there's no definition. The guide opens with when to build your own, then lists the two outputs as a pair, each with its purpose, so readers can see which one they need.</p>
+  </div>
+
+  <div class="aud-panel" role="tabpanel" id="aud-upgrade" aria-labelledby="aud-tab-upgrade">
+    <p class="aud-ask"><span class="aud-ask-label">Their question</span> Will anything in my Release 1 cluster stop me upgrading?</p>
+    <blockquote class="aud-quote">
+      <p>Before you begin, identify any OS Customizations in the Release 1 cluster. If you have OS customizations that can't be set up using a configuration file, you might need to use Oracle Container Host for Kubernetes Image Builder to build a custom image to use during the upgrade.</p>
+      <footer><a href="https://docs.oracle.com/en/operating-systems/olcne/2/upgrade/prereq.html">Upgrade guide: Prerequisites</a></footer>
+    </blockquote>
+    <p class="aud-why"><span class="aud-why-label">Why it's written this way</span> An upgrader doesn't care what an OCK image is until it affects them. The image only comes up here as a condition, before they begin, so nobody finds out halfway through an upgrade that they needed a custom build.</p>
+  </div>
+
+  <div class="aud-panel" role="tabpanel" id="aud-versions" aria-labelledby="aud-tab-versions">
+    <p class="aud-ask"><span class="aud-ask-label">Their question</span> Which versions are out, and where do I pull them from?</p>
+    <blockquote class="aud-quote">
+      <p>Kubernetes Releases 1.35 and 1.34 are included with Oracle CNE Release 2.4. Updated Oracle Container Host for Kubernetes images are also available for Kubernetes Releases 1.33 and 1.32.</p>
+      <p><mark>The Oracle Container Host for Kubernetes (OCK) image includes both the host Oracle Linux OS, and the Kubernetes software distribution.</mark> The OCK image is distributed on the Oracle Container Registry.</p>
+      <p>A bootable container image, in the Qcow2 format, is available at:</p>
+      <pre>container-registry.oracle.com/olcne/ock</pre>
+      <p>An OSTree commit based container image, is available at:</p>
+      <pre>container-registry.oracle.com/olcne/ock-ostree</pre>
+      <footer><a href="https://docs.oracle.com/en/operating-systems/olcne/2/relnotes/components.html">Release Notes: Component Versions</a></footer>
+    </blockquote>
+    <p class="aud-why"><span class="aud-why-label">Why it's written this way</span> Versions come first, because that's what release notes readers came for. Then one line of definition, in the same words as the Kubernetes Clusters guide (highlighted), so the term means the same thing in every guide. It ends with the exact locations to copy.</p>
+  </div>
+</section>
+
+<div class="about-content" markdown="1">
+
+---
+
 ## How I use AI
 
 AI is part of my writing toolkit. It makes me a faster, sharper technical writer, and it
@@ -105,3 +185,4 @@ keeps my understanding of the technology first-hand.
 </div>
 
 <script src="{{ '/assets/js/editing-replay.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/audience-switcher.js' | relative_url }}" defer></script>
