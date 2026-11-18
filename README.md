@@ -412,6 +412,14 @@ The What I do page has a "Watch a draft become documentation" section (`#watch-a
 
 The draft and the edits are defined at the top of `assets/js/editing-replay.js`: `DRAFT.blocks` (types `h`, `s` for an inline draft sentence, `p`, `note`, `step`, `code`) and `EDITS`, each with a `title`, a `why`, and `ops` (`set`, `remove`, `add`). Changed text is shown word by word; when less than half of a sentence survives, it's shown as one deletion and one insertion instead. The facts and command come from the Kubernetes Clusters guide's "Backing Up a Cluster" topic; the draft is invented.
 
+### One Idea, Four Readers
+
+The What I do page has a "One idea, four readers" section showing how four guides in the Oracle Cloud Native Environment doc set explain the OCK image to different readers (Kubernetes Clusters, OCK Image Builder, Upgrade, Release Notes). Each tab shows the reader's question, the quoted passage with a source link, and why it's written that way. The panels are plain HTML in `services.md`; `assets/js/audience-switcher.js` turns them into keyboard-accessible tabs. Without JS the panels stack. Nothing plays by itself.
+
+### Inside the Guide (Annotated Excerpts)
+
+Portfolio item pages can show a quoted excerpt from the guide with numbered highlights and margin notes explaining the writing decisions. Content lives in `_data/excerpts.yml`, keyed by the portfolio file name (for example `ocne2_quickstart`); a page with no entry shows nothing. The comments at the top of that file list the supported markup (steps, admonitions, figures, option lists, reuse labels, skipped-content markers, flow lines). `_includes/annotated-excerpt.html` renders it and `assets/js/annotated-excerpt.js` adds the behaviour: on wide screens notes sit level with their highlights, hovering or tapping a highlight lights up its note, and on phones the note opens inline under the paragraph. Highlights sweep in once when the excerpt first scrolls into view (not under reduced motion). Images used in excerpts are stored in `assets/images/portfolio/`.
+
 ### Retrieval Demo
 
 `/how-ai-reads-docs/` runs real BM25 keyword retrieval in the browser over two versions of the same cluster administration content, adapted from the Oracle Cloud Native Environment Release 2 Kubernetes Clusters guide: one structured by topic, one written as long pages and split into fixed-size chunks. For each question it shows the search terms, scores every chunk, lifts the top 3 into "all the model sees", and gives a computed verdict:

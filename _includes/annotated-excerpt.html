@@ -1,0 +1,28 @@
+{%- comment -%}
+  "Inside the guide": a real excerpt from the guide with margin notes.
+  Content lives in _data/excerpts.yml, keyed by page.slug.
+{%- endcomment -%}
+{%- assign ax = site.data.excerpts[page.slug] -%}
+{%- if ax -%}
+<section class="ax" data-annotated-excerpt aria-labelledby="ax-title">
+  <div class="ax-intro">
+    <h2 id="ax-title">Inside the guide</h2>
+    <p>An excerpt from <a href="{{ ax.url }}">{{ ax.topic }}</a>, quoted from the published guide. The numbered highlights explain why it's written the way it is. Hover over or tap a highlight to see its note.</p>
+  </div>
+  <div class="ax-layout">
+    <div class="ax-doc">
+      {{ ax.html }}
+      <p class="ax-source">Source: <a href="{{ ax.url }}">{{ ax.topic }}</a>, docs.oracle.com</p>
+    </div>
+    <ol class="ax-notes" aria-label="Notes on the excerpt">
+      {%- for note in ax.notes %}
+      <li class="ax-n" id="ax-n{{ forloop.index }}" data-n="{{ forloop.index }}">
+        <span class="ax-n-num" aria-hidden="true">{{ forloop.index }}</span>
+        <span class="ax-n-body"><strong>{{ note.title }}</strong> {{ note.text }}</span>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+<script src="{{ '/assets/js/annotated-excerpt.js' | relative_url }}" defer></script>
+{%- endif -%}

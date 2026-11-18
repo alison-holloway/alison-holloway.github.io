@@ -24,6 +24,8 @@
     '.education-item',
     '.demo-callout',
     '.journey-explorer',
+    '.aud',
+    '.ax',
     '.rd-controls',
     '.rd-panel',
     '.portfolio-links',
