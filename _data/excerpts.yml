@@ -1,4 +1,4 @@
-# Annotated excerpts shown on portfolio item pages ("Inside the guide").
+# Annotated excerpts shown on portfolio item pages ("Inside the Guide").
 #
 # Keyed by the portfolio file name (page.slug), for example ocne2_quickstart.
 # Rendered by _includes/annotated-excerpt.html; behaviour in

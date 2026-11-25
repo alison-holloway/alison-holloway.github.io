@@ -47,7 +47,7 @@ Portfolio items are managed as a Jekyll collection in `_portfolio/`. Each `.md` 
 | `assets/js/hero-terminal.js` | Animated terminal in the home page hero (scenarios defined at the top) |
 | `assets/js/editing-replay.js` | "Watch a draft become documentation" replay on the What I do page (draft and edits defined at the top) |
 | `assets/js/audience-switcher.js` | "One idea, four readers" tabs on the What I do page (panel content is HTML in `services.md`) |
-| `_data/excerpts.yml` | Annotated excerpts ("Inside the guide") for portfolio item pages, keyed by file name; rendered by `_includes/annotated-excerpt.html`, behaviour in `assets/js/annotated-excerpt.js` |
+| `_data/excerpts.yml` | Annotated excerpts ("Inside the Guide") for portfolio item pages, keyed by file name; rendered by `_includes/annotated-excerpt.html`, behaviour in `assets/js/annotated-excerpt.js` |
 | `assets/js/diagrams.js` | Inlines Excalidraw SVGs for draw-on animation; powers the journey explorer (`data-journey-explorer`) on the IA page |
 | `how-ai-reads-docs.md` | Interactive retrieval demo page (`/how-ai-reads-docs/`) |
 | `assets/js/retrieval-demo.js` | BM25 retrieval demo engine and UI, plus the live home page teaser (`data-rd-teaser`); sample docs and questions live in `retrieval-demo-data.js` |

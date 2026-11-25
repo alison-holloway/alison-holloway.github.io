@@ -352,6 +352,8 @@ Page content starts 32px below the header on desktop (24px on tablets, 20px on p
 
 Edit `portfolio/index.html` to modify the portfolio listing. Items are organized into sections using the `section` front matter field (`independent`, `other`, or Oracle Cloud Native Environment).
 
+Each portfolio item page (`_layouts/portfolio_item.html`) shows, in order: the title, the "On this page" table of contents (built from the content's `h2`/`h3` headings), the content, a details banner (product, document type, version, last publish date, tools, plus the View PDF and View Online buttons), and the back link. If the page has an "Inside the Guide" excerpt, it's inserted into the content after the `## Target Audience` section (or after `## Overview` if there's no Target Audience), so it also appears in the table of contents.
+
 ## Troubleshooting
 
 ### Site Not Building Locally

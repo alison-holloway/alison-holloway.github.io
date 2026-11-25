@@ -22,52 +22,69 @@ layout: default
     </p>
   </div>
 
-  <div class="portfolio-details">
-    <dl>
-      <dt>Product:</dt>
-      <dd>{{ page.product }}</dd>
-
-      <dt>Document Type:</dt>
-      <dd>{{ page.doc_type }}</dd>
-
-      {% if page.version %}
-      <dt>Version:</dt>
-      <dd>{{ page.version }}</dd>
-      {% endif %}
-
-      {% if page.date_completed %}
-      <dt>Last Publish Date:</dt>
-      <dd>{{ page.date_completed | date: "%B %Y" }}</dd>
-      {% endif %}
-
-      {% if page.tools %}
-      <dt>Tools Used:</dt>
-      <dd>{{ page.tools | join: ", " }}</dd>
-      {% endif %}
-    </dl>
-  </div>
-
-  {% include annotated-excerpt.html %}
-
   <nav class="toc" id="toc" aria-label="Table of contents" style="display:none">
     <div class="toc-title">On this page</div>
     <ol id="toc-list"></ol>
   </nav>
 
+  {%- comment -%}
+    The page content, with the "Inside the Guide" excerpt (if this page has
+    one in _data/excerpts.yml) inserted after the Target Audience section, or
+    after Overview when there's no Target Audience.
+  {%- endcomment -%}
+  {%- assign ax_entry = site.data.excerpts[page.slug] -%}
   <div class="portfolio-content">
-    {{ content }}
+    {%- if ax_entry -%}
+      {%- capture ax_html -%}{% include annotated-excerpt.html %}{%- endcapture -%}
+      {%- assign ax_anchor = '>Target Audience</h2>' -%}
+      {%- unless content contains ax_anchor -%}{%- assign ax_anchor = '>Overview</h2>' -%}{%- endunless -%}
+      {%- assign ax_parts = content | split: '<h2' -%}
+      {%- assign ax_done = false -%}
+      {%- for part in ax_parts -%}
+        {%- unless forloop.first -%}<h2{%- endunless -%}{{ part }}
+        {%- if ax_done == false and part contains ax_anchor -%}{{ ax_html }}{%- assign ax_done = true -%}{%- endif -%}
+      {%- endfor -%}
+      {%- unless ax_done -%}{{ ax_html }}{%- endunless -%}
+    {%- else -%}
+      {{ content }}
+    {%- endif -%}
   </div>
 
-  {% if page.pdf_url or page.doc_url %}
-  <div class="portfolio-links">
-    {% if page.pdf_url %}
-      <a href="{{ page.pdf_url }}" class="btn" target="_blank">View PDF</a>
+  <aside class="portfolio-details" aria-label="Document details">
+    <dl>
+      <dt>Product</dt>
+      <dd>{{ page.product }}</dd>
+
+      <dt>Document Type</dt>
+      <dd>{{ page.doc_type }}</dd>
+
+      {% if page.version %}
+      <dt>Version</dt>
+      <dd>{{ page.version }}</dd>
+      {% endif %}
+
+      {% if page.date_completed %}
+      <dt>Last Publish Date</dt>
+      <dd>{{ page.date_completed | date: "%B %Y" }}</dd>
+      {% endif %}
+
+      {% if page.tools %}
+      <dt>Tools Used</dt>
+      <dd>{{ page.tools | join: ", " }}</dd>
+      {% endif %}
+    </dl>
+
+    {% if page.pdf_url or page.doc_url %}
+    <div class="portfolio-links">
+      {% if page.pdf_url %}
+        <a href="{{ page.pdf_url }}" class="btn" target="_blank">View PDF</a>
+      {% endif %}
+      {% if page.doc_url %}
+        <a href="{{ page.doc_url }}" class="btn" target="_blank">View Online</a>
+      {% endif %}
+    </div>
     {% endif %}
-    {% if page.doc_url %}
-      <a href="{{ page.doc_url }}" class="btn btn-secondary" target="_blank">View Online</a>
-    {% endif %}
-  </div>
-  {% endif %}
+  </aside>
 
   <div class="portfolio-back">
     {% if page.section == "ai" %}
