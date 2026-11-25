@@ -1,5 +1,5 @@
 /*
- * Annotated excerpt: "Inside the guide" on portfolio item pages.
+ * Annotated excerpt: "Inside the Guide" on portfolio item pages.
  *
  * The excerpt and notes are rendered by Jekyll (_includes/annotated-excerpt.html)
  * and read fine without JS: numbered highlights in the text, numbered notes

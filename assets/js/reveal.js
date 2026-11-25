@@ -28,7 +28,7 @@
     '.ax',
     '.rd-controls',
     '.rd-panel',
-    '.portfolio-links',
+    '.portfolio-details',
     '.about-content > h2',
     '.portfolio-content > h2',
     '.portfolio-content > table'

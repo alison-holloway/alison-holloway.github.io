@@ -1,12 +1,12 @@
 {%- comment -%}
-  "Inside the guide": a real excerpt from the guide with margin notes.
+  "Inside the Guide": a real excerpt from the guide with margin notes.
   Content lives in _data/excerpts.yml, keyed by page.slug.
 {%- endcomment -%}
 {%- assign ax = site.data.excerpts[page.slug] -%}
 {%- if ax -%}
 <section class="ax" data-annotated-excerpt aria-labelledby="ax-title">
   <div class="ax-intro">
-    <h2 id="ax-title">Inside the guide</h2>
+    <h2 id="ax-title">Inside the Guide</h2>
     <p>An excerpt from <a href="{{ ax.url }}">{{ ax.topic }}</a>, quoted from the published guide. The numbered highlights explain why it's written the way it is. Hover over or tap a highlight to see its note.</p>
   </div>
   <div class="ax-layout">
