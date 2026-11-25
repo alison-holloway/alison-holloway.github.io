@@ -1,5 +1,5 @@
 /*
- * "How AI reads your docs" demo.
+ * "How AI Reads Your Docs" demo.
  *
  * Ranks documentation chunks against a question with BM25 (real keyword
  * retrieval, computed live in the browser), shows which chunks would be sent

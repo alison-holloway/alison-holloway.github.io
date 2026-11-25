@@ -1,5 +1,5 @@
 /*
- * Editing replay: "Watch a draft become documentation".
+ * Editing replay: "Watch a Draft Become Documentation".
  *
  * A made-up engineering draft is edited, one change at a time, into a
  * procedure. Each edit shows as tracked changes (deletions struck through,

@@ -1,5 +1,5 @@
 /*
- * Audience switcher: "One idea, four readers" on the What I do page.
+ * Audience switcher: "One Idea, Four Readers" on the What I Do page.
  *
  * The panels are plain HTML in services.md, each quoting how one guide in the
  * Oracle Cloud Native Environment doc set explains the OCK image to its

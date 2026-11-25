@@ -1,11 +1,11 @@
 ---
 layout: default
-title: How AI reads your docs
+title: How AI Reads Your Docs
 permalink: /how-ai-reads-docs/
 description: An interactive demo of how AI assistants retrieve documentation, and why structure decides whether the answer reaches the model.
 ---
 
-<h1 class="page-title">How AI reads your docs</h1>
+<h1 class="page-title">How AI Reads Your Docs</h1>
 
 <div class="page-intro">
   <p class="lead">An AI assistant doesn't read your documentation the way a person does. It retrieves a few chunks that look relevant and answers from those alone.</p>
@@ -54,7 +54,7 @@ Pick a question, then switch between the versions. Try all three: the unstructur
 
 <div class="about-content rd-outro" markdown="1">
 
-## What makes the difference
+## What Makes the Difference
 
 - **Headings that name the task.** "Backing Up a Cluster" can be found. "Preparation" can't.
 - **Sections that stand alone.** Name the subject instead of writing "it" or "everything else". A chunk loses everything around it.

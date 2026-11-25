@@ -1,10 +1,10 @@
 ---
 layout: default
-title: What I do
+title: What I Do
 permalink: /what-i-do/
 ---
 
-<h1 class="page-title">What I do</h1>
+<h1 class="page-title">What I Do</h1>
 
 <div class="page-intro">
   <p class="lead">I'm a senior technical writer for developer and platform-engineering audiences. AI is woven into how I work today. Here's what I do.</p>
@@ -48,7 +48,7 @@ raise issues early, and deliver documentation that holds up under real use.
 
 ---
 
-## Watch a draft become documentation
+## Watch a Draft Become Documentation
 
 Here's a made-up engineering draft about backing up an Oracle Cloud Native Environment cluster, and the six edits I'd make to turn it into a procedure. The draft is invented; the command and facts come from the [Kubernetes Clusters guide]({{ '/portfolio/ocne2_kubernetes_clusters/' | relative_url }}) I wrote. Press play, or step through the edits.
 
@@ -80,7 +80,7 @@ Here's a made-up engineering draft about backing up an Oracle Cloud Native Envir
 
 ---
 
-## One idea, four readers
+## One Idea, Four Readers
 
 Good documentation explains the same thing differently depending on who's reading. Here's how
 the Oracle Cloud Native Environment doc set I wrote explains one idea, the Oracle Container Host
@@ -89,7 +89,7 @@ Pick a reader.
 
 </div>
 
-<section class="aud" data-audience-switcher aria-label="One idea, four readers">
+<section class="aud" data-audience-switcher aria-label="One Idea, Four Readers">
   <div class="aud-tabs" role="tablist" aria-label="Reader" hidden>
     <button type="button" role="tab" class="aud-tab" id="aud-tab-create" aria-controls="aud-create">
       <span class="aud-tab-who">Creating a cluster</span>
@@ -160,7 +160,7 @@ Pick a reader.
 
 ---
 
-## How I use AI
+## How I Use AI
 
 AI is part of my writing toolkit. It makes me a faster, sharper technical writer, and it
 keeps my understanding of the technology first-hand.
@@ -180,7 +180,7 @@ keeps my understanding of the technology first-hand.
 </div>
 
 <div class="contact-info">
-  <h2>Ready to talk?</h2>
+  <h2>Ready to Talk?</h2>
   <p><a href="{{ '/contact/' | relative_url }}">Get in touch</a> to talk about what you're working on.</p>
 </div>
 
