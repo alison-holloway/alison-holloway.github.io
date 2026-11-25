@@ -51,7 +51,7 @@ Oracle Cloud Native Environment is a multi-component Kubernetes platform for ent
 
 **Other Oracle Linux products.** I delivered documentation for Oracle OpenStack, Oracle VM, Oracle Linux Virtualization Manager, and related open-source technologies including Podman, DTrace, Gluster Storage, and Ceph Storage.
 
-## Earlier roles: Senior Technical Writer | Oracle Australia
+## Earlier Roles: Senior Technical Writer | Oracle Australia
 
 I produced documentation for Oracle Database and Oracle Applications, covering SQL\*Plus, localisation features, and developer tools, and worked with product teams across multiple divisions. I co-authored *The Underground PHP and Oracle Manual*, a practical guide for PHP developers integrating with Oracle Database. I presented technical sessions and ran hands-on training at Oracle OpenWorld and international PHP conferences in Germany and New York.
 

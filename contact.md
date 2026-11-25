@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-<h1 class="page-title">Let's talk</h1>
+<h1 class="page-title">Let's Talk</h1>
 
 <div class="page-intro">
   <p class="lead">Have a technical writing role or project in mind? Email me. I'll get back to you within one business day.</p>

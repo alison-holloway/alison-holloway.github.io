@@ -27,11 +27,11 @@ The source code is on GitHub.
 
 ## Technical Highlights
 
-### Excalidraw diagram export pipeline
+### Excalidraw Diagram Export Pipeline
 
 Portfolio diagrams are authored as `.excalidraw` files in VS Code and exported to SVG via a custom Node.js script. The pipeline uses esbuild to bundle the `@excalidraw/excalidraw` React library for browser use, then Playwright to render the component in a headless Chromium browser and capture the SVG output. This removes any dependency on the Excalidraw web app and keeps diagrams reproducible from source.
 
-### Dev container
+### Dev Container
 
 The repository includes a VS Code dev container that provisions the full environment automatically: Ruby (Jekyll), Node.js, Playwright, Chromium, and all dependencies. Opening the repo in VS Code and clicking "Reopen in Container" is enough to get a working local development environment.
 

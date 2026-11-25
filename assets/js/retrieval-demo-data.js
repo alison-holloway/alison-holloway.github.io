@@ -1,5 +1,5 @@
 /*
- * Data for the "How AI reads your docs" demo (assets/js/retrieval-demo.js).
+ * Data for the "How AI Reads Your Docs" demo (assets/js/retrieval-demo.js).
  *
  * Content is adapted from the Oracle Cloud Native Environment Release 2
  * Kubernetes Clusters guide (Cluster Administration and libvirt Provider

@@ -51,7 +51,7 @@ alison-holloway.github.io/
 ├── package.json             # Node dependencies and the export-svg script
 ├── index.html               # Home page: hero with animated terminal, track cards, retrieval demo teaser
 ├── about.md                 # Professional background and expertise
-├── services.md              # "What I do" page (/what-i-do/): technical writing + how I use AI
+├── services.md              # "What I Do" page (/what-i-do/): technical writing + how I use AI
 ├── how-ai-reads-docs.md     # Interactive retrieval demo page (/how-ai-reads-docs/)
 ├── contact.md               # Contact page
 ├── 404.html                 # Error page
@@ -85,7 +85,7 @@ alison-holloway.github.io/
     │   ├── reveal.js              # Scroll reveals on every page
     │   ├── hero-terminal.js       # Home page hero terminal animation
     │   ├── diagrams.js            # Diagram draw-on animation and IA journey explorer
-    │   ├── editing-replay.js      # "Watch a draft become documentation" replay (What I do page)
+    │   ├── editing-replay.js      # "Watch a Draft Become Documentation" replay (What I Do page)
     │   ├── retrieval-demo.js      # Retrieval demo engine (BM25), UI, and home page teaser
     │   └── retrieval-demo-data.js # Retrieval demo questions and sample docs
     └── excalidraw/          # Diagram source files (.excalidraw) and exported SVGs
@@ -324,7 +324,7 @@ Both are loaded in `_layouts/default.html`. Small uppercase labels (`.toc-title`
 
 ### Navigation
 
-Edit `_layouts/default.html` to modify navigation links. The retrieval demo page is not in the nav; it is linked from the home page (track card 02 and the demo teaser), the What I do page, and the Kubernetes Clusters and Information Architecture portfolio pages.
+Edit `_layouts/default.html` to modify navigation links. The retrieval demo page is not in the nav; it is linked from the home page (track card 02 and the demo teaser), the What I Do page, and the Kubernetes Clusters and Information Architecture portfolio pages.
 
 ### Home Page Layout
 
@@ -410,13 +410,13 @@ Card labels must match the text in the SVG exactly. The explorer only treats whi
 
 ### Editing Replay
 
-The What I do page has a "Watch a draft become documentation" section (`#watch-a-draft-become-documentation`, linked from home track card 01). A made-up engineering draft about backing up an Oracle Cloud Native Environment cluster is edited into a procedure in six steps. Each step shows as tracked changes (deletions struck through in red, insertions typed in green) with a margin note explaining the edit. Controls: play/pause, previous/next, a Draft-to-Final slider, and a "Show changes" toggle for the clean version. It plays once when it first scrolls into view (not under reduced motion).
+The What I Do page has a "Watch a Draft Become Documentation" section (`#watch-a-draft-become-documentation`, linked from home track card 01). A made-up engineering draft about backing up an Oracle Cloud Native Environment cluster is edited into a procedure in six steps. Each step shows as tracked changes (deletions struck through in red, insertions typed in green) with a margin note explaining the edit. Controls: play/pause, previous/next, a Draft-to-Final slider, and a "Show changes" toggle for the clean version. It plays once when it first scrolls into view (not under reduced motion).
 
 The draft and the edits are defined at the top of `assets/js/editing-replay.js`: `DRAFT.blocks` (types `h`, `s` for an inline draft sentence, `p`, `note`, `step`, `code`) and `EDITS`, each with a `title`, a `why`, and `ops` (`set`, `remove`, `add`). Changed text is shown word by word; when less than half of a sentence survives, it's shown as one deletion and one insertion instead. The facts and command come from the Kubernetes Clusters guide's "Backing Up a Cluster" topic; the draft is invented.
 
 ### One Idea, Four Readers
 
-The What I do page has a "One idea, four readers" section showing how four guides in the Oracle Cloud Native Environment doc set explain the OCK image to different readers (Kubernetes Clusters, OCK Image Builder, Upgrade, Release Notes). Each tab shows the reader's question, the quoted passage with a source link, and why it's written that way. The panels are plain HTML in `services.md`; `assets/js/audience-switcher.js` turns them into keyboard-accessible tabs. Without JS the panels stack. Nothing plays by itself.
+The What I Do page has a "One Idea, Four Readers" section showing how four guides in the Oracle Cloud Native Environment doc set explain the OCK image to different readers (Kubernetes Clusters, OCK Image Builder, Upgrade, Release Notes). Each tab shows the reader's question, the quoted passage with a source link, and why it's written that way. The panels are plain HTML in `services.md`; `assets/js/audience-switcher.js` turns them into keyboard-accessible tabs. Without JS the panels stack. Nothing plays by itself.
 
 ### Inside the Guide (Annotated Excerpts)
 
