@@ -4,10 +4,12 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "24"
-    }
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "mounts": [
-    "source=portfolio-claude-config,target=/home/vscode/.claude,type=volume"
+    "source=portfolio-claude-config,target=/home/vscode/.claude,type=volume",
+    "source=portfolio-gh-config,target=/home/vscode/.config/gh,type=volume"
   ],
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "forwardPorts": [4000],
