@@ -2,6 +2,7 @@
 layout: default
 title: About
 permalink: /about/
+image: /assets/images/social/about.png
 ---
 
 <h1 class="page-title">About Alison</h1>

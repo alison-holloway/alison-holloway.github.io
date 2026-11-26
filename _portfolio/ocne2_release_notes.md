@@ -14,6 +14,7 @@ pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/relnotes/OCNE-2-RE
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/relnotes/
 excerpt: Comprehensive release notes documenting new features, enhancements, known
   issues, and resolved bugs for Oracle Cloud Native Environment Release 2.
+image: /assets/images/social/ocne2_release_notes.png
 ---
 
 ## Overview

@@ -15,6 +15,7 @@ pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/concepts/OCNE-2-CO
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/concepts/
 excerpt: Foundational concepts and architecture documentation for Oracle Cloud Native
   Environment Release 2, covering cluster providers, node images, and platform components.
+image: /assets/images/social/ocne2_concepts.png
 ---
 
 ## Overview

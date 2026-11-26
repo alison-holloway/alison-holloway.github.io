@@ -3,6 +3,7 @@ layout: default
 title: How AI Reads Your Docs
 permalink: /how-ai-reads-docs/
 description: An interactive demo of how AI assistants retrieve documentation, and why structure decides whether the answer reaches the model.
+image: /assets/images/social/how-ai-reads-docs.png
 ---
 
 <h1 class="page-title">How AI Reads Your Docs</h1>

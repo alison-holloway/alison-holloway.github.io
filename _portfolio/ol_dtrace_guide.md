@@ -16,6 +16,7 @@ doc_url: https://docs.oracle.com/en/operating-systems/oracle-linux/dtrace-v2-gui
 excerpt: Comprehensive reference guide for DTrace dynamic tracing tool on Oracle Linux,
   restructured using DITA XML and updated with latest features for modern eBPF-based
   implementation.
+image: /assets/images/social/ol_dtrace_guide.png
 ---
 
 ## Overview

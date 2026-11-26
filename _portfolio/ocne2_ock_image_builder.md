@@ -14,6 +14,7 @@ pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/ockforge/OCNE-2-OC
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/ockforge/
 excerpt: Guide for creating customized Oracle Container Host for Kubernetes (OCK)
   images used as node operating systems in Oracle Cloud Native Environment Kubernetes clusters.
+image: /assets/images/social/ocne2_ock_image_builder.png
 ---
 
 ## Overview

@@ -12,6 +12,7 @@ tools:
 - Excalidraw
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/
 excerpt: Complete information architecture for Oracle Cloud Native Environment Release 2, encompassing 9 integrated documentation deliverables designed to support diverse user journeys across evaluation, deployment, operation, and advanced customization scenarios.
+image: /assets/images/social/ocne2_information_architecture.png
 ---
 
 ## Overview
