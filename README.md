@@ -133,7 +133,9 @@ The repository includes a dev container configuration for VS Code that sets up t
 
 1. Clone the repository and open the folder in VS Code
 2. When prompted, click **Reopen in Container** (or open the Command Palette and run `Dev Containers: Reopen in Container`)
-3. Wait for the container to build and the `postCreateCommand` to finish — this installs all Ruby gems, Node packages, and Playwright browser dependencies automatically
+3. Wait for the container to build and `.devcontainer/post-create.sh` to finish. It installs all Ruby gems, Node packages, Playwright's Chromium, and the system libraries and fonts Chromium needs to render text
+
+The container runs Debian 12 (bookworm) with Ruby 3.3. After pulling changes to `.devcontainer/`, run `Dev Containers: Rebuild Container` to pick them up. Claude Code's settings and memory (`~/.claude`) are kept in a Docker volume (`portfolio-claude-config`), so they survive rebuilds.
 
 **Running the site:**
 
@@ -149,7 +151,7 @@ View the site at `http://localhost:4000` (VS Code will offer to open the forward
 npm run export-svg
 ```
 
-No additional setup needed — Playwright and Chromium are pre-installed in the container.
+No additional setup needed — Playwright and Chromium are pre-installed in the container. The same goes for `npm run social-cards`.
 
 ---
 
