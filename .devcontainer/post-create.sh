@@ -22,7 +22,9 @@ npx playwright install chromium
 
 echo "==> Chromium system dependencies and fonts"
 sudo apt-get update
-sudo npx playwright install-deps chromium
+# sudo resets PATH, and npx (from the Node feature) lives under nvm, so pass
+# PATH through or sudo can't find it.
+sudo env "PATH=$PATH" npx playwright install-deps chromium
 sudo apt-get install -y --no-install-recommends fontconfig fonts-dejavu-core
 
 if [ "$(fc-list | wc -l)" -eq 0 ]; then

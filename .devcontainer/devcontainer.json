@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/jekyll:2-3.3-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
+      "version": "24"
     }
   },
   "mounts": [
@@ -20,7 +20,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "pomdtr.excalidraw-editor"
+        "pomdtr.excalidraw-editor",
+        "anthropic.claude-code"
       ]
     }
   },
