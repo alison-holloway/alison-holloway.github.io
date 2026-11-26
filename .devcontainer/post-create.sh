@@ -6,10 +6,12 @@
 # without them, headless Chromium draws pages with no text.
 set -euo pipefail
 
-# ~/.claude is a named Docker volume (see devcontainer.json) so Claude Code's
-# settings and memory survive rebuilds. Docker creates it owned by root.
-echo "==> Claude Code config volume"
-sudo chown -R vscode:vscode /home/vscode/.claude
+# ~/.claude and ~/.config/gh are named Docker volumes (see devcontainer.json)
+# so Claude Code's settings and memory, and the GitHub CLI sign-in, survive
+# rebuilds. Docker creates them (and a missing ~/.config) owned by root.
+echo "==> Config volumes"
+sudo chown -R vscode:vscode /home/vscode/.claude /home/vscode/.config/gh
+sudo chown vscode:vscode /home/vscode/.config
 
 echo "==> Ruby gems"
 bundle install
