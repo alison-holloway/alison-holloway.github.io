@@ -15,6 +15,7 @@ pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/quickstart/OCNE-2-
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/quickstart/
 excerpt: Fast-track guide for creating a KVM-based Kubernetes cluster using the libvirt
   provider, designed to get users up and running with Oracle Cloud Native Environment quickly.
+image: /assets/images/social/ocne2_quickstart.png
 ---
 
 ## Overview

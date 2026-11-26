@@ -12,6 +12,7 @@ pdf_url: https://www.oracle.com/a/tech/docs/database/201212-ug-php-oracle.pdf
 doc_url: http://www.oracle.com/technetwork/topics/php/underground-php-oracle-manual-098250.html
 excerpt: Co-authored comprehensive technical manual bridging PHP and Oracle Database,
   freely distributed to expand Oracle's engagement with the PHP developer community.
+image: /assets/images/social/underground_php.png
 ---
 
 ## Overview

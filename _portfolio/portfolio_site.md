@@ -17,6 +17,7 @@ tools:
 - VS Code Dev Containers
 doc_url: https://github.com/alison-holloway/alison-holloway.github.io
 excerpt: A Jekyll-based portfolio and services site with a custom Excalidraw-to-SVG export pipeline, responsive design, and a VS Code dev container for reproducible development.
+image: /assets/images/social/portfolio_site.png
 ---
 
 ## Overview

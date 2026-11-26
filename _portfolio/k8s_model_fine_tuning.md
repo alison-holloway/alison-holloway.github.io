@@ -17,6 +17,7 @@ tools:
 - WSL2
 doc_url: https://github.com/alison-holloway/k8s-model-fine-tuning
 excerpt: "Fine-tuning Llama 3.1 8B on 2,000 Kubernetes examples for YAML generation, kubectl command explanation, and error troubleshooting. Training on a Windows gaming PC (RTX 2080); inference via Ollama."
+image: /assets/images/social/k8s_model_fine_tuning.png
 ---
 
 ## Overview

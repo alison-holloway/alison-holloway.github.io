@@ -2,6 +2,7 @@
 layout: default
 title: What I Do
 permalink: /what-i-do/
+image: /assets/images/social/what-i-do.png
 ---
 
 <h1 class="page-title">What I Do</h1>

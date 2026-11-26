@@ -14,6 +14,7 @@ pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/kubernetes/OCNE-2-
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/kubernetes/
 excerpt: Comprehensive introduction to using Kubernetes on Oracle Cloud Native Environment, covering kubectl
   usage, pod management, services, deployments, and core Kubernetes concepts.
+image: /assets/images/social/ocne2_kubernetes_guide.png
 ---
 
 ## Overview

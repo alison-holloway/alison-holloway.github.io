@@ -17,6 +17,7 @@ doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/clusters/
 excerpt: Comprehensive guide covering Kubernetes cluster creation, configuration,
   and lifecycle management across all Oracle Cloud Native Environment provider types (libvirt, OCI, OLVM,
   and Bring Your Own).
+image: /assets/images/social/ocne2_kubernetes_clusters.png
 ---
 
 ## Overview

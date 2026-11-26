@@ -2,6 +2,7 @@
 layout: default
 title: Contact
 permalink: /contact/
+image: /assets/images/social/contact.png
 ---
 
 <h1 class="page-title">Let's Talk</h1>

@@ -19,6 +19,7 @@ doc_url: https://docs.oracle.com/en/operating-systems/oracle-linux/podman/index.
 excerpt: Comprehensive user guide for Podman container management on Oracle Linux,
   restructured with DITA XML and updated with Oracle Linux 10 support, new Kubernetes
   integration chapter, and extensively revised content for modern container workflows.
+image: /assets/images/social/ol_podman_guide.png
 ---
 
 ## Overview

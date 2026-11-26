@@ -14,6 +14,7 @@ doc_url: https://github.com/alison-holloway/microk8s-dashboard-local-access-patt
 excerpt: A practical guide comparing four methods for accessing the Canonical MicroK8s
   Kubernetes Dashboard on a local machine, with setup instructions, security trade-offs,
   and troubleshooting tips.
+image: /assets/images/social/microk8s_dashboard_access.png
 ---
 
 ## Overview

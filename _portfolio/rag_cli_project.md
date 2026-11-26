@@ -17,6 +17,7 @@ tools:
 - Ollama
 doc_url: https://github.com/alison-holloway/rag-cli
 excerpt: "A Retrieval-Augmented Generation system for querying local documents using language models, with four interfaces: CLI, REST API, web UI, and a native macOS desktop app."
+image: /assets/images/social/rag_cli_project.png
 ---
 
 ## Overview

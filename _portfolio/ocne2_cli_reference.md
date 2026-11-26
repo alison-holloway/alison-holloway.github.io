@@ -15,6 +15,7 @@ doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/cli/
 excerpt: Complete command-line interface reference for the ocne tool, documenting
   installation, configuration, and all commands for Kubernetes cluster lifecycle management
   in Oracle Cloud Native Environment.
+image: /assets/images/social/ocne2_cli_reference.png
 ---
 
 ## Overview

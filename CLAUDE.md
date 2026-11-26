@@ -20,6 +20,9 @@ bundle exec jekyll clean
 
 # Re-export Excalidraw diagrams to SVG (after editing .excalidraw files)
 npm run export-svg
+
+# Regenerate link-preview images (after changing a portfolio item's title, product, or excerpt)
+npm run social-cards
 ```
 
 ## Architecture
@@ -52,6 +55,7 @@ Portfolio items are managed as a Jekyll collection in `_portfolio/`. Each `.md` 
 | `how-ai-reads-docs.md` | Interactive retrieval demo page (`/how-ai-reads-docs/`) |
 | `assets/js/retrieval-demo.js` | BM25 retrieval demo engine and UI, plus the live home page teaser (`data-rd-teaser`); sample docs and questions live in `retrieval-demo-data.js` |
 | `scripts/export-excalidraw-svg.mjs` | Excalidraw → SVG export script (Playwright + esbuild) |
+| `scripts/make-social-cards.mjs` | Generates the 1200×630 link-preview images in `assets/images/social/` (Playwright; needs internet and a machine that renders text) |
 
 ### Portfolio Item Front Matter
 

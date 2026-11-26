@@ -15,6 +15,7 @@ doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/applications/
 excerpt: Guide for deploying and managing cloud-native applications on Oracle Cloud Native Environment
   using application catalogs, covering installation, configuration, and lifecycle
   management of applications.
+image: /assets/images/social/ocne2_applications.png
 ---
 
 ## Overview

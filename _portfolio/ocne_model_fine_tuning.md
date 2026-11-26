@@ -15,6 +15,7 @@ tools:
 - vLLM
 doc_url: https://github.com/alison-holloway/ocne-model-fine-tuning
 excerpt: "Fine-tuning Llama 3.1 8B Instruct on 285 curated Q&A pairs scraped from Oracle Cloud Native Environment documentation, covering CLI usage, cluster administration, and architectural concepts."
+image: /assets/images/social/ocne_model_fine_tuning.png
 ---
 
 ## Overview

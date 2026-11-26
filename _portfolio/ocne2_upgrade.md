@@ -14,6 +14,7 @@ pdf_url: https://docs.oracle.com/en/operating-systems/olcne/2/upgrade/OCNE-2-UPG
 doc_url: https://docs.oracle.com/en/operating-systems/olcne/2/upgrade/
 excerpt: Comprehensive procedures for upgrading from Oracle Cloud Native Environment Release 1.9 to Release
   2, including planning, prerequisites, upgrade execution, and post-upgrade validation.
+image: /assets/images/social/ocne2_upgrade.png
 ---
 
 ## Overview

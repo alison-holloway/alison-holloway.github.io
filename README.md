@@ -443,6 +443,19 @@ console.log(m.padEnd(12),r.complete?(r.close?"only just":"pass"):"fail",q.text)}
 
 The home page teaser (`data-rd-teaser="upgrade"` in `index.html`) runs the same engine for one question, so it never drifts from the demo. The static HTML inside it is the no-JS fallback; update it if the results change.
 
+## Link Previews (Social Cards)
+
+When a page is shared on LinkedIn, Slack, or in email, it shows a 1200×630 preview image. Every page gets `assets/images/social/default.png` (set in `_config.yml` defaults). Main pages and every portfolio item have their own card, set with `image:` in front matter; portfolio cards are named after the file (`ocne2_quickstart.png`). `jekyll-seo-tag` turns `image:` into the `og:image` and `twitter:image` tags, using `url` in `_config.yml` (`https://www.alison-holloway.com`).
+
+Generate or refresh the cards with:
+
+```bash
+npm run social-cards              # writes assets/images/social/*.png
+npm run social-cards -- --list    # prints each card's text, no rendering
+```
+
+Main page card text is defined in `PAGES` at the top of `scripts/make-social-cards.mjs`. Portfolio cards use each item's `product`, `title`, and `excerpt`, so re-run the script after changing those, or after adding a portfolio item (add `image: /assets/images/social/<file-name>.png` to its front matter too). The script loads fonts from Google Fonts and needs a machine that can render text; it stops with an error rather than writing blank cards. To check a card after deploying, paste the page URL into the [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/), which also refreshes LinkedIn's cached preview.
+
 ## Excalidraw Diagrams
 
 Portfolio items use Excalidraw diagrams for visualizing information architecture, user flows, and documentation structure. Diagrams are authored as `.excalidraw` files and exported to SVG. On the site they animate in as they scroll into view; see [Diagram Draw-On and Journey Explorer](#diagram-draw-on-and-journey-explorer).
